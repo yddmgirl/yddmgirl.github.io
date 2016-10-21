@@ -1,0 +1,652 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="项目经验,工作总结," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="最近做了一个PC项目，由于页面比较短，在大屏电脑中，下面有一部分是空白，显得整个网站很不协调。
+例如，妙味课堂官网在大屏电脑下也差不多：
+
+针对此问题设计师提出了一个建议：如果页面高度不够，就让网站底部的内容在大屏电脑中始终置于浏览器最底端，如果页面高度足够，就保持现在的状况，拉到底部才显示底部内容。
+我想到了如下方案：
+
+footer设置position:absolute;bottom:0;等属">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网站底部内容始终置于页面最底端">
+<meta property="og:url" content="http://mmdgirl.github.io/2016/06/23/网站底部内容始终置于页面最底端/index.html">
+<meta property="og:site_name" content="一丢丢萌">
+<meta property="og:description" content="最近做了一个PC项目，由于页面比较短，在大屏电脑中，下面有一部分是空白，显得整个网站很不协调。
+例如，妙味课堂官网在大屏电脑下也差不多：
+
+针对此问题设计师提出了一个建议：如果页面高度不够，就让网站底部的内容在大屏电脑中始终置于浏览器最底端，如果页面高度足够，就保持现在的状况，拉到底部才显示底部内容。
+我想到了如下方案：
+
+footer设置position:absolute;bottom:0;等属">
+<meta property="og:image" content="http://mmdgirl.github.io/assets/images/post/pic2.png">
+<meta property="og:updated_time" content="2016-10-20T09:48:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="网站底部内容始终置于页面最底端">
+<meta name="twitter:description" content="最近做了一个PC项目，由于页面比较短，在大屏电脑中，下面有一部分是空白，显得整个网站很不协调。
+例如，妙味课堂官网在大屏电脑下也差不多：
+
+针对此问题设计师提出了一个建议：如果页面高度不够，就让网站底部的内容在大屏电脑中始终置于浏览器最底端，如果页面高度足够，就保持现在的状况，拉到底部才显示底部内容。
+我想到了如下方案：
+
+footer设置position:absolute;bottom:0;等属">
+<meta name="twitter:image" content="http://mmdgirl.github.io/assets/images/post/pic2.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 网站底部内容始终置于页面最底端 | 一丢丢萌 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">一丢丢萌</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">努力，向前端奔跑</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                网站底部内容始终置于页面最底端
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-23T14:04:36+08:00" content="2016-06-23">
+              2016-06-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/项目经验/" itemprop="url" rel="index">
+                    <span itemprop="name">项目经验</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>最近做了一个PC项目，由于页面比较短，在大屏电脑中，下面有一部分是空白，显得整个网站很不协调。</p>
+<p>例如，妙味课堂官网在大屏电脑下也差不多：</p>
+<p><img src="/assets/images/post/pic2.png" alt=""></p>
+<p>针对此问题设计师提出了一个建议：如果页面高度不够，就让网站底部的内容在大屏电脑中始终置于浏览器最底端，如果页面高度足够，就保持现在的状况，拉到底部才显示底部内容。</p>
+<p>我想到了如下方案：</p>
+<ol>
+<li>footer设置position:absolute;bottom:0;等属性</li>
+<li>html和body设置min-height:100%;</li>
+</ol>
+<p>这样的方案按理说应该是可取的，可是测试后发现：当浏览器没有滚动条时是Ok的，有滚动条时就有问题，这个时候footer始终处于window的高度的那个位置，并不是页面最底端。其实，有没有给html和body设置<code>min-height:100%</code>效果是一样的，这句代码并没有生效。</p>
+<p>究其原因，比较复杂。当绝对定位元素如果没有设置定位父级，其实并不是相对于html或body定位，而是相对<code>initial containing block</code>定位的。<code>initial containing block</code> 是以整个 canvas （渲染内容的空间）的坐标原点(左上)为基准，以 viewport (也就是浏览器视窗内渲染 HTML 的空间)为大小的矩形。</p>
+<p>然后，我得出了这样的解决方案（目测兼容所有浏览器）：</p>
+<ol>
+<li>直接给footer设置绝对定位且bottom:0。当页面有滚动条时，使用js给body设置相对定位即可（如果给html那么IE6-7不兼容）。</li>
+<li>由于我们经常会把浏览器缩小放大来进行测试，所以要封装一个函数，当浏览器窗口大小改变时就执行依次该函数。</li>
+</ol>
+<p>通过以上思路我写出了js代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">posFooter</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> body = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>],</div><div class="line">        bodyHeight = body.offsetHeight;</div><div class="line">        winHeight = <span class="built_in">document</span>.documentElement.clientHeight;</div><div class="line"></div><div class="line">    <span class="keyword">if</span>(bodyHeight &gt; winHeight)&#123;</div><div class="line">        body.style.position = <span class="string">'relative'</span>;</div><div class="line">    &#125; <span class="keyword">else</span>&#123;</div><div class="line">        body.style.position = <span class="string">''</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">posFooter();</div><div class="line"><span class="built_in">window</span>.onresize = posFooter;</div></pre></td></tr></table></figure>
+<p>但是这个方法有个问题：如果js加载较慢，footer可能会先处于没有加js的状态然后立刻跳到加完js的状态，那种跳动让人感觉很不爽！</p>
+<p>后来我突然发现，我的这个博客的footer居然就是我想要的效果！而且没有任何bug！查看了一下源代码，居然发现开发这个博客框架的大神居然没有用js，直接用css就解决了。整理了一下思路，总结了最精简的代码如下（兼容所有浏览器）：</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">html</span> &#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">    <span class="attribute">position</span>: relative;</div><div class="line">    <span class="attribute">min-height</span>: <span class="number">100%</span>;</div><div class="line">    *<span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">    <span class="attribute">padding-bottom</span>: <span class="number">100px</span>; <span class="comment">// 给footer占位的高度</span></div><div class="line">    <span class="attribute">box-sizing</span>: border-box;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>注意：由于box-sizing: border-box不兼容IE6-7，所以这个方法只兼容IE8+。如果想要兼容IE7，可以把网站主内容区（footer前面的div）加padding-bottom，或者用加多一层结构：<br>    <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"g-wrap"</span>&gt;</span></div><div class="line">      <span class="comment">&lt;!-- 这里是网站内容 --&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<pre><code><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">html</span> &#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">    <span class="attribute">position</span>: relative;</div><div class="line">    <span class="attribute">min-height</span>: <span class="number">100%</span>;</div><div class="line">    *<span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.g-wrap</span>&#123;</div><div class="line">    <span class="attribute">padding-bottom</span>: <span class="number">100px</span>; <span class="comment">// 给footer占位的高度</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</code></pre><p><span class="xsfont">参考资料：</span><br><span class="xsfont"><a href="https://www.zhihu.com/question/19926700/answer/13376153" target="_blank" rel="external">https://www.zhihu.com/question/19926700/answer/13376153</a> （作者：顾轶灵  来源：知乎）</span><br><span class="xsfont"><a href="http://www.w3.org/TR/CSS2/intro.html#canvas" target="_blank" rel="external">http://www.w3.org/TR/CSS2/intro.html#canvas</a> </span></p>
+
+        <div class="post-end-text" style="padding-top:20px;">
+            —— end ——
+            <span style="display:block;color:#999; font-size: 12px;">注：水平有限，难免有误，如有错误欢迎指出！</span>
+        </div>
+      
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/项目经验/" rel="tag">#项目经验</a>
+          
+            <a href="/tags/工作总结/" rel="tag">#工作总结</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/08/重力感应H5/" rel="next" title="重力感应H5">
+                <i class="fa fa-chevron-left"></i> 重力感应H5
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/30/3D特效制作/" rel="prev" title="【学习笔记】3D特效制作">
+                【学习笔记】3D特效制作 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/avatar.jpg"
+               alt="SmilYi" />
+          <p class="site-author-name" itemprop="name">SmilYi</p>
+          <p class="site-description motion-element" itemprop="description">web前端开发程序媛</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SmilYi</span>
+</div>
+
+<div class="powered-by">
+  All Rights Reserved
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/assets/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/assets/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/assets/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/assets/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/assets/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/assets/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

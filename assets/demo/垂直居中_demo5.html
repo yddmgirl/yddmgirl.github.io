@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{padding: 0;margin: 0;font-style: normal;}
+        body{font-family: "微软雅黑";color: #333;font-size: 14px;
+            line-height: 2;margin: 10px;}
+        .ps{margin-bottom: 10px;color: #666;font-size: 12px;}
+        .ps em{background: #a5d0b5; color: #fff; padding: 0 5px;}
+        .ps span{background: #88a3d2; color: #fff; padding: 0 5px;}
+        .ps i{background: #feb38b; color: #fff; padding: 0 5px;}
+        .outbox{
+            width: 500px;
+            height: 400px;
+            background-color: #a5d0b5; /*绿色*/
+        }
+        .inbox{
+            background-color: #88a3d2; /*紫色*/
+        }
+        .content{
+            background-color: #feb38b; /*橙色*/
+        }
+
+
+        /* 重要代码开始 */
+
+        .inbox{
+            height: 100px;
+        }
+        .outbox:before{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 50%;
+            margin-bottom: -50px;
+        }
+
+        /* 重要代码结束 */
+
+    </style>
+</head>
+<body>
+    <div class="ps">
+        <b>注释：</b> <em>outbox 绿色背景</em> <span>inbox 紫色背景</span> <i>content 橙色背景</i>
+    </div>
+
+    <!-- 重要代码开始 -->
+
+    <div class="outbox">
+        <div class="inbox">
+            测试测试测试测试测试测
+            <p>测试测试测试测试测试测</p>
+        </div>
+    </div>
+
+    <!-- 重要代码结束 -->
+</body>
+</html>

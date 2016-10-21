@@ -1,0 +1,649 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="经验总结," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="在工作中，经常会遇到需要让某个内容在父级元素中垂直居中的问题。查过很多资料，但是都没有时间进行统一的总结，趁今天有空，就总结了一下。可能不够全面，后面不断完善。
+子级元素在父级元素中垂直居中有以下几种方法：
+【根据经验，PC端比较常用方法4，移动端比较常用方法2】
+html结构：
+123&amp;lt;div class=&quot;outbox&quot;&amp;gt;    &amp;lt;div class=&quot;inbox&quot;&amp;gt;测">
+<meta property="og:type" content="article">
+<meta property="og:title" content="内容垂直居中">
+<meta property="og:url" content="http://mmdgirl.github.io/2016/07/19/内容垂直居中/index.html">
+<meta property="og:site_name" content="一丢丢萌">
+<meta property="og:description" content="在工作中，经常会遇到需要让某个内容在父级元素中垂直居中的问题。查过很多资料，但是都没有时间进行统一的总结，趁今天有空，就总结了一下。可能不够全面，后面不断完善。
+子级元素在父级元素中垂直居中有以下几种方法：
+【根据经验，PC端比较常用方法4，移动端比较常用方法2】
+html结构：
+123&amp;lt;div class=&quot;outbox&quot;&amp;gt;    &amp;lt;div class=&quot;inbox&quot;&amp;gt;测">
+<meta property="og:updated_time" content="2016-10-21T09:12:48.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="内容垂直居中">
+<meta name="twitter:description" content="在工作中，经常会遇到需要让某个内容在父级元素中垂直居中的问题。查过很多资料，但是都没有时间进行统一的总结，趁今天有空，就总结了一下。可能不够全面，后面不断完善。
+子级元素在父级元素中垂直居中有以下几种方法：
+【根据经验，PC端比较常用方法4，移动端比较常用方法2】
+html结构：
+123&amp;lt;div class=&quot;outbox&quot;&amp;gt;    &amp;lt;div class=&quot;inbox&quot;&amp;gt;测">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 内容垂直居中 | 一丢丢萌 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">一丢丢萌</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">努力，向前端奔跑</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                内容垂直居中
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-19T18:24:01+08:00" content="2016-07-19">
+              2016-07-19
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/经验总结/" itemprop="url" rel="index">
+                    <span itemprop="name">经验总结</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在工作中，经常会遇到需要让某个内容在父级元素中垂直居中的问题。查过很多资料，但是都没有时间进行统一的总结，趁今天有空，就总结了一下。可能不够全面，后面不断完善。</p>
+<p><strong>子级元素在父级元素中垂直居中有以下几种方法：</strong></p>
+<p>【根据经验，PC端比较常用方法4，移动端比较常用方法2】</p>
+<p>html结构：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"outbox"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"inbox"</span>&gt;</span>测试文字<span class="tag">&lt;<span class="name">p</span>&gt;</span>测试测试<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="子级无高度"><a href="#子级无高度" class="headerlink" title="子级无高度"></a>子级无高度</h2><h3 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h3><p>**兼容IE8+ <a href="/assets/demo/垂直居中_demo1.html">【查看demo】</a><br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.outbox</span>&#123;</div><div class="line">    <span class="attribute">display</span>: table;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.inbox</span>&#123;</div><div class="line">    <span class="attribute">display</span>: table-cell;</div><div class="line">    <span class="attribute">vertical-align</span>: middle;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这种方法的弊端：</p>
+<ol>
+<li><code>outbox</code>不支持<code>overflow:hidden</code>属性，只能给<code>outbox</code>嵌套一个父级来设置<code>overflow:hidden</code>属性</li>
+<li><code>inbox</code>默认宽和高均为父级的100%，不支持自定义的宽和高。可以给它添加一个子级来限制宽和高。</li>
+</ol>
+<p><strong>此方法兼容IE6-7的hack：</strong> <a href="/assets/demo/垂直居中_demo1_2.html">【查看demo】</a></p>
+<p>注：以上代码如果想兼容IE6-7，需要在<code>inbox</code>里面再嵌套一个div例如命名为<code>content</code>，然后添加如下hack即可：（以下代码是只兼容IE6-7的垂直居中代码）</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.outbox</span>&#123;</div><div class="line">    *<span class="attribute">position</span>: relative;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.inbox</span>&#123;</div><div class="line">    *<span class="attribute">position</span>: absolute;</div><div class="line">    *<span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.content</span>&#123;</div><div class="line">    *<span class="attribute">position</span>: relative;</div><div class="line">    *<span class="attribute">top</span>: -<span class="number">50%</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h3><p>**只兼容IE9+ <a href="/assets/demo/垂直居中_demo2.html">【查看demo】</a></p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.outbox</span>&#123;</div><div class="line">    <span class="attribute">position</span>: relative;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.inbox</span>&#123;</div><div class="line">   <span class="attribute">position</span>: absolute;</div><div class="line">   <span class="attribute">left</span>: <span class="number">50%</span>;   <span class="comment">// 水平也居中</span></div><div class="line">   <span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">   <span class="attribute">transform</span>: translate(-<span class="number">50%</span>,-<span class="number">50%</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="方法3"><a href="#方法3" class="headerlink" title="方法3"></a>方法3</h3><p>**所有浏览器均兼容 <a href="/assets/demo/垂直居中_demo3.html">【查看demo】</a></p>
+<p>（此方法貌似并不实用，仅供了解）此方法在IE8+中和方法1是一样的，在IE6-7中，<code>inbox</code>必须是行内元素，并且<code>inbox</code>后面还得加上一个空的行内元素。<br>结构示例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"outbox"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"inbox"</span>&gt;</span></div><div class="line">        测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</div><div class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="方法4-（最好）"><a href="#方法4-（最好）" class="headerlink" title="方法4 （最好）"></a>方法4 （最好）</h3><p>**兼容IE8+ <a href="/assets/demo/垂直居中_demo4.html">【查看demo】</a></p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.inbox</span>&#123;</div><div class="line">    <span class="attribute">display</span>: inline-block;</div><div class="line">    <span class="attribute">vertical-align</span>: middle;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.outbox</span><span class="selector-pseudo">:before</span>&#123;</div><div class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</div><div class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">    <span class="attribute">display</span>: inline-block;</div><div class="line">    <span class="attribute">vertical-align</span>: middle;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>此方法兼容IE6-7的hack：</strong> <a href="/assets/demo/垂直居中_demo4_2.html">【查看demo】</a></p>
+<p>由于IE6-7不支持伪类和块元素的<code>inline-block</code>，所以此方法若想兼容IE6-7，需要在<code>inbox</code>的前面或后面加上一个空的div例如命名为<code>empty</code>，然后写hack即可。<strong>（也可以再嵌套一个<code>content</code>然后用方法1中的hack）</strong></p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.inbox</span>,<span class="selector-class">.empty</span>&#123;</div><div class="line">    <span class="attribute">display</span>: inline-block;</div><div class="line">    <span class="attribute">vertical-align</span>: middle;</div><div class="line">    *<span class="attribute">display</span>: inline;</div><div class="line">    *<span class="attribute">zoom</span>: <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.empty</span>&#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">    *<span class="attribute">width</span>: <span class="number">1px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="方法5"><a href="#方法5" class="headerlink" title="方法5"></a>方法5</h3><p><strong>兼容IE8+。但是貌似只兼容文档头为HTML5类型的文件，例如XHTML就不兼容。（可用于移动端）。</strong></p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.outbox</span>&#123;</div><div class="line">    <span class="attribute">line-height</span>: <span class="number">400px</span>; <span class="comment">// 行高等于高度</span></div><div class="line">&#125;</div><div class="line"><span class="selector-class">.inbox</span>&#123;</div><div class="line">    <span class="attribute">display</span>: inline-block;</div><div class="line">    *<span class="attribute">display</span>: inline;</div><div class="line">    <span class="attribute">vertical-align</span>: middle;</div><div class="line">    <span class="attribute">line-height</span>: <span class="number">2</span>; <span class="comment">// 如果有文字，行高必须定义否则文字会跑出去</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="子级有高度"><a href="#子级有高度" class="headerlink" title="子级有高度"></a>子级有高度</h2><h3 id="方法6"><a href="#方法6" class="headerlink" title="方法6"></a>方法6</h3><p><strong>所有浏览器均兼容</strong></p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">outbox</span>&#123;</div><div class="line">    <span class="attribute">position</span>: relative;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">inbox</span>&#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">    <span class="attribute">position</span>: absolute;</div><div class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">    <span class="attribute">margin-top</span>: -<span class="number">50px</span>; <span class="comment">// 高度的一半</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="方法7"><a href="#方法7" class="headerlink" title="方法7"></a>方法7</h3><p><strong>兼容IE8+</strong></p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.inbox</span>&#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.outbox</span><span class="selector-pseudo">:before</span>&#123;</div><div class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</div><div class="line">    <span class="attribute">display</span>: block;</div><div class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">50%</span>;</div><div class="line">    <span class="attribute">margin-bottom</span>: -<span class="number">50px</span>; <span class="comment">// 高度的一半</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>此方法兼容IE6-7的解决方案：</strong></p>
+<p>由于IE6-7不支持伪类，所以此方法若想兼容IE6-7，需要在<code>inbox</code>的前面加上一个空的div例如命名为<code>empty</code>，css代码如下。</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.inbox</span>&#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.empty</span>&#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">50%</span>;</div><div class="line">    <span class="attribute">margin-bottom</span>: -<span class="number">50px</span>; <span class="comment">// 高度的一半</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="父级无高度"><a href="#父级无高度" class="headerlink" title="父级无高度"></a>父级无高度</h2><p>如果父级<code>outbox</code>的高度是自适应的，那么想要垂直居中，直接给子级<code>inbox</code>加相同的上下内边距<code>padding</code>即可！</p>
+
+        <div class="post-end-text" style="padding-top:20px;">
+            —— end ——
+            <span style="display:block;color:#999; font-size: 12px;">注：水平有限，难免有误，如有错误欢迎指出！</span>
+        </div>
+      
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/经验总结/" rel="tag">#经验总结</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/30/3D特效制作/" rel="next" title="【学习笔记】3D特效制作">
+                <i class="fa fa-chevron-left"></i> 【学习笔记】3D特效制作
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/avatar.jpg"
+               alt="SmilYi" />
+          <p class="site-author-name" itemprop="name">SmilYi</p>
+          <p class="site-description motion-element" itemprop="description">web前端开发程序媛</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#子级无高度"><span class="nav-number">1.</span> <span class="nav-text">子级无高度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法1"><span class="nav-number">1.1.</span> <span class="nav-text">方法1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法2"><span class="nav-number">1.2.</span> <span class="nav-text">方法2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法3"><span class="nav-number">1.3.</span> <span class="nav-text">方法3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法4-（最好）"><span class="nav-number">1.4.</span> <span class="nav-text">方法4 （最好）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法5"><span class="nav-number">1.5.</span> <span class="nav-text">方法5</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子级有高度"><span class="nav-number">2.</span> <span class="nav-text">子级有高度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法6"><span class="nav-number">2.1.</span> <span class="nav-text">方法6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法7"><span class="nav-number">2.2.</span> <span class="nav-text">方法7</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#父级无高度"><span class="nav-number">3.</span> <span class="nav-text">父级无高度</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SmilYi</span>
+</div>
+
+<div class="powered-by">
+  All Rights Reserved
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/assets/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/assets/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/assets/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/assets/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/assets/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/assets/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

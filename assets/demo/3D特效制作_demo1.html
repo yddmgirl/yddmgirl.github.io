@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{padding: 0; margin: 0; list-style: none;}
+		.box{
+			position: relative;
+			width: 300px;
+			height: 300px;
+			padding: 0 500px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		.box ul{
+			height: 300px;
+			-webkit-perspective: 800;
+    		-webkit-perspective-origin: 50% 50%;
+    		-webkit-transform-style: preserve-3d;
+		}
+		.box li{
+			width: 300px;
+			height: 300px;
+			line-height: 300px;
+			background: #000;
+			color: #fff;
+			text-align: center;
+			font-size: 100px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			transform: rotateX(90deg);
+			transition: all 1s;
+			transform-origin: bottom;
+		}
+		.prev,.next{
+			position: absolute;
+			top: 330px;
+		}
+		.prev{
+			left: 50%;
+			margin-left: -100px;
+		}
+		.next{
+			right: 50%;
+			margin-right: -100px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box" class="box">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ul>
+	</div>
+	<a href="javascript:prev();" class="prev">上一张</a>
+	<a href="javascript:next();" class="next">下一张</a>
+</body>
+<script>
+	var box = document.getElementById('box');
+	var aLi = box.getElementsByTagName('li');
+	var num = 0;
+	var timer = null;
+	aLi[0].style.transform = 'rotateX(0)';
+
+	function next(){
+		if(num<aLi.length-1){
+			aLi[num].style.transform = 'rotateX(-90deg)';
+			num++;
+			aLi[num].style.transform = 'rotateX(0)';
+		}
+	}
+	function prev(){
+		if(num>0){
+			aLi[num].style.transform = 'rotateX(90deg)';
+			num--;
+			aLi[num].style.transform = 'rotateX(0)';
+		}
+	}
+</script>
+</html>
