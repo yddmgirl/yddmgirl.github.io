@@ -68,7 +68,7 @@
 <link href="/assets/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="项目经验,工作总结," />
+  <meta name="keywords" content="项目经验,工作总结,H5,前端插件," />
 
 
 
@@ -84,19 +84,27 @@
 
 
 
-<meta name="description" content="最近在做CDC十周年官网项目的时候，设计师提出了一个需求：“把banner上的文字和背景分离，当打开页面的时候背景是立即出现的，而文字是慢慢淡入的动画效果。并且这个效果只执行一次，刷新这个页面或者跳到其他页面再次进入这个页面时，不再执行这个动画效果。”
-当时我自己的思路是这样子的：第一次进入到这个页面时，判断是否有这个cookie，如果没有，就执行动画，并给浏览器写入cookie；当再次进入此页面">
+<meta name="description" content="这两天做了一个新的H5项目，项目其中有一个难点是实现重力感应功能。之前没有做过类似的项目，所以设计师发了一个案例给我参考。如图，带有立体感的纸张等元素都会随着手机的摇晃而动：
+
+查看了源码，了解到了一个很实用的插件parallax.js，github地址：https://github.com/wagerfield/parallax
+这是一个简单的，轻量级的的视差引擎，能够对智能设备的方向作出反应。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="cookie只执行一次">
-<meta property="og:url" content="http://mmdgirl.github.io/2016/05/25/cookie只执行一次/index.html">
+<meta property="og:title" content="重力感应H5">
+<meta property="og:url" content="http://mmdgirl.github.io/2016/06/08/parallax/index.html">
 <meta property="og:site_name" content="一丢丢萌">
-<meta property="og:description" content="最近在做CDC十周年官网项目的时候，设计师提出了一个需求：“把banner上的文字和背景分离，当打开页面的时候背景是立即出现的，而文字是慢慢淡入的动画效果。并且这个效果只执行一次，刷新这个页面或者跳到其他页面再次进入这个页面时，不再执行这个动画效果。”
-当时我自己的思路是这样子的：第一次进入到这个页面时，判断是否有这个cookie，如果没有，就执行动画，并给浏览器写入cookie；当再次进入此页面">
-<meta property="og:updated_time" content="2016-10-26T09:52:52.000Z">
+<meta property="og:description" content="这两天做了一个新的H5项目，项目其中有一个难点是实现重力感应功能。之前没有做过类似的项目，所以设计师发了一个案例给我参考。如图，带有立体感的纸张等元素都会随着手机的摇晃而动：
+
+查看了源码，了解到了一个很实用的插件parallax.js，github地址：https://github.com/wagerfield/parallax
+这是一个简单的，轻量级的的视差引擎，能够对智能设备的方向作出反应。">
+<meta property="og:image" content="http://mmdgirl.github.io/assets/images/post/pic1.png">
+<meta property="og:updated_time" content="2016-10-24T02:51:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="cookie只执行一次">
-<meta name="twitter:description" content="最近在做CDC十周年官网项目的时候，设计师提出了一个需求：“把banner上的文字和背景分离，当打开页面的时候背景是立即出现的，而文字是慢慢淡入的动画效果。并且这个效果只执行一次，刷新这个页面或者跳到其他页面再次进入这个页面时，不再执行这个动画效果。”
-当时我自己的思路是这样子的：第一次进入到这个页面时，判断是否有这个cookie，如果没有，就执行动画，并给浏览器写入cookie；当再次进入此页面">
+<meta name="twitter:title" content="重力感应H5">
+<meta name="twitter:description" content="这两天做了一个新的H5项目，项目其中有一个难点是实现重力感应功能。之前没有做过类似的项目，所以设计师发了一个案例给我参考。如图，带有立体感的纸张等元素都会随着手机的摇晃而动：
+
+查看了源码，了解到了一个很实用的插件parallax.js，github地址：https://github.com/wagerfield/parallax
+这是一个简单的，轻量级的的视差引擎，能够对智能设备的方向作出反应。">
+<meta name="twitter:image" content="http://mmdgirl.github.io/assets/images/post/pic1.png">
 
 
 
@@ -114,7 +122,7 @@
   };
 </script>
 
-  <title> cookie只执行一次 | 一丢丢萌 </title>
+  <title> 重力感应H5 | 一丢丢萌 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -254,7 +262,7 @@
             
             
               
-                cookie只执行一次
+                重力感应H5
               
             
           </h1>
@@ -266,8 +274,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-25T18:24:01+08:00" content="2016-05-25">
-              2016-05-25
+            <time itemprop="dateCreated" datetime="2016-06-08T17:16:55+08:00" content="2016-06-08">
+              2016-06-08
             </time>
           </span>
 
@@ -313,13 +321,17 @@
       
 
       
-        <p>最近在做CDC十周年官网项目的时候，设计师提出了一个需求：<br>“把banner上的文字和背景分离，当打开页面的时候背景是立即出现的，而文字是慢慢淡入的动画效果。并且这个效果只执行一次，刷新这个页面或者跳到其他页面再次进入这个页面时，不再执行这个动画效果。”</p>
-<p>当时我自己的思路是这样子的：第一次进入到这个页面时，判断是否有这个cookie，如果没有，就执行动画，并给浏览器写入cookie；当再次进入此页面，浏览器读到此cookie，就不再执行动画。但是测试的时候却发现有一个问题：由于cookie并不是页面的，而是整个站点的，也就是说，如果先进入的是本站点的其他页面，cookie就已经写入了浏览器中，所以再进入该页面，动画就不再执行了。</p>
-<p>后来查阅了一些资料，解决了此问题。以下代码cookie只执行某事一次：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="built_in">document</span>.cookie.replace(<span class="regexp">/(?:(?:^|.*;\s*)someCookieName\s*\=\s*([^;]*).*$)|^.*$/</span>, <span class="string">"$1"</span>) !== <span class="string">"true"</span>) &#123;</div><div class="line">		alert(<span class="string">"Do something here!"</span>);  <span class="comment">// 此处是写你要执行的代码</span></div><div class="line">		<span class="built_in">document</span>.cookie = <span class="string">"someCookieName=true; expires=有效期; path=/"</span>;  <span class="comment">// expires后面是cookie的有效期</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>我在项目中的代码：</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="built_in">document</span>.cookie.replace(<span class="regexp">/(?:(?:^|.*;\s*)banner\s*\=\s*([^;]*).*$)|^.*$/</span>, <span class="string">"$1"</span>) !== <span class="string">"true"</span>) &#123;</div><div class="line">	$(<span class="string">'.about-banner-text'</span>).fadeIn(<span class="number">2500</span>);</div><div class="line">	<span class="keyword">var</span> oDate = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">	oDate.setDate(oDate.getDate()+<span class="number">1</span>);</div><div class="line">	<span class="built_in">document</span>.cookie = <span class="string">"banner=true;expires='+ oDate +'path=/"</span>;</div><div class="line">&#125; <span class="keyword">else</span>&#123;</div><div class="line">	$(<span class="string">'.about-banner-text'</span>).show();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><span class="xsfont">参考文档：</span><br><span class="xsfont"><a href="http://www.imooc.com/video/169" target="_blank" rel="external">http://www.imooc.com/video/169</a></span><br><span class="xsfont"><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie</a></span></p>
+        <p>这两天做了一个新的H5项目，项目其中有一个难点是实现重力感应功能。之前没有做过类似的项目，所以设计师发了一个案例给我参考。如图，带有立体感的纸张等元素都会随着手机的摇晃而动：</p>
+<p><img src="/assets/images/post/pic1.png" alt=""></p>
+<p>查看了源码，了解到了一个很实用的插件<a href="http://matthew.wagerfield.com/parallax/" style="color:red;" target="_blank" rel="external">parallax.js</a>，github地址：<a href="https://github.com/wagerfield/parallax" target="_blank" rel="external">https://github.com/wagerfield/parallax</a></p>
+<p>这是一个简单的，轻量级的的视差引擎，能够对智能设备的方向作出反应。在没有没有陀螺仪或运动检测硬件可用的时候，使用光标的位置来代替。简单的说就是：使用它手机上可以根据手机硬件中的陀螺仪或运动监测硬件来实现重力感应效果，如果不是在手机上，那么它可以根据你鼠标光标的移动来模拟重力感应效果。</p>
+<p>另外，这个插件还可以产生3D的感觉，如果物体离你近，那么重力感应的产生效果越明显，物体离你越远，重力感应产生的效果越不明显，你只需要给每个物体设置不同的深度，即data-depth，取值是0-1之间，0则表示完全静止，1则表示动静最大。</p>
+<p>使用parallax.js这个插件很简单，首先写好结构：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"scene1"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"layer"</span> <span class="attr">data-depth</span>=<span class="string">"0.00"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"layer6.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"layer"</span> <span class="attr">data-depth</span>=<span class="string">"0.20"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"layer5.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"layer"</span> <span class="attr">data-depth</span>=<span class="string">"0.40"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"layer4.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>然后调用js并初始化设置视差（scene1的名字可以随意）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"js/parallax.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div><div class="line">&lt;script&gt;</div><div class="line">  <span class="keyword">var</span> scene1 = <span class="built_in">document</span>.getElementById(<span class="string">'scene1'</span>);</div><div class="line">  <span class="keyword">var</span> parallax = <span class="keyword">new</span> Parallax(scene1);</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<p>如果有多个地方要调用，写好html结构后，就定义多个Parallax：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"js/parallax.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div><div class="line">&lt;script&gt;</div><div class="line">  <span class="keyword">var</span> scene1 = <span class="built_in">document</span>.getElementById(<span class="string">'scene1'</span>);</div><div class="line">  <span class="keyword">var</span> scene2 = <span class="built_in">document</span>.getElementById(<span class="string">'scene2'</span>);</div><div class="line">  <span class="keyword">var</span> scene3 = <span class="built_in">document</span>.getElementById(<span class="string">'scene3'</span>);</div><div class="line">  <span class="keyword">var</span> parallax = <span class="keyword">new</span> Parallax(scene2);</div><div class="line">  <span class="keyword">var</span> parallax = <span class="keyword">new</span> Parallax(scene1);</div><div class="line">  <span class="keyword">var</span> parallax = <span class="keyword">new</span> Parallax(scene3);</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
 
         <div class="post-end-text" style="padding-top:20px;">
             —— end ——
@@ -348,6 +360,10 @@
           
             <a href="/tags/工作总结/" rel="tag">#工作总结</a>
           
+            <a href="/tags/H5/" rel="tag">#H5</a>
+          
+            <a href="/tags/前端插件/" rel="tag">#前端插件</a>
+          
         </div>
       
 
@@ -355,12 +371,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/05/25/cookie只执行一次/" rel="next" title="cookie只执行一次">
+                <i class="fa fa-chevron-left"></i> cookie只执行一次
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/06/08/parallax/" rel="prev" title="重力感应H5">
-                重力感应H5 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/06/23/网站底部内容始终置于页面最底端/" rel="prev" title="网站底部内容始终置于页面最底端">
+                网站底部内容始终置于页面最底端 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
