@@ -1,0 +1,663 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="经验总结," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="前面有一篇博文提到了RequireJs，那么这篇主要是从某个实际项目中的应用来总结一下RequireJs。
+RequireJs项目的应用拿出最近某个同事使用RequireJs写的一个项目，来分析一下其中的代码。
+目录结构：
+
+HTML引入：
+1&amp;lt;script src=&quot;js/vendor/require.js&quot; data-main=&quot;js/main&quot;&amp;gt;&amp;lt;/script&amp;gt;
+m">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RequireJs的理解">
+<meta property="og:url" content="http://mmdgirl.github.io/2016/10/27/RequireJs的理解/index.html">
+<meta property="og:site_name" content="一丢丢萌">
+<meta property="og:description" content="前面有一篇博文提到了RequireJs，那么这篇主要是从某个实际项目中的应用来总结一下RequireJs。
+RequireJs项目的应用拿出最近某个同事使用RequireJs写的一个项目，来分析一下其中的代码。
+目录结构：
+
+HTML引入：
+1&amp;lt;script src=&quot;js/vendor/require.js&quot; data-main=&quot;js/main&quot;&amp;gt;&amp;lt;/script&amp;gt;
+m">
+<meta property="og:image" content="http://mmdgirl.github.io/private/images/pic0004.png">
+<meta property="og:updated_time" content="2017-08-04T07:59:05.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="RequireJs的理解">
+<meta name="twitter:description" content="前面有一篇博文提到了RequireJs，那么这篇主要是从某个实际项目中的应用来总结一下RequireJs。
+RequireJs项目的应用拿出最近某个同事使用RequireJs写的一个项目，来分析一下其中的代码。
+目录结构：
+
+HTML引入：
+1&amp;lt;script src=&quot;js/vendor/require.js&quot; data-main=&quot;js/main&quot;&amp;gt;&amp;lt;/script&amp;gt;
+m">
+<meta name="twitter:image" content="http://mmdgirl.github.io/private/images/pic0004.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> RequireJs的理解 | 一丢丢萌 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">一丢丢萌</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">努力，向前端奔跑</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                RequireJs的理解
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-27T15:28:55+08:00" content="2016-10-27">
+              2016-10-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/经验总结/" itemprop="url" rel="index">
+                    <span itemprop="name">经验总结</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>前面有一篇博文提到了RequireJs，那么这篇主要是从某个实际项目中的应用来总结一下RequireJs。</p>
+<h3 id="RequireJs项目的应用"><a href="#RequireJs项目的应用" class="headerlink" title="RequireJs项目的应用"></a>RequireJs项目的应用</h3><p>拿出最近某个同事使用RequireJs写的一个项目，来分析一下其中的代码。</p>
+<p>目录结构：</p>
+<p><img src="/private/images/pic0004.png" alt="RequireJs"></p>
+<p>HTML引入：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/vendor/require.js"</span> <span class="attr">data-main</span>=<span class="string">"js/main"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>main.js的内容：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">require</span>.config(&#123;</div><div class="line">    baseUrl: <span class="string">'.'</span>,</div><div class="line">    paths: &#123;</div><div class="line">        <span class="string">'js'</span>: <span class="string">'js'</span>,</div><div class="line">        <span class="string">'jquery'</span>: <span class="string">'js/vendor/jquery.min'</span>,</div><div class="line">        <span class="string">'swiper'</span>: <span class="string">'js/vendor/swiper2.min'</span>,</div><div class="line">        <span class="string">'waypoints'</span>: <span class="string">'js/vendor/jquery.waypoints.min'</span>,</div><div class="line">        <span class="string">'jquery.inview'</span>: <span class="string">'js/vendor/jquery.inview.min'</span></div><div class="line">    &#125;,</div><div class="line">    shim: &#123;</div><div class="line">        <span class="string">'waypoints'</span>: &#123;</div><div class="line">            deps: [<span class="string">'jquery'</span>],</div><div class="line">            exports: <span class="string">'jQuery.fn.waypoint'</span></div><div class="line">        &#125;,</div><div class="line">        <span class="string">'jquery.inview'</span>: &#123;</div><div class="line">            deps: [<span class="string">'jquery'</span>]</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="built_in">require</span>([<span class="string">'jquery'</span>, <span class="string">'waypoints'</span>, <span class="string">'swiper'</span>, <span class="string">'jquery.inview'</span>], <span class="function"><span class="keyword">function</span>(<span class="params">$, waypoint, Swiper</span>) </span>&#123;</div><div class="line">    <span class="comment">// code here!</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="关于HTML引入RequireJs"><a href="#关于HTML引入RequireJs" class="headerlink" title="关于HTML引入RequireJs"></a>关于HTML引入RequireJs</h3><p>使用RequireJs的话，我们只需要导入RequireJs即可，不需要显式导入其它的js库，因为这个工作会交给RequireJs来做。<br>属性<code>data-main</code>是告诉RequireJs：你下载完以后，马上去载入真正的入口文件。它一般用来对RequireJs进行配置，并且载入真正的程序模块。</p>
+<h3 id="关于main-js"><a href="#关于main-js" class="headerlink" title="关于main.js"></a>关于main.js</h3><p>main.js 中通常用来做两件事：</p>
+<ol>
+<li><p>使用<code>require.config()</code>配置RequireJs。<br><strong>baseUrl</strong>：与paths是相关的，指定paths里文件的基准目录。<br><strong>paths</strong>：指定项目中用到哪些模块，文件路径是什么等等。<br><strong>shim</strong>：将某个依赖中的某个全局变量暴露给requirejs，当作这个模块本身的引用。</p>
+</li>
+<li><p>使用<code>require()</code>函数载入“主模块”。</p>
+</li>
+</ol>
+<h3 id="关于模块"><a href="#关于模块" class="headerlink" title="关于模块"></a>关于模块</h3><p>我们可以把main.js可以理解为所有模块的入口（称为“主模块”）。通常在项目中，都在main.js中使用require()函数来引入依赖的其他模块。在后文中，我把每一个引入到main.js的js文件都称作为模块。</p>
+<p>所有模块都必须按照AMD的规定来写，即采用特定的define()函数来定义。有两种情况：</p>
+<ul>
+<li>模块不依赖其他模块：<br>直接用define()函数，传入一个函数即可。</li>
+<li>模块还依赖其他模块：<br>使用define()函数传入两个参数，第一个参数必须是一个数组，指明该模块依赖的模块；第二个参数是函数。当require()加载这个模块的时候，就会先加载当前这个模块依赖的模块。</li>
+</ul>
+<p>当然，如果一个模块没有按照AMD的规定来写，也可以被依赖。就需要在require.config()的shim参数中定义。</p>
+<p>例如有一个未按照AMD的规定来写的模块hello.js：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    alert(<span class="string">"hello, world~"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>先看下面不能正确工作的代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">requirejs.config(&#123;</div><div class="line">    baseUrl: <span class="string">'/public/js'</span>,</div><div class="line">    paths: &#123;</div><div class="line">        hello: <span class="string">'hello'</span></div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">requirejs([<span class="string">'hello'</span>], <span class="function"><span class="keyword">function</span>(<span class="params">hello</span>) </span>&#123;</div><div class="line">    hello();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>这段代码会报错，提示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Uncaught TypeError: undefined is not a function</div></pre></td></tr></table></figure>
+<p>原因是最后调用 hello() 的时候，这个 hello 是个undefined . 这说明，虽然我们依赖了一个js库（它会被载入），但requirejs无法从中拿到代表它的对象注入进来供我们使用。<br>在这种情况下，我们要使用 shim ，将某个依赖中的某个全局变量暴露给requirejs，当作这个模块本身的引用。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">requirejs.config(&#123;</div><div class="line">    baseUrl: <span class="string">'/public/js'</span>,</div><div class="line">    paths: &#123;</div><div class="line">        hello: <span class="string">'hello'</span></div><div class="line">    &#125;,</div><div class="line">    shim: &#123;</div><div class="line">        hello: &#123; exports: <span class="string">'hello'</span> &#125;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">requirejs([<span class="string">'hello'</span>], <span class="function"><span class="keyword">function</span>(<span class="params">hello</span>) </span>&#123;</div><div class="line">    hello();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>再运行就正常了。</p>
+<p>上面代码<code>exports:&#39;hello&#39;</code>中的hello，是我们在hello.js中定义的hello函数。当我们使用<code>function hello() {}</code>的方式定义一个函数的时候，它就是全局可用的。如果我们选择了把它export给requirejs，那当我们的代码依赖于hello模块的时候，就可以拿到这个hello函数的引用了。</p>
+<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><p>关于paths参数中配置的<code>&#39;js&#39;: &#39;js&#39;</code>，目的是为了省略后面的扩展名.js。</p>
+<p><br><br></p>
+<p><span class="xsfont">参考资料：</span><br><span class="xsfont">haorooms博客：<a href="http://www.haorooms.com/post/requirejs_sy_lj" target="_blank" rel="external">http://www.haorooms.com/post/requirejs_sy_lj</a></span><br><span class="xsfont">AMD规范：<a href="https://github.com/amdjs/amdjs-api/wiki/AMD" target="_blank" rel="external">https://github.com/amdjs/amdjs-api/wiki/AMD</a></span></p>
+
+        <div class="post-end-text" style="padding-top:20px;">
+            —— end ——
+            <span style="display:block;color:#999; font-size: 12px;">注：水平有限，难免有误，如有错误欢迎指出！</span>
+        </div>
+      
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/经验总结/" rel="tag">#经验总结</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/25/RequireJs/" rel="next" title="RequireJs">
+                <i class="fa fa-chevron-left"></i> RequireJs
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/01/RequireJS与Zepto/" rel="prev" title="RequireJS与Zepto">
+                RequireJS与Zepto <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/avatar.jpg"
+               alt="SmileYi" />
+          <p class="site-author-name" itemprop="name">SmileYi</p>
+          <p class="site-description motion-element" itemprop="description">mmdgirl.github.io</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#RequireJs项目的应用"><span class="nav-number">1.</span> <span class="nav-text">RequireJs项目的应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于HTML引入RequireJs"><span class="nav-number">2.</span> <span class="nav-text">关于HTML引入RequireJs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于main-js"><span class="nav-number">3.</span> <span class="nav-text">关于main.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于模块"><span class="nav-number">4.</span> <span class="nav-text">关于模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#补充"><span class="nav-number">5.</span> <span class="nav-text">补充</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SmileYi</span>
+</div>
+
+<div class="powered-by">
+  All Rights Reserved
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/assets/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/assets/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/assets/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/assets/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/assets/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/assets/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

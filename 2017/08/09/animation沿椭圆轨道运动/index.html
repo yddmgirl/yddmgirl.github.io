@@ -1,0 +1,636 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="经验总结,css3," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="一些废话：
+很久没有更博了，主要原因是由于使用git工具push的时候，自己的私人账号和工作的git账号总是冲突，每次明明切换过了账号，可是push的时候却用的是错误的账号，找不到解决办法。最近得知github有桌面版，终于不会再冲突了！
+前言最近工作上遇到一个项目有两张banner，都需要实现围绕椭圆旋转的动画效果。
+
+拿到这个需求，第一反应是用animation应该很容易实现。脑袋里的思路是，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【原创】css3 animation沿椭圆轨道旋转运动">
+<meta property="og:url" content="http://mmdgirl.github.io/2017/08/09/animation沿椭圆轨道运动/index.html">
+<meta property="og:site_name" content="一丢丢萌">
+<meta property="og:description" content="一些废话：
+很久没有更博了，主要原因是由于使用git工具push的时候，自己的私人账号和工作的git账号总是冲突，每次明明切换过了账号，可是push的时候却用的是错误的账号，找不到解决办法。最近得知github有桌面版，终于不会再冲突了！
+前言最近工作上遇到一个项目有两张banner，都需要实现围绕椭圆旋转的动画效果。
+
+拿到这个需求，第一反应是用animation应该很容易实现。脑袋里的思路是，">
+<meta property="og:image" content="http://mmdgirl.github.io/private/images/pic0006.jpg">
+<meta property="og:image" content="http://mmdgirl.github.io/private/images/pic0005.jpg">
+<meta property="og:image" content="http://mmdgirl.github.io/private/images/pic0008.jpg">
+<meta property="og:updated_time" content="2017-08-09T13:45:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【原创】css3 animation沿椭圆轨道旋转运动">
+<meta name="twitter:description" content="一些废话：
+很久没有更博了，主要原因是由于使用git工具push的时候，自己的私人账号和工作的git账号总是冲突，每次明明切换过了账号，可是push的时候却用的是错误的账号，找不到解决办法。最近得知github有桌面版，终于不会再冲突了！
+前言最近工作上遇到一个项目有两张banner，都需要实现围绕椭圆旋转的动画效果。
+
+拿到这个需求，第一反应是用animation应该很容易实现。脑袋里的思路是，">
+<meta name="twitter:image" content="http://mmdgirl.github.io/private/images/pic0006.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 【原创】css3 animation沿椭圆轨道旋转运动 | 一丢丢萌 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">一丢丢萌</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">努力，向前端奔跑</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                【原创】css3 animation沿椭圆轨道旋转运动
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-08-09T21:39:45+08:00" content="2017-08-09">
+              2017-08-09
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>一些废话：</strong></p>
+<p>很久没有更博了，主要原因是由于使用git工具push的时候，自己的私人账号和工作的git账号总是冲突，每次明明切换过了账号，可是push的时候却用的是错误的账号，找不到解决办法。最近得知github有桌面版，终于不会再冲突了！</p>
+<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>最近工作上遇到一个项目有两张banner，都需要实现围绕椭圆旋转的动画效果。</p>
+<p><img src="/private/images/pic0006.jpg" alt=""><br><img src="/private/images/pic0005.jpg" alt=""></p>
+<p>拿到这个需求，第一反应是用animation应该很容易实现。脑袋里的思路是，先实现沿正圆运动，再进行3D旋转即可。然而，我得到的效果是：</p>
+<iframe src="/private/demo/demo0011.html" frameborder="0" width="440px" height="242px"></iframe>
+
+
+<p>吐血的小圆球。。。是平面的，进行了3D旋转，看上去就是椭圆了！</p>
+<h4 id="踩过的坑"><a href="#踩过的坑" class="headerlink" title="踩过的坑"></a>踩过的坑</h4><p>思考了许久找不到解决办法，于是只好google啦，然后我就找到了这个案例 <a href="https://codepen.io/yincheng/pen/QjMzZr" target="_blank" rel="external">https://codepen.io/yincheng/pen/QjMzZr</a> ，本以为是惊喜，结果是“厄运”，因为花费了很多时间去研究却最终弃用。使用案例中的代码，若圆球较大看似没什么问题，但是当圆球很小的时候怎么都对不准轨道。。。<br>这个案例的原理是<a href="http://jinlong.github.io/2016/01/14/moving-along-a-curved-path-in-css-with-layered-animation/" target="_blank" rel="external">CSS分层动画可以让元素沿弧形路径运动</a>，然而如果想要围绕标准的椭圆运动，需要调整动画的贝塞尔曲线，好像是需要通过公式计算，而且每个轨道的椭圆都不同，这种方法的难度和工作量似乎有点大，我只好放弃。</p>
+<h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><p>后来我又搜到了一个案例： <a href="https://codepen.io/ghost028/pen/bEBKXZ" target="_blank" rel="external">https://codepen.io/ghost028/pen/bEBKXZ</a> ，这个案例跟我最初想到的思路差不多，不过小圆球在运动的过程中也要不断进行3D旋转，就能让它视觉上一直都是一个圆。效果还是很不错的：</p>
+<iframe src="/private/demo/demo0012.html" frameborder="0" width="440px" height="200px"></iframe>
+
+
+<h4 id="问题延伸"><a href="#问题延伸" class="headerlink" title="问题延伸"></a>问题延伸</h4><p>所以第一张banner就用此方法完美解决，当我准备用这个方法做第二张banner的时候，我突然发现了一些问题。<br>在上一张banner中，要旋转的元素是和轨道我用的是同一个颜色，如果不是同样的颜色呢？我们会发现，轨道其实是”插入“圆形里面的。</p>
+<iframe src="/private/demo/demo0013.html" frameborder="0" width="440px" height="200px"></iframe>
+
+<p>虽然在这个项目中，第二张banner的轨道可以忽略，两张banner都可以用上面的解决办法，但是我并不甘心。</p>
+<p>为什么不可以直接让元素沿着一条轨道运动呢？我能否“绘制”一个椭圆的N个坐标，让元素沿着这些坐标运动？先从最简化的开始，假如椭圆只有四个坐标，小圆球沿着这四个坐标运动，就是下面这样：</p>
+<iframe src="/private/demo/demo0014.html" frameborder="0" width="440px" height="242px"></iframe>
+
+<p>那么以此类推，把坐标的数量不断增加，小圆球沿轨道运动就会越来越精细。要获得椭圆坐标，需要用到数学公式。<br>高中数学已经基本忘光了o(╯□╰)o，我在网上找到了椭圆的坐标公式：</p>
+<blockquote>
+<p>x=a*cosr<br>y=b*sinr</p>
+</blockquote>
+<p>已知椭圆的长半径a和短半径b，可以根据角度r来得到椭圆轨道的x坐标和y坐标。</p>
+<p><img src="/private/images/pic0008.jpg" alt=""></p>
+<p>如果用css来断点，数量过多，非常麻烦，所以用less就方便了很多，以下是重点代码：</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="variable">@a :</span> <span class="number">160px</span>;  <span class="comment">// 椭圆x轴半径(长半径)</span></div><div class="line"><span class="variable">@b :</span> <span class="number">80px</span>;  <span class="comment">// 椭圆y轴半径(短半径)</span></div><div class="line"><span class="variable">@s :</span> <span class="number">40</span>;  <span class="comment">// 坐标点的数目(数目越大，动画越精细)</span></div><div class="line"> </div><div class="line"><span class="selector-class">.loop</span>(<span class="variable">@index</span>) <span class="keyword">when</span> (<span class="variable">@index</span> &lt; <span class="variable">@s</span>+<span class="number">1</span>) &#123;</div><div class="line">    <span class="selector-class">.loop</span>((<span class="variable">@index</span> + <span class="number">1</span>));</div><div class="line">    <span class="variable">@keyframeSel:</span> <span class="variable">@index</span> * <span class="number">100%</span>/<span class="variable">@s</span>; <span class="comment">// keyframes断点</span></div><div class="line">    <span class="variable">@&#123;keyframeSel&#125;</span>&#123;</div><div class="line">        <span class="attribute">transform</span>: translate(<span class="variable">@a</span>*cos(<span class="number">360deg</span>/<span class="variable">@s</span>*<span class="variable">@index</span>),<span class="variable">@b</span>*sin(<span class="number">360deg</span>/<span class="variable">@s</span>*<span class="variable">@index</span>),);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="keyword">@keyframes</span> move&#123;</div><div class="line">    <span class="selector-class">.loop</span>(<span class="number">0</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>运行效果请看codePen： </p>
+<p></p><p data-height="283" data-theme-id="0" data-slug-hash="RZVgoq" data-default-tab="css,result" data-user="mmdgirl" data-embed-version="2" data-pen-title="RZVgoq" class="codepen">See the Pen <a href="https://codepen.io/mmdgirl/pen/RZVgoq/" target="_blank" rel="external">RZVgoq</a> by SmileYi (<a href="https://codepen.io/mmdgirl" target="_blank" rel="external">@mmdgirl</a>) on <a href="https://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+
+<p><span class="xsfont">参考资料：</span><br><span class="xsfont"><a href="https://stackoverflow.com/questions/38404204/how-to-iterate-keyframe-percentages-less-css" target="_blank" rel="external">https://stackoverflow.com/questions/38404204/how-to-iterate-keyframe-percentages-less-css</a></span><br><span class="xsfont"><a href="http://tobiasahlin.com/blog/curved-path-animations-in-css/" target="_blank" rel="external">http://tobiasahlin.com/blog/curved-path-animations-in-css/</a></span></p>
+
+        <div class="post-end-text" style="padding-top:20px;">
+            —— end ——
+            <span style="display:block;color:#999; font-size: 12px;">注：水平有限，难免有误，如有错误欢迎指出！</span>
+        </div>
+      
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/经验总结/" rel="tag">#经验总结</a>
+          
+            <a href="/tags/css3/" rel="tag">#css3</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/05/Hexo搭建博客遇到的问题汇总/" rel="next" title="Hexo搭建博客遇到的问题汇总">
+                <i class="fa fa-chevron-left"></i> Hexo搭建博客遇到的问题汇总
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/avatar.jpg"
+               alt="SmileYi" />
+          <p class="site-author-name" itemprop="name">SmileYi</p>
+          <p class="site-description motion-element" itemprop="description">mmdgirl.github.io</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#踩过的坑"><span class="nav-number">2.</span> <span class="nav-text">踩过的坑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决办法"><span class="nav-number">3.</span> <span class="nav-text">解决办法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#问题延伸"><span class="nav-number">4.</span> <span class="nav-text">问题延伸</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SmileYi</span>
+</div>
+
+<div class="powered-by">
+  All Rights Reserved
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/assets/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/assets/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/assets/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/assets/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/assets/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/assets/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

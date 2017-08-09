@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="一丢丢萌">
 <meta property="og:description" content="最近在做CDC十周年官网项目的时候，设计师提出了一个需求：“把banner上的文字和背景分离，当打开页面的时候背景是立即出现的，而文字是慢慢淡入的动画效果。并且这个效果只执行一次，刷新这个页面或者跳到其他页面再次进入这个页面时，不再执行这个动画效果。”
 当时我自己的思路是这样子的：第一次进入到这个页面时，判断是否有这个cookie，如果没有，就执行动画，并给浏览器写入cookie；当再次进入此页面">
-<meta property="og:updated_time" content="2016-10-26T09:52:52.000Z">
+<meta property="og:updated_time" content="2017-08-09T13:49:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cookie只执行一次">
 <meta name="twitter:description" content="最近在做CDC十周年官网项目的时候，设计师提出了一个需求：“把banner上的文字和背景分离，当打开页面的时候背景是立即出现的，而文字是慢慢淡入的动画效果。并且这个效果只执行一次，刷新这个页面或者跳到其他页面再次进入这个页面时，不再执行这个动画效果。”
@@ -319,7 +319,9 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="built_in">document</span>.cookie.replace(<span class="regexp">/(?:(?:^|.*;\s*)someCookieName\s*\=\s*([^;]*).*$)|^.*$/</span>, <span class="string">"$1"</span>) !== <span class="string">"true"</span>) &#123;</div><div class="line">		alert(<span class="string">"Do something here!"</span>);  <span class="comment">// 此处是写你要执行的代码</span></div><div class="line">		<span class="built_in">document</span>.cookie = <span class="string">"someCookieName=true; expires=有效期; path=/"</span>;  <span class="comment">// expires后面是cookie的有效期</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong>我在项目中的代码：</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="built_in">document</span>.cookie.replace(<span class="regexp">/(?:(?:^|.*;\s*)banner\s*\=\s*([^;]*).*$)|^.*$/</span>, <span class="string">"$1"</span>) !== <span class="string">"true"</span>) &#123;</div><div class="line">	$(<span class="string">'.about-banner-text'</span>).fadeIn(<span class="number">2500</span>);</div><div class="line">	<span class="keyword">var</span> oDate = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">	oDate.setDate(oDate.getDate()+<span class="number">1</span>);</div><div class="line">	<span class="built_in">document</span>.cookie = <span class="string">"banner=true;expires='+ oDate +'path=/"</span>;</div><div class="line">&#125; <span class="keyword">else</span>&#123;</div><div class="line">	$(<span class="string">'.about-banner-text'</span>).show();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><span class="xsfont">参考文档：</span><br><span class="xsfont"><a href="http://www.imooc.com/video/169" target="_blank" rel="external">http://www.imooc.com/video/169</a></span><br><span class="xsfont"><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie</a></span></p>
+<p>最终上线效果：<a href="http://cdc.tencent.com/about/" target="_blank" rel="external">http://cdc.tencent.com/about/</a></p>
+<p><br></p>
+<p><span class="xsfont">参考文档：</span><br><span class="xsfont"><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie</a></span></p>
 
         <div class="post-end-text" style="padding-top:20px;">
             —— end ——
@@ -359,7 +361,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/06/08/parallax/" rel="prev" title="重力感应H5">
+              <a href="/2016/06/08/重力感应H5/" rel="prev" title="重力感应H5">
                 重力感应H5 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -422,9 +424,9 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/assets/images/avatar.jpg"
-               alt="SmilYi" />
-          <p class="site-author-name" itemprop="name">SmilYi</p>
-          <p class="site-description motion-element" itemprop="description">web前端开发程序媛</p>
+               alt="SmileYi" />
+          <p class="site-author-name" itemprop="name">SmileYi</p>
+          <p class="site-description motion-element" itemprop="description">mmdgirl.github.io</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
@@ -437,7 +439,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -446,7 +448,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -494,11 +496,11 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">SmilYi</span>
+  <span class="author" itemprop="copyrightHolder">SmileYi</span>
 </div>
 
 <div class="powered-by">

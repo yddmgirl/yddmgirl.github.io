@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .ellips {
+          width: 400px;
+          height: 200px;
+          border-radius: 100%;
+          border: 1px solid #333;
+          position: relative;
+        }
+        .x-axis {
+          position: absolute;
+          width: 400px;
+          height: 1px;
+          left: 0;
+          top: 100px;
+          background: #333;
+        }
+        .y-axis {
+          position: absolute;
+          width: 1px;
+          height: 200px;
+          left: 200px;
+          top: 0;
+          background: #333;
+        }
+        .dot {
+          width: 20px;
+          height: 20px;
+          left: 190px;
+          top: 90px;
+          background: red;
+          border-radius: 100%;
+          position: absolute;
+          animation: move 10s linear infinite;
+        }
+        @keyframes move {
+          100% {
+            transform: translate(200px, 0px);
+          }
+          75% {
+            transform: translate(0px, -100px);
+          }
+          50% {
+            transform: translate(-200px, 0px);
+          }
+          25% {
+            transform: translate(0px, 100px);
+          }
+          0% {
+            transform: translate(200px, 0px);
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="ellips">
+        <div class="x-axis"></div>
+        <div class="y-axis"></div>
+        <div class="dot"></div>
+    </div>
+</body>
+</html>
