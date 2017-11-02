@@ -68,7 +68,7 @@
 <link href="/assets/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="项目经验,工作总结,H5,前端插件," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,27 +84,22 @@
 
 
 
-<meta name="description" content="这两天做了一个新的H5项目，项目其中有一个难点是实现重力感应功能。之前没有做过类似的项目，所以设计师发了一个案例给我参考。如图，带有立体感的纸张等元素都会随着手机的摇晃而动：
-
-查看了源码，了解到了一个很实用的插件parallax.js，github地址：https://github.com/wagerfield/parallax
-这是一个简单的，轻量级的的视差引擎，能够对智能设备的方向作出反应。">
+<meta name="description" content="Q : 什么是offsetLeft？A : MDN文档上阐释，HTMLElement.offsetLeft 是一个只读属性，返回当前元素左上角相对于 HTMLElement.offsetParent 节点的左边界偏移的像素值。
+然而今天在测试的时候发现并非这么简单！
+123456789101112131415161718192021222324252627282930&amp;lt;!DOCTYPE ht">
 <meta property="og:type" content="article">
-<meta property="og:title" content="重力感应H5">
-<meta property="og:url" content="http://mmdgirl.github.io/2016/06/08/重力感应H5/index.html">
+<meta property="og:title" content="offsetLeft & offsetTop新发现">
+<meta property="og:url" content="http://mmdgirl.github.io/2017/11/02/offsetLeft-offsetTop新发现/index.html">
 <meta property="og:site_name" content="一丢丢萌">
-<meta property="og:description" content="这两天做了一个新的H5项目，项目其中有一个难点是实现重力感应功能。之前没有做过类似的项目，所以设计师发了一个案例给我参考。如图，带有立体感的纸张等元素都会随着手机的摇晃而动：
-
-查看了源码，了解到了一个很实用的插件parallax.js，github地址：https://github.com/wagerfield/parallax
-这是一个简单的，轻量级的的视差引擎，能够对智能设备的方向作出反应。">
-<meta property="og:image" content="http://mmdgirl.github.io/private/images/pic0001.png">
-<meta property="og:updated_time" content="2017-08-04T07:56:54.000Z">
+<meta property="og:description" content="Q : 什么是offsetLeft？A : MDN文档上阐释，HTMLElement.offsetLeft 是一个只读属性，返回当前元素左上角相对于 HTMLElement.offsetParent 节点的左边界偏移的像素值。
+然而今天在测试的时候发现并非这么简单！
+123456789101112131415161718192021222324252627282930&amp;lt;!DOCTYPE ht">
+<meta property="og:updated_time" content="2017-11-02T12:44:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="重力感应H5">
-<meta name="twitter:description" content="这两天做了一个新的H5项目，项目其中有一个难点是实现重力感应功能。之前没有做过类似的项目，所以设计师发了一个案例给我参考。如图，带有立体感的纸张等元素都会随着手机的摇晃而动：
-
-查看了源码，了解到了一个很实用的插件parallax.js，github地址：https://github.com/wagerfield/parallax
-这是一个简单的，轻量级的的视差引擎，能够对智能设备的方向作出反应。">
-<meta name="twitter:image" content="http://mmdgirl.github.io/private/images/pic0001.png">
+<meta name="twitter:title" content="offsetLeft & offsetTop新发现">
+<meta name="twitter:description" content="Q : 什么是offsetLeft？A : MDN文档上阐释，HTMLElement.offsetLeft 是一个只读属性，返回当前元素左上角相对于 HTMLElement.offsetParent 节点的左边界偏移的像素值。
+然而今天在测试的时候发现并非这么简单！
+123456789101112131415161718192021222324252627282930&amp;lt;!DOCTYPE ht">
 
 
 
@@ -122,7 +117,7 @@
   };
 </script>
 
-  <title> 重力感应H5 | 一丢丢萌 </title>
+  <title> offsetLeft & offsetTop新发现 | 一丢丢萌 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -262,7 +257,7 @@
             
             
               
-                重力感应H5
+                offsetLeft & offsetTop新发现
               
             
           </h1>
@@ -274,30 +269,11 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-08T17:16:55+08:00" content="2016-06-08">
-              2016-06-08
+            <time itemprop="dateCreated" datetime="2017-11-02T20:05:45+08:00" content="2017-11-02">
+              2017-11-02
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/项目经验/" itemprop="url" rel="index">
-                    <span itemprop="name">项目经验</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
@@ -321,17 +297,20 @@
       
 
       
-        <p>这两天做了一个新的H5项目，项目其中有一个难点是实现重力感应功能。之前没有做过类似的项目，所以设计师发了一个案例给我参考。如图，带有立体感的纸张等元素都会随着手机的摇晃而动：</p>
-<p><img src="/private/images/pic0001.png" alt=""></p>
-<p>查看了源码，了解到了一个很实用的插件<a href="http://matthew.wagerfield.com/parallax/" style="color:red;" target="_blank" rel="external">parallax.js</a>，github地址：<a href="https://github.com/wagerfield/parallax" target="_blank" rel="external">https://github.com/wagerfield/parallax</a></p>
-<p>这是一个简单的，轻量级的的视差引擎，能够对智能设备的方向作出反应。在没有没有陀螺仪或运动检测硬件可用的时候，使用光标的位置来代替。简单的说就是：使用它手机上可以根据手机硬件中的陀螺仪或运动监测硬件来实现重力感应效果，如果不是在手机上，那么它可以根据你鼠标光标的移动来模拟重力感应效果。</p>
-<p>另外，这个插件还可以产生3D的感觉，如果物体离你近，那么重力感应的产生效果越明显，物体离你越远，重力感应产生的效果越不明显，你只需要给每个物体设置不同的深度，即data-depth，取值是0-1之间，0则表示完全静止，1则表示动静最大。</p>
-<p>使用parallax.js这个插件很简单，首先写好结构：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"scene1"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"layer"</span> <span class="attr">data-depth</span>=<span class="string">"0.00"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"layer6.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"layer"</span> <span class="attr">data-depth</span>=<span class="string">"0.20"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"layer5.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"layer"</span> <span class="attr">data-depth</span>=<span class="string">"0.40"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"layer4.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>然后调用js并初始化设置视差（scene1的名字可以随意）：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"js/parallax.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div><div class="line">&lt;script&gt;</div><div class="line">  <span class="keyword">var</span> scene1 = <span class="built_in">document</span>.getElementById(<span class="string">'scene1'</span>);</div><div class="line">  <span class="keyword">var</span> parallax = <span class="keyword">new</span> Parallax(scene1);</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
-<p>如果有多个地方要调用，写好html结构后，就定义多个Parallax：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"js/parallax.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div><div class="line">&lt;script&gt;</div><div class="line">  <span class="keyword">var</span> scene1 = <span class="built_in">document</span>.getElementById(<span class="string">'scene1'</span>);</div><div class="line">  <span class="keyword">var</span> scene2 = <span class="built_in">document</span>.getElementById(<span class="string">'scene2'</span>);</div><div class="line">  <span class="keyword">var</span> scene3 = <span class="built_in">document</span>.getElementById(<span class="string">'scene3'</span>);</div><div class="line">  <span class="keyword">var</span> parallax = <span class="keyword">new</span> Parallax(scene2);</div><div class="line">  <span class="keyword">var</span> parallax = <span class="keyword">new</span> Parallax(scene1);</div><div class="line">  <span class="keyword">var</span> parallax = <span class="keyword">new</span> Parallax(scene3);</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+        <p>Q : 什么是offsetLeft？<br>A : MDN文档上阐释，<code>HTMLElement.offsetLeft</code> 是一个只读属性，返回当前元素左上角相对于 <code>HTMLElement.offsetParent</code> 节点的左边界偏移的像素值。</p>
+<p>然而今天在测试的时候发现并非这么简单！</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">        html&#123;</div><div class="line">            background: #eee;</div><div class="line">            padding: 10px;</div><div class="line">            margin: 10px;</div><div class="line">        &#125;</div><div class="line">        body&#123;</div><div class="line">            background: #ccc;</div><div class="line">            padding: 20px;</div><div class="line">            margin: 0;</div><div class="line">        &#125;</div><div class="line">        #box&#123;</div><div class="line">            background: #999;</div><div class="line">        &#125;</div><div class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"box"</span>&gt;</span>测试<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">    var box = document.getElementById('box');</div><div class="line">    console.log(box.offsetParent);  // body</div><div class="line">    console.log(box.offsetLeft);    // 30</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>在上面这个案例中，box没有定位父级，所以box的offsetParent为body，如果说offsetLeft是相对body的左边界偏移，那么box的offsetLeft应该是20，可答案却是30。另外IE下offsetLeft为40，但现在不考虑IE，因为IE的情况太复杂。</p>
+<p>所以可以大胆地猜测，offsetLeft是相对html的左边界偏移，而不是像MDN文档所说的那样相对于offsetParent的偏移。</p>
+<p>同样是这个案例，如果给box设置了属性<code>position: absolute</code>，情况又会是什么样呢？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(box.offsetParent);  <span class="comment">// body</span></div><div class="line"><span class="built_in">console</span>.log(box.offsetLeft);    <span class="comment">// 40</span></div></pre></td></tr></table></figure>
+<p>这让我回忆到之前在知乎上看到的：</p>
+<blockquote>
+<p>当绝对定位元素如果没有设置定位父级，其实并不是相对于html或body定位，而是相对initial containing block定位的。initial containing block 是以整个 canvas （渲染内容的空间）的坐标原点(左上)为基准，以 viewport (也就是浏览器视窗内渲染 HTML 的空间)为大小的矩形。</p>
+</blockquote>
+<p>这时可以大胆的猜测，对于绝对定位的元素而言，offsetLeft是相对于 “浏览器渲染内容的空间” 的左边界偏移的。</p>
+<p>当然，一般情况下我们都会在样式重置的时候把浏览器的padding和margin设置为0，所以不会出现以上问题。</p>
+<p>offsetLeft和offsetTop兼容性问题很多，后期若发现更规范的参考文档，再更新本篇博文。</p>
 
         <div class="post-end-text" style="padding-top:20px;">
             —— end ——
@@ -354,34 +333,18 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/项目经验/" rel="tag">#项目经验</a>
-          
-            <a href="/tags/工作总结/" rel="tag">#工作总结</a>
-          
-            <a href="/tags/H5/" rel="tag">#H5</a>
-          
-            <a href="/tags/前端插件/" rel="tag">#前端插件</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/25/cookie只执行一次/" rel="next" title="cookie只执行一次">
-                <i class="fa fa-chevron-left"></i> cookie只执行一次
+              <a href="/2017/08/09/animation沿椭圆轨道运动/" rel="next" title="【原创】css3 animation沿椭圆轨道旋转运动">
+                <i class="fa fa-chevron-left"></i> 【原创】css3 animation沿椭圆轨道旋转运动
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/23/网站底部内容始终置于页面最底端/" rel="prev" title="网站底部内容始终置于页面最底端">
-                网站底部内容始终置于页面最底端 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
