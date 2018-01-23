@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .flex-wrap li{
+            float: left;
+            list-style: none;
+            width: 240px;
+        }
+        .box{
+            width: 200px;
+            background: #eee;
+            display: flex;
+            display: -webkit-flex;
+        }
+        .box1{
+            justify-content: flex-start;
+        }
+        .box2{
+            justify-content: flex-end;
+        }
+        .box3{
+            justify-content: center;
+        }
+        .box4{
+            justify-content: space-between;
+        }
+        .box5{
+            justify-content: space-around;
+        }
+        .box span{
+            margin: 1px;
+            background: #222;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+        }
+        .text{
+            width: 200px;
+            text-align: center;
+            font-family: "helvetica neue", "hiragino sans gb", PingFangSC-Light, Arial, tahoma, "microsoft yahei ui", "microsoft yahei", 微软雅黑, simsun, sans-serif;
+            font-size: 12px;
+            padding: 5px 0 30px;
+            color: #fc6423;
+        }
+    </style>
+</head>
+<body>
+    <ul class="flex-wrap">
+        <li>
+            <div class="box box1">
+                <span>A</span>
+                <span>B</span>
+                <span>C</span>
+            </div>
+            <div class="text">flex-start</div>
+        </li>
+
+        <li>
+            <div class="box box2">
+                <span>A</span>
+                <span>B</span>
+                <span>C</span>
+            </div>
+            <div class="text">flex-end</div>
+        </li>
+
+        <li>
+            <div class="box box3">
+                <span>A</span>
+                <span>B</span>
+                <span>C</span>
+            </div>
+            <div class="text">center</div>
+        </li>
+
+        <li>
+            <div class="box box4">
+                <span>A</span>
+                <span>B</span>
+                <span>C</span>
+            </div>
+            <div class="text">space-between<br>（flex item之间间隔相等）</div>
+        </li>
+
+        <li>
+            <div class="box box5">
+                <span>A</span>
+                <span>B</span>
+                <span>C</span>
+            </div>
+            <div class="text">space-around<br>(flex item两边间隔相等)</div>
+        </li>
+    </ul>
+</body>
+</html>

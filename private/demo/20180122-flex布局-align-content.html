@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: "helvetica neue", "hiragino sans gb", PingFangSC-Light, Arial, tahoma, "microsoft yahei ui", "microsoft yahei", 微软雅黑, simsun, sans-serif;
+        }
+        .flex-wrap li{
+            float: left;
+            list-style: none;
+            width: 240px;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background: #eee;
+            display: flex;
+            display: -webkit-flex;
+            flex-wrap: wrap;
+        }
+        .box1{
+            align-content: stretch;
+        }
+        .box2{
+            align-content: flex-start;
+        }
+        .box3{
+            align-content: flex-end;
+        }
+        .box4{
+            align-content: center;
+        }
+        .box5{
+            align-content: space-between;
+        }
+        .box6{
+            align-content: space-around;
+        }
+        
+        .box span{
+            margin: 1px;
+            background: #222;
+            width: 40px;
+            /*height: 40px;*/
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+        }
+        .box span:nth-of-type(1){
+            padding-top: 10px;
+        }
+        .box span:nth-of-type(2){
+            height: 60px;
+        }
+        .box span:nth-of-type(3){
+            height: 70px;
+        }
+        .text{
+            width: 200px;
+            text-align: center;
+            height: 40px;
+            font-size: 12px;
+            padding: 8px 0 30px;
+            color: #fc6423;
+        }
+    </style>
+</head>
+<body>
+    <p style="margin-left: 42px; font-size: 12px; color: #888;">备注：ADEFGHI未设置高度，B和C设置了不同的高度</p>
+    <ul class="flex-wrap">
+        <li>
+            <div class="box box1">
+                <span>A</span>
+                <span>B</span>
+                <span>C</span>
+                <span>D</span>
+                <span>E</span>
+                <span>F</span>
+                <span>G</span>
+                <span>H</span>
+                <span>I</span>
+            </div>
+            <div class="text">stretch(默认值) <br>(上下对齐并拉伸除非flex item有高度)</div>
+        </li>
+
+        <li>
+            <div class="box box2">
+                <span>A</span>
+                <span>B</span>
+                <span>C</span>
+                <span>D</span>
+                <span>E</span>
+                <span>F</span>
+                <span>G</span>
+                <span>H</span>
+                <span>I</span>
+            </div>
+            <div class="text">flex-start <br>(顶对齐)</div>
+        </li>
+
+        <li>
+            <div class="box box3">
+                <span>A</span>
+                <span>B</span>
+                <span>C</span>
+                <span>D</span>
+                <span>E</span>
+                <span>F</span>
+                <span>G</span>
+                <span>H</span>
+                <span>I</span>
+            </div>
+            <div class="text">flex-end <br>(底对齐)</div>
+        </li>
+
+        <li>
+            <div class="box box4">
+                <span>A</span>
+                <span>B</span>
+                <span>C</span>
+                <span>D</span>
+                <span>E</span>
+                <span>F</span>
+                <span>G</span>
+                <span>H</span>
+                <span>I</span>
+            </div>
+            <div class="text">center <br>(居中对齐)</div>
+        </li>
+
+        <li>
+            <div class="box box5">
+                <span>A</span>
+                <span>B</span>
+                <span>C</span>
+                <span>D</span>
+                <span>E</span>
+                <span>F</span>
+                <span>G</span>
+                <span>H</span>
+                <span>I</span>
+            </div>
+            <div class="text">space-between <br>(flex item之间的间距相等)</div>
+        </li>
+
+        <li>
+            <div class="box box6">
+                <span>A</span>
+                <span>B</span>
+                <span>C</span>
+                <span>D</span>
+                <span>E</span>
+                <span>F</span>
+                <span>G</span>
+                <span>H</span>
+                <span>I</span>
+            </div>
+            <div class="text">space-around <br>(flex item上下间距相等)</div>
+        </li>
+    </ul>
+</body>
+</html>
