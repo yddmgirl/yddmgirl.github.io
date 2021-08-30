@@ -166,7 +166,7 @@ function makePhoto(){
 // 创建FormData： 参数: 滤镜id
 function createFormDate(styleId){
     var formdata = new FormData();
-    console.log($("#file-upload")[0].files[0])
+    // console.log($("#file-upload")[0].files[0])
     formdata.append('upload_image',$("#file-upload")[0].files[0]);
     formdata.append('user','abc');
     formdata.append('style_id',styleId);
@@ -182,7 +182,7 @@ function sendPhoto(formdata,fn){
       reader.onload = function(){
           //读取完成后，数据保存在对象的result属性中
           var src=this.result
-          console.log(src)
+          // console.log(src)
           fn({
             filterId:111,
             url: src,
