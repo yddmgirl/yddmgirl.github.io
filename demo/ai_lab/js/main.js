@@ -59,125 +59,125 @@ function loadProperties() {
         mode: 'both',
         language: lang,
         callback: function() {
-            // $(document).find('title').html(msg_document_title);
-            // // 首页
-            // $('.page1-title').text(msg_page1_title);
-            // $('.page1-info').html(msg_page1_info);
-            // $('.page2 .study-title').text(msg_page2_title);
-            // $('.page2 .search-cats a').eq(0).text(msg_page2_search_cats1);
-            // $('.page2 .search-cats a').eq(1).text(msg_page2_search_cats2);
-            // $('.page2 .search-content li').eq(0).find('h4').text(msg_page2_search_tit1);
-            // $('.page2 .search-content li').eq(1).find('h4').text(msg_page2_search_tit2);
-            // $('.page2 .search-content li').eq(2).find('h4').text(msg_page2_search_tit3);
-            // $('.page2 .search-content li').eq(3).find('h4').text(msg_page2_search_tit4);
-            // $('.page2 .search-content li').eq(0).find('p').text(msg_page2_search_desc1);
-            // $('.page2 .search-content li').eq(1).find('p').text(msg_page2_search_desc2);
-            // $('.page2 .search-content li').eq(2).find('p').text(msg_page2_search_desc3);
-            // $('.page2 .search-content li').eq(3).find('p').text(msg_page2_search_desc4);
-            // $('.page2 .application-content li').eq(0).find('h4').text(msg_page2_application_tit1);
-            // $('.page2 .application-content li').eq(1).find('h4').text(msg_page2_application_tit2);
-            // $('.page2 .application-content li').eq(2).find('h4').text(msg_page2_application_tit3);
-            // $('.page2 .application-content li').eq(3).find('h4').text(msg_page2_application_tit4);
-            // $('.page2 .application-content li').eq(0).find('p').text(msg_page2_application_desc1);
-            // $('.page2 .application-content li').eq(1).find('p').text(msg_page2_application_desc2);
-            // $('.page2 .application-content li').eq(2).find('p').text(msg_page2_application_desc3);
-            // $('.page2 .application-content li').eq(3).find('p').text(msg_page2_application_desc4);
-            // $('.page2-btn').text(page2_btn);
-            // $('.page3-title span').text(msg_page3_title);
-            // $('.page3-info-1').text(msg_page3_info_1);
-            // $('.page3-info-2').text(msg_page3_info_2);
-            // $('.page4-title span').text(msg_page4_title);
-            // $('.page4-info-1').text(msg_page4_info_1);
-            // $('.page4-info-2').text(msg_page4_info_2);
-            // $('.page5-title span').text(msg_page5_title);
-            // $('.page5-info-1').text(msg_page5_info_1);
-            // $('.page5-info-2').text(msg_page5_info_2);
-            // $('.page6-title').text(msg_page6_title);
-            // $('.page6-btn').text(msg_page6_btn);
-            // $('.page7-title').text(msg_page7_title);
-            // $('.page7-btn').text(msg_page7_btn);
-            // $('.page8-title').text(msg_page8_title);
-            // $('.page8-text').text(msg_page8_text);
-            // $('.page8-title-2').text(msg_page8_title_2);
-            // $('.page8-text-2').text(msg_page8_text_2);
-            // $('.page8-btn').text(msg_page8_btn);
-            // $('.page8-title-3').text(msg_page8_title_3);
-            // $('.page8-text-3').text(msg_page8_text_3);
-            // $('.page8-btn2').text(msg_page8_btn2);
+            $(document).find('title').html(msg_document_title);
+            // 首页
+            $('.page1-title').text(msg_page1_title);
+            $('.page1-info').html(msg_page1_info);
+            $('.page2 .study-title').text(msg_page2_title);
+            $('.page2 .search-cats a').eq(0).text(msg_page2_search_cats1);
+            $('.page2 .search-cats a').eq(1).text(msg_page2_search_cats2);
+            $('.page2 .search-content li').eq(0).find('h4').text(msg_page2_search_tit1);
+            $('.page2 .search-content li').eq(1).find('h4').text(msg_page2_search_tit2);
+            $('.page2 .search-content li').eq(2).find('h4').text(msg_page2_search_tit3);
+            $('.page2 .search-content li').eq(3).find('h4').text(msg_page2_search_tit4);
+            $('.page2 .search-content li').eq(0).find('p').text(msg_page2_search_desc1);
+            $('.page2 .search-content li').eq(1).find('p').text(msg_page2_search_desc2);
+            $('.page2 .search-content li').eq(2).find('p').text(msg_page2_search_desc3);
+            $('.page2 .search-content li').eq(3).find('p').text(msg_page2_search_desc4);
+            $('.page2 .application-content li').eq(0).find('h4').text(msg_page2_application_tit1);
+            $('.page2 .application-content li').eq(1).find('h4').text(msg_page2_application_tit2);
+            $('.page2 .application-content li').eq(2).find('h4').text(msg_page2_application_tit3);
+            $('.page2 .application-content li').eq(3).find('h4').text(msg_page2_application_tit4);
+            $('.page2 .application-content li').eq(0).find('p').text(msg_page2_application_desc1);
+            $('.page2 .application-content li').eq(1).find('p').text(msg_page2_application_desc2);
+            $('.page2 .application-content li').eq(2).find('p').text(msg_page2_application_desc3);
+            $('.page2 .application-content li').eq(3).find('p').text(msg_page2_application_desc4);
+            $('.page2-btn').text(page2_btn);
+            $('.page3-title span').text(msg_page3_title);
+            $('.page3-info-1').text(msg_page3_info_1);
+            $('.page3-info-2').text(msg_page3_info_2);
+            $('.page4-title span').text(msg_page4_title);
+            $('.page4-info-1').text(msg_page4_info_1);
+            $('.page4-info-2').text(msg_page4_info_2);
+            $('.page5-title span').text(msg_page5_title);
+            $('.page5-info-1').text(msg_page5_info_1);
+            $('.page5-info-2').text(msg_page5_info_2);
+            $('.page6-title').text(msg_page6_title);
+            $('.page6-btn').text(msg_page6_btn);
+            $('.page7-title').text(msg_page7_title);
+            $('.page7-btn').text(msg_page7_btn);
+            $('.page8-title').text(msg_page8_title);
+            $('.page8-text').text(msg_page8_text);
+            $('.page8-title-2').text(msg_page8_title_2);
+            $('.page8-text-2').text(msg_page8_text_2);
+            $('.page8-btn').text(msg_page8_btn);
+            $('.page8-title-3').text(msg_page8_title_3);
+            $('.page8-text-3').text(msg_page8_text_3);
+            $('.page8-btn2').text(msg_page8_btn2);
 
-            // // 上一页下一页
-            // $('.paper-prev .prev').text(msg_paper_prev);
-            // $('.paper-next .next').text(msg_paper_next);
+            // 上一页下一页
+            $('.paper-prev .prev').text(msg_paper_prev);
+            $('.paper-next .next').text(msg_paper_next);
 
-            // // 导航
-            // $('.navbar li:eq(0)').find('span').text(msg_nav_1);
-            // $('.navbar li:eq(1)').find('span').text(msg_nav_2);
-            // $('.navbar li:eq(3)').find('span').text(msg_nav_3);
-            // $('.navbar li:eq(4)').find('span').text(msg_nav_4);
-            // $('.navbar li:eq(5)').find('span').text(msg_nav_5);
-            // $('.navbar li:eq(6)').find('span').text(msg_nav_6);
+            // 导航
+            $('.navbar li:eq(0)').find('span').text(msg_nav_1);
+            $('.navbar li:eq(1)').find('span').text(msg_nav_2);
+            $('.navbar li:eq(3)').find('span').text(msg_nav_3);
+            $('.navbar li:eq(4)').find('span').text(msg_nav_4);
+            $('.navbar li:eq(5)').find('span').text(msg_nav_5);
+            $('.navbar li:eq(6)').find('span').text(msg_nav_6);
 
-            // // 论文
-            // $('.paper-list-tit').text(msg_nav_2);
-            // $('.search-filter-title').text(research_title);
+            // 论文
+            $('.paper-list-tit').text(msg_nav_2);
+            $('.search-filter-title').text(research_title);
 
-            // // 新闻
-            // $('.related-title').text(related_title)
+            // 新闻
+            $('.related-title').text(related_title)
 
-            // // 合作
-            // $('.banner-academic h2').html(banner_academic);
-            // $('.academic-desc').html(academic_desc);
+            // 合作
+            $('.banner-academic h2').html(banner_academic);
+            $('.academic-desc').html(academic_desc);
 
-            // $('.news-title-common').html(msg_nav_3);
-            // $('.academic-list').html(academic_list);
+            $('.news-title-common').html(msg_nav_3);
+            $('.academic-list').html(academic_list);
 
-            // $('.fellowship-production').html(fellowship_production);  // 腾讯AI实验室博士生奖学金计划说明
-            // $('.fellowship-wrap').html(fellowship_wrap);  // 腾讯AI实验室博士生奖学金计划申请表
-            // $('.pop-submit-success').html(pop_submit_success);
-            // $('.joint_research_program_title').html(joint_research_program_title); // 腾讯AI Lab联合研究项目标题
-            // $('.joint_research_program').html(joint_research_program); // 腾讯AI
+            $('.fellowship-production').html(fellowship_production);  // 腾讯AI实验室博士生奖学金计划说明
+            $('.fellowship-wrap').html(fellowship_wrap);  // 腾讯AI实验室博士生奖学金计划申请表
+            $('.pop-submit-success').html(pop_submit_success);
+            $('.joint_research_program_title').html(joint_research_program_title); // 腾讯AI Lab联合研究项目标题
+            $('.joint_research_program').html(joint_research_program); // 腾讯AI
 
-            // $('.visiting_scholars_program_title').html(visiting_scholars_program_title); // 腾讯AI Lab犀牛鸟访问学者
-            // $('.visiting_scholars_program').html(visiting_scholars_program); // 腾讯AI Lab犀牛鸟访问学者
+            $('.visiting_scholars_program_title').html(visiting_scholars_program_title); // 腾讯AI Lab犀牛鸟访问学者
+            $('.visiting_scholars_program').html(visiting_scholars_program); // 腾讯AI Lab犀牛鸟访问学者
 
 
-            // // 招聘
-            // $('.banner-recruit h2').html(msg_banner_recruit);
-            // $('.recruit-list').html(msg_recruit_list);
+            // 招聘
+            $('.banner-recruit h2').html(msg_banner_recruit);
+            $('.recruit-list').html(msg_recruit_list);
 
-            // // 关于我们
-            // $('.banner-about h2').text(msg_about_banner);
-            // $('.about-desc').html(msg_about_desc);
-            // $('.about-member h3').text(msg_about_title);
-            // $('.about-member h3').text(msg_about_title);
-            // $('.member-item .btn-page').text(msg_about_btn_page);
-            // $('.member1 .member-name').text(msg_member1_name);
-            // $('.member1 .member-position').text(msg_member1_pos);
-            // $('.member1 .member-desc').html(msg_member1_desc);
-            // $('.member2 .member-name').text(msg_member2_name);
-            // $('.member2 .member-position').text(msg_member2_pos);
-            // $('.member2 .member-desc').html(msg_member2_desc);
-            // $('.member3 .member-name').text(msg_member3_name);
-            // $('.member3 .member-position').text(msg_member3_pos);
-            // $('.member3 .member-desc').html(msg_member3_desc);
-            // $('.search-area h3').text(search_area_h3);
-            // $('.search-area-list li').eq(0).find('h4').html(search_list_tit1);
-            // $('.search-area-list li').eq(1).find('h4').html(search_list_tit2);
-            // $('.search-area-list li').eq(2).find('h4').html(search_list_tit3);
-            // $('.search-area-list li').eq(3).find('h4').html(search_list_tit4);
-            // $('.search-area-list li').eq(0).find('p').html(search_list_desc1);
-            // $('.search-area-list li').eq(1).find('p').html(search_list_desc2);
-            // $('.search-area-list li').eq(2).find('p').html(search_list_desc3);
-            // $('.search-area-list li').eq(3).find('p').html(search_list_desc4);
-            // $('.application-area h3').text(application_area_h3);
-            // $('.application-area-list li').eq(0).find('h4').html(application_list_tit1);
-            // $('.application-area-list li').eq(1).find('h4').html(application_list_tit2);
-            // $('.application-area-list li').eq(2).find('h4').html(application_list_tit3);
-            // $('.application-area-list li').eq(3).find('h4').html(application_list_tit4);
-            // $('.application-area-list li').eq(0).find('p').html(application_list_desc1);
-            // $('.application-area-list li').eq(1).find('p').html(application_list_desc2);
-            // $('.application-area-list li').eq(2).find('p').html(application_list_desc3);
-            // $('.application-area-list li').eq(3).find('p').html(application_list_desc4);
+            // 关于我们
+            $('.banner-about h2').text(msg_about_banner);
+            $('.about-desc').html(msg_about_desc);
+            $('.about-member h3').text(msg_about_title);
+            $('.about-member h3').text(msg_about_title);
+            $('.member-item .btn-page').text(msg_about_btn_page);
+            $('.member1 .member-name').text(msg_member1_name);
+            $('.member1 .member-position').text(msg_member1_pos);
+            $('.member1 .member-desc').html(msg_member1_desc);
+            $('.member2 .member-name').text(msg_member2_name);
+            $('.member2 .member-position').text(msg_member2_pos);
+            $('.member2 .member-desc').html(msg_member2_desc);
+            $('.member3 .member-name').text(msg_member3_name);
+            $('.member3 .member-position').text(msg_member3_pos);
+            $('.member3 .member-desc').html(msg_member3_desc);
+            $('.search-area h3').text(search_area_h3);
+            $('.search-area-list li').eq(0).find('h4').html(search_list_tit1);
+            $('.search-area-list li').eq(1).find('h4').html(search_list_tit2);
+            $('.search-area-list li').eq(2).find('h4').html(search_list_tit3);
+            $('.search-area-list li').eq(3).find('h4').html(search_list_tit4);
+            $('.search-area-list li').eq(0).find('p').html(search_list_desc1);
+            $('.search-area-list li').eq(1).find('p').html(search_list_desc2);
+            $('.search-area-list li').eq(2).find('p').html(search_list_desc3);
+            $('.search-area-list li').eq(3).find('p').html(search_list_desc4);
+            $('.application-area h3').text(application_area_h3);
+            $('.application-area-list li').eq(0).find('h4').html(application_list_tit1);
+            $('.application-area-list li').eq(1).find('h4').html(application_list_tit2);
+            $('.application-area-list li').eq(2).find('h4').html(application_list_tit3);
+            $('.application-area-list li').eq(3).find('h4').html(application_list_tit4);
+            $('.application-area-list li').eq(0).find('p').html(application_list_desc1);
+            $('.application-area-list li').eq(1).find('p').html(application_list_desc2);
+            $('.application-area-list li').eq(2).find('p').html(application_list_desc3);
+            $('.application-area-list li').eq(3).find('p').html(application_list_desc4);
         }
 
     });
