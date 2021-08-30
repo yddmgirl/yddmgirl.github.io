@@ -1,1 +1,460 @@
-function makePhoto(){var e=createFormDate(8);$(".make-img").attr("data-filter",8),$(".spinner").show(),sendPhoto(e,function(e){if(e){$(".spinner").hide();var a=e.url,t=new Image;t.src=a,t.onload=function(){$(".make-page").addClass("disappear").removeClass("hide");var n=document.getElementById("file-upload");getOrientation(n.files[0],function(n){var r,i,o=$(".make-pic").width(),s=t.width>t.height?t.height/t.width:t.width/t.height;t.width==t.height?(r=o,i=o):t.width<t.height?(r=o*s,i=o):(r=o,i=o*s);for(var c=[3,4,5,6,7,8],p=0;p<c.length;p++)c[p]==n&&(r/=s,i/=s);switch(n){case 3:$(".make-pic").css("transform","rotate(-180deg)");break;case 4:$(".make-pic").css("transform","rotate(180deg)");break;case 5:$(".make-pic").css("transform","rotate(-90deg)");break;case 6:$(".make-pic").css("transform","rotate(90deg)");break;case 7:$(".make-pic").css("transform","rotate(90deg)");break;case 8:$(".make-pic").css("transform","rotate(-90deg)")}$(".make-img").css({width:r+"px",height:i+"px","margin-left":"-"+r/2+"px","margin-top":"-"+i/2+"px"}),$(".make-img").attr("src",a),$(".upload-bg").css("background-image","url("+a+")");var m=e.result,g=makePoemHMTL(m[0],e.haspoem);$(".poem-word").html(g),$(".btn-change").hide(),e.haspoem?($(".shake-word").html(""),m.length>1&&$(".btn-change").show()):$(".shake-word").html("似乎没有匹配的诗词"),$(".main-page").addClass("hide"),$(".make-page").removeClass("disappear"),$(".pop-tips").removeClass("hide"),setTimeout(function(){$(".pop-tips").addClass("disappear"),$(".make-img").attr("data-filter",8)},2e3),changePoem(m)})}}});var a=!0;return changeFilter(a),!1}function createFormDate(e){var a=new FormData;return a.append("upload_image",$("#file-upload")[0].files[0]),a.append("user","abc"),a.append("style_id",e),a}function sendPhoto(e,a){$.ajax({type:"post",url:"https://asr.qq.com/upd_py/imgPoemCgi.py",data:e,cache:!1,processData:!1,contentType:!1,dataType:"json",success:function(e){a(e)}})}function makePoemHMTL(e,a){var t="",e=e.replace(/；|;|？|\?|\,|\.| /g,"");if(a){t="<span>"+e.replace(/。/g,"<i>。</i></span><span>").replace(/，/g,"<i>，</i></span><span>").replace(/：/g,'<i class="mh">：</i></span><span>').replace(/、/g,"<i>、</i></span><span>")}else if(e.length>8){for(var n=e.split(""),r=parseInt(n.length/8),i=1;i<=r;i++)n.splice(9*i-1,0,"</span><span>");t="<span>"+n.join("")+"</span>"}else t="<span>"+e+"</span>";return t}function changeFilter(e){var a=document.querySelector(".make-item"),t=new Hammer(a);t.on("swipe",function(a){if(a.deltaX<0){if($(".pop-tips").addClass("disappear"),setTimeout(function(){$(".pop-tips").addClass("invisible")},1e3),!e)return;e=!1;var t;if(8==$(".make-img").attr("data-filter")){var n=createFormDate(374);t=374}else{var n=createFormDate(8);t=8}$(".pop-tips").hasClass("invisible")?$(".spinner").show():setTimeout(function(){$(".spinner").show()},600),sendPhoto(n,function(a){if(a){$(".make-img").attr("data-filter",t);var n=a.url;$(".make-img").attr("src",n),$(".upload-bg").css("background-image","url("+n+")"),$(".spinner").hide(),setTimeout(function(){e=!0},500)}})}return!1})}function HtmlToCanvas(e,a){html2canvas(document.querySelector(e),{onrendered:function(e){a(e)},allowTaint:!0,scale:4})}function convertCanvasToImage(e){var a=new Image;return a.src=e.toDataURL("image/png"),a}function changePoem(e){var a=1;$(".btn-change").on("click",function(){a==e.length&&(a=0);var t=makePoemHMTL(e[a],1);$(".poem-word").html(t),a++})}function getTranditionalTime(){function e(e,a){return e>>a&1}function a(){s=3!=arguments.length?new Date:new Date(arguments[0],arguments[1],arguments[2]);var a,t,n,m,g=!1,h=s.getYear();for(h<1900&&(h+=1900),a=365*(h-1921)+Math.floor((h-1921)/4)+p[s.getMonth()]+s.getDate()-38,s.getYear()%4==0&&s.getMonth()>1&&a++,t=0;;t++){for(m=c[t]<4095?11:12,n=m;n>=0;n--){if(a<=29+e(c[t],n)){g=!0;break}a=a-29-e(c[t],n)}if(g)break}r=1921+t,i=m-n+1,o=a,12==m&&(i==Math.floor(c[t]/65536)+1&&(i=1-i),i>Math.floor(c[t]/65536)+1&&i--)}function t(){var e="";return e+=m.charAt((r-4)%10),e+=g.charAt((r-4)%12),e+="",e+="年",e+=i<1?l.charAt(-i-1):l.charAt(i-1),e+="月",e+=o<11?"初":o<20?"十":o<30?"廿":"三十",o%10==0&&10!=o||(e+=h.charAt((o-1)%10)),e}function n(e,n,r){return e<1921||e>2020?"":(n=parseInt(n)>0?n-1:11,a(e,n,r),t())}var r,i,o,s,c=new Array(100),p=new Array(12),m="甲乙丙丁戊己庚辛壬癸",g="子丑寅卯辰巳午未申酉戌亥",h="一二三四五六七八九十",l="正二三四五六七八九十冬腊";c=new Array(2635,333387,1701,1748,267701,694,2391,133423,1175,396438,3402,3749,331177,1453,694,201326,2350,465197,3221,3402,400202,2901,1386,267611,605,2349,137515,2709,464533,1738,2901,330421,1242,2651,199255,1323,529706,3733,1706,398762,2741,1206,267438,2647,1318,204070,3477,461653,1386,2413,330077,1197,2637,268877,3365,531109,2900,2922,398042,2395,1179,267415,2635,661067,1701,1748,398772,2742,2391,330031,1175,1611,200010,3749,527717,1452,2742,332397,2350,3222,268949,3402,3493,133973,1386,464219,605,2349,334123,2709,2890,267946,2773,592565,1210,2651,395863,1323,2707,265877),p[0]=0,p[1]=31,p[2]=59,p[3]=90,p[4]=120,p[5]=151,p[6]=181,p[7]=212,p[8]=243,p[9]=273,p[10]=304,p[11]=334;var u=new Date,d=u.getFullYear(),f=u.getMonth()+1,v=u.getDate();u.getDay(),parseInt(u.getTime()/1e3);d<100&&(d="19"+d);var $=n(d,f,v);return $}function getOrientation(e,a){var t=new FileReader;t.onload=function(e){var t=new DataView(e.target.result);if(65496!=t.getUint16(0,!1))return a(-2);for(var n=t.byteLength,r=2;r<n;){var i=t.getUint16(r,!1);if(r+=2,65505==i){if(1165519206!=t.getUint32(r+=2,!1))return a(-1);var o=18761==t.getUint16(r+=6,!1);r+=t.getUint32(r+4,o);var s=t.getUint16(r,o);r+=2;for(var c=0;c<s;c++)if(274==t.getUint16(r+12*c,o))return a(t.getUint16(r+12*c+8,o))}else{if(65280!=(65280&i))break;r+=t.getUint16(r,!1)}}return a(-1)},t.readAsArrayBuffer(e.slice(0,65536))}$(function(){$("#file-upload").on("change",function(){makePhoto()}),$(".btn-save").on("click",function(){HtmlToCanvas(".make-item",function(e){e.style.width="100%",e.style.height="auto";var a=convertCanvasToImage(e);if($(".photo-wrap").append(a),a){var t="micromessenger"==window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i);t?wx.ready(function(){wx.previewImage({current:a.src,urls:[a.src]})}):($(".photo-wrap").html(a),$(".photo-show").removeClass("hide"),$(".photo-show").on("click",function(){return $(".photo-show").addClass("hide"),!1}))}})});var e=getTranditionalTime();$(".current-time").html(e)});
+$(function(){
+
+    // 我要制作
+    $("#file-upload").on('change',function(){
+        makePhoto();
+    });
+
+    // 保存
+    $('.btn-save').on('click',function(){
+        // 制作canvas生成图片
+        HtmlToCanvas('.make-item',function(canvas){
+            canvas.style.width = '100%';
+            canvas.style.height = 'auto';
+            var newImg = convertCanvasToImage(canvas);
+            $('.photo-wrap').append(newImg);
+            if(newImg){
+                var isWechat = window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger';
+                if(isWechat){
+                    wx.ready(function(){
+                        wx.previewImage({
+                            current: newImg.src, // 当前显示图片的http链接
+                            urls: [newImg.src] // 需要预览的图片http链接列表
+                        });
+                    });
+                } else{
+                    $('.photo-wrap').html(newImg);
+                    $('.photo-show').removeClass('hide');
+                    $('.photo-show').on('click',function(){
+                        $('.photo-show').addClass('hide');
+                        return false;
+                    });
+                }
+            }
+        });
+    });
+
+    // 设置当前农历时间
+    var currentTime = getTranditionalTime();
+    $('.current-time').html(currentTime);
+
+
+});
+
+// 制作明信片
+function makePhoto(){
+    var formdata = createFormDate(8);  // 创建FormData
+    $('.make-img').attr('data-filter',8);
+    $('.spinner').show();
+
+    // 上传图片发送数据
+    sendPhoto(formdata,function(res){
+        if(res){
+            $('.spinner').hide();
+            var onlineURL = res.url;
+            var newImg = new Image();
+            newImg.src = onlineURL;
+            newImg.onload = function(){
+                $('.make-page').addClass('disappear').removeClass('hide');
+                // 判断拍照图片的方向，并设置图片尺寸
+                var fileInput = document.getElementById('file-upload');
+                getOrientation(fileInput.files[0],function(orientation){  // 获取到方向代码
+                    var wrapWidth = $('.make-pic').width();
+                    var ratio = newImg.width > newImg.height ? newImg.height/newImg.width : newImg.width/newImg.height;
+                    var resImgWidth,resImgHeight;
+                    if(newImg.width == newImg.height){
+                        resImgWidth = wrapWidth;
+                        resImgHeight = wrapWidth;
+                    } else if(newImg.width < newImg.height){
+                        resImgWidth = wrapWidth*ratio;
+                        resImgHeight = wrapWidth;
+                    } else{
+                        resImgWidth = wrapWidth;
+                        resImgHeight = wrapWidth*ratio;
+                    }
+
+                    // 如果是以下代码中的一个，就放大图片
+                    var arrOrt = [3,4,5,6,7,8];
+                    for(var i=0;i<arrOrt.length;i++){
+                        if(arrOrt[i] == orientation){
+                            resImgWidth = resImgWidth/ratio;
+                            resImgHeight = resImgHeight/ratio;
+                        }
+                    }
+                    // 根据方向做出相应的旋转
+                    switch(orientation){
+                        case 3:
+                            // 向左旋转180度
+                            $('.make-pic').css('transform','rotate(-180deg)');
+                            break;
+                        case 4:
+                            // 垂直翻转
+                            $('.make-pic').css('transform','rotate(180deg)');
+                            break;
+                        case 5:
+                            // 垂直翻转 + 向右旋转90度
+                            $('.make-pic').css('transform','rotate(-90deg)');
+                            break;
+                        case 6:
+                            // 向右旋转90度
+                            $('.make-pic').css('transform','rotate(90deg)');
+                            break;
+                        case 7:
+                            // 水平翻转 + 向右旋转90度
+                            $('.make-pic').css('transform','rotate(90deg)');
+                            break;
+                        case 8:
+                            // 向左旋转90度
+                            $('.make-pic').css('transform','rotate(-90deg)');
+                            break;
+                    }
+                    $('.make-img').css({
+                        'width': resImgWidth + 'px',
+                        'height': resImgHeight + 'px',
+                        'margin-left': '-'+resImgWidth/2 + 'px',
+                        'margin-top': '-'+resImgHeight/2 + 'px'
+
+                    });
+                    $('.make-img').attr('src',onlineURL);
+                    $('.upload-bg').css('background-image','url('+ onlineURL +')');
+
+
+                    // 匹配诗词
+                    var arrResult = res.result;
+                    var poemHTML = makePoemHMTL(arrResult[0],res.haspoem); // 调用函数【生成诗词HTML】
+                    $('.poem-word').html(poemHTML);
+                    $('.btn-change').hide();
+                    if(!res.haspoem){
+                        $('.shake-word').html('似乎没有匹配的诗词');
+                    } else{
+                        $('.shake-word').html('');
+                        if(arrResult.length > 1){
+                            $('.btn-change').show();
+                        }
+                    }
+
+                    $('.main-page').addClass('hide');
+                    $('.make-page').removeClass('disappear');
+
+
+
+                    // 新手引导：向左滑屏切换滤镜两秒后消失
+                    $('.pop-tips').removeClass('hide');
+                    setTimeout(function(){
+                        $('.pop-tips').addClass('disappear');
+                        $('.make-img').attr('data-filter',8);
+                    },2000);
+
+                    
+                    
+                    // 换诗
+                    changePoem(arrResult);
+
+                });
+            }
+        }
+    });
+
+    // 更换滤镜
+    var isSlidable = true;
+    changeFilter(isSlidable);
+
+    return false;
+};
+
+
+// 创建FormData： 参数: 滤镜id
+function createFormDate(styleId){
+    var formdata = new FormData();
+    console.log($("#file-upload")[0].files[0])
+    formdata.append('upload_image',$("#file-upload")[0].files[0]);
+    formdata.append('user','abc');
+    formdata.append('style_id',styleId);
+    return $("#file-upload")[0].files[0];
+}
+
+// 发送图片到服务器并返回数据
+function sendPhoto(formdata,fn){
+
+    setTimeout(function(){
+      var reader = new FileReader();
+      reader.readAsDataURL(formdata);//发起异步请求
+      reader.onload = function(){
+          //读取完成后，数据保存在对象的result属性中
+          var src=this.result
+          console.log(src)
+          fn({
+            filterId:111,
+            url: src,
+            result: '测试数据'
+          })
+      }
+    },1000)
+    return;
+
+    $.ajax({
+         type : 'post',
+         url : 'https://asr.qq.com/upd_py/imgPoemCgi.py',
+         data : formdata,
+         cache : false,
+         processData : false,
+         contentType : false,
+         dataType: 'json',
+         success : function(res){
+            fn(res);
+         }
+    });
+}
+
+// 生成诗词HTML : 参数：某一句诗词(string)、是否有诗词(boolean)。返回值为HTML
+function makePoemHMTL(poem,hasPoem){
+    var poemHTML = '';
+    var poem = poem.replace(/；|;|？|\?|\,|\.| /g, '');  // 去掉奇怪的符号
+    if(hasPoem){
+        var punctuation = ['。','，','。']; // 标点符号
+        poemHTML = '<span>' + poem.replace(/。/g, '<i>。</i></span><span>').replace(/，/g, '<i>，</i></span><span>').replace(/：/g, '<i class="mh">：</i></span><span>').replace(/、/g, '<i>、</i></span><span>');
+    } else{
+        if(poem.length > 8){
+            var wordArr = poem.split('');
+            var col = parseInt(wordArr.length/8);
+            for(var i=1;i<=col;i++){
+                wordArr.splice(i*9-1,0,'</span><span>');
+            }
+            poemHTML = '<span>' + wordArr.join('') + '</span>';
+        } else{
+            poemHTML = '<span>' + poem + '</span>';
+        }
+    }
+    return poemHTML;
+};
+
+// 向左滑动切换滤镜 【依赖hammer.min.js】参数：是否允许切换(未成功切换滤镜前不再次发送请求)
+function changeFilter(isSlidable){
+    var photo = document.querySelector('.make-item');
+    var hammertime = new Hammer(photo);
+
+    hammertime.on('swipe', function(e) {
+        if(e.deltaX < 0){
+            $('.pop-tips').addClass('disappear');
+            setTimeout(function(){
+                $('.pop-tips').addClass('invisible');
+            },1000);
+            if(!isSlidable) return;
+            isSlidable = false;
+            var filterId;
+            if($('.make-img').attr('data-filter') == 8){
+                var formdata = createFormDate(374);
+                filterId = 374;
+            } else{
+                var formdata = createFormDate(8);
+                filterId = 8;
+            }
+            if($('.pop-tips').hasClass('invisible')){
+                $('.spinner').show();
+            } else{
+                setTimeout(function(){
+                    $('.spinner').show();
+                },600);
+            }
+            sendPhoto(formdata,function(res){
+                if(res){
+                    $('.make-img').attr('data-filter',filterId);
+                    var onlineURL = res.url;
+                    $('.make-img').attr('src',onlineURL);
+                    $('.upload-bg').css('background-image','url('+ onlineURL +')');
+                    $('.spinner').hide();
+                    // 0.5秒后才允许再次切换
+                    setTimeout(function(){
+                        isSlidable = true;   
+                    },500);
+                }
+            });
+        }
+        return false;
+    });
+};
+
+// HTML转Canvas 参数：转换后图片的宽w、高h，回调函数fn
+function HtmlToCanvas(ele,fn){
+    html2canvas(document.querySelector(ele), {
+        onrendered: function(canvas) {
+            fn(canvas);
+        },
+        allowTaint: true,
+        scale: 4
+    });
+}
+
+// canvas转Image
+function convertCanvasToImage(canvas) {
+    var image = new Image();
+    image.src = canvas.toDataURL("image/png");
+    return image;
+}
+
+
+// 换诗
+function changePoem(poemArr){
+    var i = 1;
+    $('.btn-change').on('click',function(){
+        if(i == poemArr.length) i = 0;
+        var poem = makePoemHMTL(poemArr[i],1);
+        $('.poem-word').html(poem);
+        i++;
+    });
+}
+
+
+/* 获取当前时间，返回农历日期(年月日) */
+function getTranditionalTime(){
+    var CalendarData = new Array(100);
+    var madd = new Array(12);
+    var tgString = "甲乙丙丁戊己庚辛壬癸";
+    var dzString = "子丑寅卯辰巳午未申酉戌亥";
+    var numString = "一二三四五六七八九十";
+    var monString = "正二三四五六七八九十冬腊";
+    var weekString = "日一二三四五六";
+    var cYear, cMonth, cDay, TheDate;
+    CalendarData = new Array(0xA4B, 0x5164B, 0x6A5, 0x6D4, 0x415B5, 0x2B6, 0x957, 0x2092F, 0x497, 0x60C96, 0xD4A, 0xEA5, 0x50DA9, 0x5AD, 0x2B6, 0x3126E, 0x92E, 0x7192D, 0xC95, 0xD4A, 0x61B4A, 0xB55, 0x56A, 0x4155B, 0x25D, 0x92D, 0x2192B, 0xA95, 0x71695, 0x6CA, 0xB55, 0x50AB5, 0x4DA, 0xA5B, 0x30A57, 0x52B, 0x8152A, 0xE95, 0x6AA, 0x615AA, 0xAB5, 0x4B6, 0x414AE, 0xA57, 0x526, 0x31D26, 0xD95, 0x70B55, 0x56A, 0x96D, 0x5095D, 0x4AD, 0xA4D, 0x41A4D, 0xD25, 0x81AA5, 0xB54, 0xB6A, 0x612DA, 0x95B, 0x49B, 0x41497, 0xA4B, 0xA164B, 0x6A5, 0x6D4, 0x615B4, 0xAB6, 0x957, 0x5092F, 0x497, 0x64B, 0x30D4A, 0xEA5, 0x80D65, 0x5AC, 0xAB6, 0x5126D, 0x92E, 0xC96, 0x41A95, 0xD4A, 0xDA5, 0x20B55, 0x56A, 0x7155B, 0x25D, 0x92D, 0x5192B, 0xA95, 0xB4A, 0x416AA, 0xAD5, 0x90AB5, 0x4BA, 0xA5B, 0x60A57, 0x52B, 0xA93, 0x40E95);
+    madd[0] = 0;
+    madd[1] = 31;
+    madd[2] = 59;
+    madd[3] = 90;
+    madd[4] = 120;
+    madd[5] = 151;
+    madd[6] = 181;
+    madd[7] = 212;
+    madd[8] = 243;
+    madd[9] = 273;
+    madd[10] = 304;
+    madd[11] = 334;
+
+    function GetBit(m, n) {
+    return (m >> n) & 1;
+    }
+
+    function e2c() {
+    TheDate = (arguments.length != 3) ? new Date() : new Date(arguments[0], arguments[1], arguments[2]);
+    var total, m, n, k;
+    var isEnd = false;
+    var tmp = TheDate.getYear();
+    if (tmp < 1900) {
+        tmp += 1900;
+    }
+    total = (tmp - 1921) * 365 + Math.floor((tmp - 1921) / 4) + madd[TheDate.getMonth()] + TheDate.getDate() - 38;
+
+    if (TheDate.getYear() % 4 == 0 && TheDate.getMonth() > 1) {
+        total++;
+    }
+    for (m = 0;; m++) {
+        k = (CalendarData[m] < 0xfff) ? 11 : 12;
+        for (n = k; n >= 0; n--) {
+            if (total <= 29 + GetBit(CalendarData[m], n)) {
+                isEnd = true;
+                break;
+            }
+            total = total - 29 - GetBit(CalendarData[m], n);
+        }
+        if (isEnd) break;
+    }
+    cYear = 1921 + m;
+    cMonth = k - n + 1;
+    cDay = total;
+    if (k == 12) {
+        if (cMonth == Math.floor(CalendarData[m] / 0x10000) + 1) {
+            cMonth = 1 - cMonth;
+        }
+        if (cMonth > Math.floor(CalendarData[m] / 0x10000) + 1) {
+            cMonth--;
+        }
+    }
+    }
+
+    function GetcDateString() {
+        var tmp = "";
+        tmp += tgString.charAt((cYear - 4) % 10);
+        tmp += dzString.charAt((cYear - 4) % 12);
+        tmp += "";
+        tmp += "年";
+        if (cMonth < 1) {
+            // tmp += "(闰)";
+            tmp += monString.charAt(-cMonth - 1);
+        } else {
+            tmp += monString.charAt(cMonth - 1);
+        }
+        tmp += "月";
+        tmp += (cDay < 11) ? "初" : ((cDay < 20) ? "十" : ((cDay < 30) ? "廿" : "三十"));
+        if (cDay % 10 != 0 || cDay == 10) {
+            tmp += numString.charAt((cDay - 1) % 10);
+        }
+        return tmp;
+        }
+
+        function GetLunarDay(solarYear, solarMonth, solarDay) {
+        //solarYear = solarYear<1900?(1900+solarYear):solarYear;
+        if (solarYear < 1921 || solarYear > 2020) {
+            return "";
+        } else {
+            solarMonth = (parseInt(solarMonth) > 0) ? (solarMonth - 1) : 11;
+            e2c(solarYear, solarMonth, solarDay);
+            return GetcDateString();
+        }
+    }
+
+    var D = new Date();
+    var yy = D.getFullYear();
+    var mm = D.getMonth() + 1;
+    var dd = D.getDate();
+    var ww = D.getDay();
+    var ss = parseInt(D.getTime() / 1000);
+    if (yy < 100) yy = "19" + yy;
+
+    var currentTime = GetLunarDay(yy, mm, dd);
+    return currentTime;
+}
+
+
+//  获取拍照照片的方向，返回相机拍照的方向的代码
+function getOrientation(file, callback) {
+  var reader = new FileReader();
+  reader.onload = function(e) {
+
+    var view = new DataView(e.target.result);
+    if (view.getUint16(0, false) != 0xFFD8) return callback(-2);
+    var length = view.byteLength, offset = 2;
+    while (offset < length) {
+      var marker = view.getUint16(offset, false);
+      offset += 2;
+      if (marker == 0xFFE1) {
+        if (view.getUint32(offset += 2, false) != 0x45786966) return callback(-1);
+        var little = view.getUint16(offset += 6, false) == 0x4949;
+        offset += view.getUint32(offset + 4, little);
+        var tags = view.getUint16(offset, little);
+        offset += 2;
+        for (var i = 0; i < tags; i++)
+          if (view.getUint16(offset + (i * 12), little) == 0x0112)
+            return callback(view.getUint16(offset + (i * 12) + 8, little));
+      }
+      else if ((marker & 0xFF00) != 0xFF00) break;
+      else offset += view.getUint16(offset, false);
+    }
+    return callback(-1);
+  };
+  reader.readAsArrayBuffer(file.slice(0, 64 * 1024));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
