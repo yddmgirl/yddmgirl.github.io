@@ -186,7 +186,8 @@ function sendPhoto(formdata,fn){
           fn({
             filterId:111,
             url: src,
-            result: '测 试 数据'
+            result: ['测试诗词'],
+            haspoem: true
           })
       }
     },1000)
