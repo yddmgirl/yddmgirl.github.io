@@ -1,0 +1,861 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<title>CDC十周年邀请函</title>
+<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+  <!-- loading -->
+      <div class="loading">
+        <div class="loading_bar main">
+          <p class="progress">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </p>
+          <span class="progress_value">Loading…</span>
+        </div>
+      </div>        
+  <!-- loading -->
+
+  <!-- 音乐 -->
+  <div id="music" class="on">
+    <div class="fore1"></div><!-- Start -->
+      <div class="fore2"></div><!-- Stop -->
+    <audio src="media/music3.mp3" autoplay="autoplay" id="audio" loop="loop"></audio>
+  </div>
+  
+  <!-- 滑屏主内容区 -->
+  <article class="content hide" id="fullpage">
+    <!-- 第1屏 -->
+    <section class="section page page_1">
+      <div class="page_wrap page_up">
+        <div class="page_1_tit">
+          <div class="page_1_logo"></div>
+          <div class="page_1_line"></div>
+          <div class="page_1_text1"></div>
+          <div class="page_1_text2"></div>
+          <div class="page_1_text3"></div>
+        </div>
+        <div class="page_1_100d ">
+            <!-- <div class="mod_100d page_1_100d_1"></div>
+            <div class="mod_100d page_1_100d_2"></div>
+            <div class="mod_100d page_1_100d_3"></div>
+            <div class="mod_100d page_1_100d_4"></div> -->
+        </div>
+        <!-- 滑动提示 [[-->
+        <section class="slide_tips">
+          <p>
+            <span class="text"><!-- 滑一下 --></span>
+            <i class="icon_arrow"><!-- 向下箭头 --></i>
+          </p>
+        </section>
+        <!-- 滑动提示 ]]-->
+      </div>
+    </section>
+    
+    <!-- 第4屏 -->
+    <section class="section page page_4">
+      <div class="page_wrap page_down_3">
+        <div class="page_4_tit">流程</div>
+        <div class="page_4_con">
+          <h2>10年，在你身边</h2>
+          <span>2016年5月18日  2:00PM <br>腾讯大厦2F多功能厅</span>
+          <div class="page_4_text">
+            <p>来张久违的超级大合影</p>
+            <p>听听老大们怎么说</p>
+            <p>回头看看我们的十年</p>
+            <p>CDC Talk</p>
+            <p>一起唱首生日歌</p>
+            <p>躁起来</p>
+            <p>Free Talk</p>
+          </div>
+        </div>
+        <div class="page_4_d"></div>
+        <button class="btn_whocome" id="btn_whocome">点击看看谁会来</button>
+        <!-- 滑动提示 [[-->
+        <section class="slide_tips">
+          <p>
+            <span class="text"><!-- 滑一下 --></span>
+            <i class="icon_arrow"><!-- 向下箭头 --></i>
+          </p>
+        </section>
+        <!-- 滑动提示 ]]-->
+      </div>
+    </section>
+    <!-- 第5屏 -->
+    <section class="section page page_5">
+      <div class="page_wrap page_down_4">
+        <div class="page_5_tit">报名确认</div>
+        <div class="page_5_bd">
+          <h3>参与报名请填写下面的信息：</h3>
+          <div class="question_form">
+            <div class="question question1" data-type="radio">
+              <p>当天是否能莅临现场</p>
+              <div class="qustion_list">
+                <a href="javascript:void(0);" class="question1 checked"><i></i><span>是</span></a>
+                <a href="javascript:void(0);" class="question1"><i></i><span>否</span></a>
+              </div>
+            </div>
+            <div class="question q_name" data-type="text">
+              <p>您的姓名，例如：钟锦松</p>
+              <input type="text" id="cdcer_name">
+              <p class="tips_error error_name">*您的姓名不能为空</p>
+            </div>
+            <div class="question q_phone" data-type="text">
+              <p>您的联系电话</p>
+              <input type="text" id="cdcer_phone">
+              <p class="tips_error error_phone">*您的联系方式不能为空</p>
+            </div>
+            <div class="question q_rtx" data-type="text">
+              <p>您曾经的 RTX 名，例如：jingzhong</p>
+              <input type="text" id="cdcer_rtx">
+              <p class="tips_error error_rtx">*您的RTX不能为空</p>
+            </div>
+            <div class="question" data-type="select">
+              <p>我们届时会为您订制十周年纪念文化衫<br>请提前提供您的衣服尺码</p>
+              <select name="" id="size_sel">
+                                <option value="女款XS">女款XS</option>
+                                <option value="女款S">女款S</option>
+                <option value="女款M">女款M</option>
+                <option value="女款L">女款L</option>
+                <option value="女款XL">女款XL</option>
+                                <option value="女款2XL">女款2XL</option>
+                                <option value="女款3XL">女款3XL</option>
+                                <option value="女款4XL">女款4XL</option>
+                                <option value="男款XS">男款XS</option>
+                                <option value="男款S">男款S</option>
+                <option value="男款M">男款M</option>
+                <option value="男款L">男款L</option>
+                <option value="男款XL">男款XL</option>
+                                <option value="男款2XL">男款2XL</option>
+                                <option value="男款3XL">男款3XL</option>
+                                <option value="男款4XL">男款4XL</option>
+              </select>
+            </div>
+            <input type="button" class="question_btn" value="报名提交">
+          </div>
+        </div>
+        <div class="page_5_d"></div>
+        
+      </div>
+    </section>
+  </article>
+  <div class="mod_pop pop_win hide">
+    <div class="inner pop_win_cont">
+      报名成功<br>来制作您的入场券吧:)
+    </div>
+  </div>
+  <section class="page page_6 play " style="display: none;">
+    <div class="page_wrap page_down_5 js_uploadBox">
+      <div class="make_photo">
+        <div class="photo_con">
+          <div class="page_6_logo"></div>
+          <div class="photo_upload">
+            <i></i>
+            <span>点击上传你的照片</span>
+          </div>
+          <div id="imgBox" class="js_showBox photo poster">
+            <img id="testImg" class="js_logoBox" src="">
+          </div>
+          <input id="upimgbig" class="photo_ipt js_upFile" type="file" name="cover" value="">
+          <label class="photo_cover" for="upimgbig"></label>
+                    <div class="tipscover">支持图片移动及缩放</div>
+        </div>
+        <div class="photo_infor">
+          <div class="rtx">elviguo</div>
+          <div class="name">郭特宏</div>
+          <p>CDC十周年庆典VIP入场券</p>
+          <div class="page_6_logo2"></div>
+        </div>
+      </div>
+      <div class="page_6_qrcode">
+        <img src="img/page_6_qrcode.png" alt="">
+        <span>518等你回家</span>
+      </div>
+      <div class="make_btn">
+        <div class="btn_change_wr">
+          <input id="upimg" class=" js_upFile" type="file" name="cover" value="">
+          <label class="mod_btn btn_change" for="upimg">换图</label>
+        </div>
+        <button class="mod_btn btn_save">保存</button>
+        <button class="mod_btn btn_show">炫耀</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 点击看看谁会来的内容 -->
+  <div class="pop_whocome" id="pop_whocome">
+    <h4>我们都在，你也一起吧</h4>
+    <div class="pop_whocome_con">
+      <ul>
+        <li>石菁菁    v_jingjshi</li>
+        <li>路克克    Lukezhu</li>
+        <li>黄坤 Tutuhuang </li>
+        <li>avenir elwinzheng</li>
+        <li>陈敏峰    davidmfchen</li>
+        <li>万志权    aderwan</li>
+        <li>姚舒 jasonsyao</li>
+        <li>陈堃 sammerchen</li>
+        <li>刘云天    jornnyliu</li>
+        <li>吴林辉    v_linhuiwu</li>
+        <li>蒋说 suvijiang</li>
+        <li>刘晓刚    xiaogangliu</li>
+        <li>罗静 joyluo</li>
+        <li>高静 jessicagao</li>
+        <li>吴小葵    angelwu</li>
+        <li>谭禛 erztan</li>
+        <li>钟锦松    jingzhong</li>
+        <li>朱恩儒    aaronzhu</li>
+        <li>谢鑫 stephenxie</li>
+        <li>fido   fidonian</li>
+        <li>黄资炜    waywang</li>
+        <li>黎浩光    leolai</li>
+        <li>陈正熙    heychen</li>
+        <li>罗伟怀    listyluo</li>
+        <li>尤原庆    yuanqingyou</li>
+        <li>朱佳荔    Emmyzhu</li>
+        <li>李玮 hydrnli</li>
+        <li>刘文婷    wentyliu</li>
+        <li>杨玥 yithyang</li>
+        <li>牛原 silenniu</li>
+        <li>余美华    Emay</li>
+        <li>汤乐 merrytang</li>
+        <li>孙志濂    emliosun</li>
+        <li>龚旺星    nickgong</li>
+        <li>王军 ivan</li>
+        <li>肖瑶 yummyxiao</li>
+        <li>惠卉 huihui</li>
+        <li>洪楷楠    kainanhong</li>
+        <li>万常华    charles</li>
+        <li>范新晔    yexinfan</li>
+        <li>许京 xujing</li>
+        <li>吴军 frankiewu</li>
+        <li>吴思静    sijingwu</li>
+        <li>倪敏 minni</li>
+        <li>李江 tuffli</li>
+        <li>刘楚龙    breakliu</li>
+        <li>王若楠    ruonanwang</li>
+        <li>刘恩辉    eviliu</li>
+        <li>Winny  Winny</li>
+        <li>杜珣 xundu</li>
+        <li>魏德彦    deyanwei</li>
+        <li>王颖 yokiwang</li>
+        <li>黄贝霞    kenlayhuang</li>
+        <li>擦车 cache</li>
+        <li>李娜娜    nanauedli</li>
+        <li>陈俊伟    kenshinchen</li>
+        <li>罗丽 funnyluo</li>
+        <li>苏旎 rainasu</li>
+        <li>李琦 likyli</li>
+        <li>sukeypang  sukeypang</li>
+        <li>李苏晨    sueli</li>
+        <li>江宁 ningjiang</li>
+        <li>牟博文    novakmu</li>
+        <li>梁艳婷    Tinaytliang</li>
+        <li>闵尚剑    mavismin</li>
+        <li>邱敏 rabigqiu</li>
+        <li>李诚 cheneryli</li>
+        <li>郑宇 yiyizheng </li>
+        <li>夏牧子    elvaxia</li>
+        <li>陈妍妍    yanyanchen</li>
+        <li>马德龙    banlonma</li>
+        <li>邹峰 Josephzou</li>
+        <li>梁绮琴    qinliang</li>
+        <li>胡琴 aimeehu</li>
+        <li>龚泓琼    nancygong</li>
+        <li>刘姝文    lenaliu</li>
+        <li>李圣林    linusli</li>
+        <li>潘伟彬    knightpan</li>
+        <li>徐健凯    nicxu</li>
+        <li>王皓炘    Jimmywong</li>
+        <li>金鑫 kahnjin</li>
+        <li>郭瑾谨    jinjinguo</li>
+        <li>廖丽君    juneliao</li>
+        <li>曹超利    charliecao</li>
+        <li>吕佩君    ashinlv</li>
+        <li>皇甫尚斐   feihuangfu</li>
+        <li>李嘉娜    janali</li>
+        <li>曾楚 murphyzeng</li>
+        <li>miss   misszhang</li>
+        <li>王灵可    daisy</li>
+        <li>梁璟彪    twinliang</li>
+        <li>蔡延青    imkennycai</li>
+        <li>王希 wangxi5</li>
+        <li>邵维翰    Ethanshao</li>
+        <li>朱晨 snowdenzhu</li>
+        <li>黄浩 vertuhuang</li>
+        <li>任家良    Deemo</li>
+        <li>杜夏 Sharondu</li>
+        <li>夏巍 shawnxia</li>
+        <li>高晓松    XIAOSONG</li>
+        <li>温禾 fredwen</li>
+        <li>唐凌 Neotang</li>
+        <li>范俊豪    tommyfan</li>
+        <li>黄姝姝    Sunnyshuang</li>
+        <li>董杰 DJ</li>
+        <li>林友荣    leoringlin</li>
+        <li>仲星 nickozhong</li>
+        <li>曹粟 darrencao</li>
+        <li>马茜 xima</li>
+        <li>吴宇兰    ivywu</li>
+        <li>李俊 windyli</li>
+        <li>高建潮    gavinergao</li>
+        <li>张望 mondzhang</li>
+        <li>刘志坚    gkin</li>
+        <li>欧阳晓宁   edithou</li>
+        <li>李世钦    lesenli</li>
+        <li>何子健    tkhe</li>
+        <li>熊佩 angliaxiong</li>
+        <li>徐婷婷    tinaxu</li>
+        <li>侯腾炯    jommanshou</li>
+        <li>杨杰 Eddieyang</li>
+        <li>程明宇    garymycheng</li>
+        <li>崔莉 jennycui</li>
+        <li>万旭成    treewan</li>
+        <li>代希刚    xigangdai</li>
+        <li>张曦 Elainezhang </li>
+        <li>李志锋    kenli</li>
+        <li>周赖靖竞   lailaizhou</li>
+        <li>杨晟 sheenyang</li>
+        <li>邓杨洲    elecdeng</li>
+        <li>黎俊聪    echosli</li>
+        <li>阳子文    waldenyang</li>
+        <li>朱雷 Conniezhu</li>
+        <li>刘文涛    richieliu</li>
+        <li>陈东明    brucechen</li>
+        <li>姜仕奇    Jessejiang</li>
+        <li>杨光 isaacyang</li>
+        <li>张威 waynewzhang</li>
+        <li>黄星爷    xingyehuang</li>
+        <li>洪翀 fabohong</li>
+        <li>熊婷璐    Fionalulu</li>
+        <li>沈天依    deanshen</li>
+        <li>王彬宇    Answer</li>
+        <li>余子翼    myu</li>
+        <li>杨章钊    Timyang</li>
+        <li>王丽云    kaylawang</li>
+        <li>温沉汭    tinawen</li>
+        <li>林敏 min?min?lin</li>
+        <li>黎雪莹    xueyingli</li>
+        <li>百科 kylelin</li>
+        <li>刘冬源    dongyuanliu</li>
+        <li>王烨 Amypapawang</li>
+        <li>李晨曦    chenxili</li>
+        <li>吴开斌    Kaibinwu</li>
+        <li>白晓州    Baixiaozhou</li>
+        <li>陈松 songchen</li>
+        <li>汪涛 olicwang</li>
+        <li>陈坚 jianchen</li>
+        <li>周登辉    denghuizhou</li>
+        <li>聂颖 nieying</li>
+        <li>黎博 bobbli</li>
+        <li>曹晖 huihuicai</li>
+        <li>周公子    arvimzhou</li>
+        <li>沈咪娜    sarahshen</li>
+        <li>薛峰 fengxue</li>
+        <li>杨康 kangyang</li>
+        <li>陈妍 ENYA</li>
+        <li>邱博 photoqiu</li>
+        <li>熊睿 riixiong</li>
+        <li>高蓓蓓    elinegao</li>
+        <li>刘沙 sasaliu</li>
+        <li>李战红    vonnieli</li>
+        <li>祝振翔    Snailzhu </li>
+        <li>王湘勇    ivanxywang</li>
+        <li>郑恬 tikizheng</li>
+        <li>周威 v_weiwzhou</li>
+        <li>冯裕铭    yumyfeng</li>
+        <li>樊曼曼    liviafan</li>
+        <li>高洁 markgao</li>
+        <li>卢文喆    nicklu</li>
+        <li>包丁 boatinchen</li>
+        <li>潘思思    sissipan</li>
+        <li>郑琼璐    nekozheng</li>
+        <li>冯智超    daniefeng </li>
+        <li>黄鹏 dapenghuang</li>
+        <li>陈颢 v_hchaochen</li>
+        <li>黄乐 faninxhuang</li>
+        <li>盛佳林    shengjialin</li>
+        <li>郑小雪    snowzheng</li>
+        <li>陈彬强    Seasonschen</li>
+        <li>高涛明    rodisgao</li>
+        <li>黄松波    ernesthuang</li>
+        <li>姜明辉    lvesjiang</li>
+        <li>宋磊 tongsong</li>
+        <li>王旭凯    Ryan </li>
+        <li>郝崇磊    V_jaredhao</li>
+        <li>黄耀德    Joeyhuang</li>
+        <li>刘皓芳    utaliu</li>
+        <li>游欢 vinyou</li>
+        <li>陈思静    jo?dir?chen</li>
+        <li>项唯伟    mattxiang</li>
+        <li>陈莉 mousachen</li>
+        <li>欧义挺    leonou</li>
+        <li>薛乃一    reinaxue</li>
+        <li>穆锦云    Yoamimu</li>
+        <li>谢斯豪    libraxie</li>
+        <li>欧文 Owenhong</li>
+        <li>王荣 Rowenawang</li>
+        <li>王顶峰    dfwang</li>
+        <li>陈沁 olivianchen</li>
+        <li>叶婍 sevenye</li>
+        <li>汤杰 jiedadatang</li>
+        <li>杨梦茜    CiciYang</li>
+        <li>杜兴德    dudedu</li>
+        <li>郭超 v_supercguo</li>
+        <li>符骏扬    junyangfu</li>
+        <li>李维乐    weileli</li>
+        <li>杨帅 josieyang</li>
+        <li>周文娟    makizhou</li>
+        <li>何聃 Dennyhe</li>
+        <li>岳海平    harryyue</li>
+        <li>张云 judyzyzhang</li>
+        <li>董乙力    v_liydong</li>
+        <li>林秀欣    Boolin</li>
+        <li>杨泽弘    Jolly</li>
+        <li>杨莎 shannonyang</li>
+        <li>黄泽群    jaydenhuang</li>
+        <li>张雪慧    silviazhang</li>
+        <li>李永晶    yancyli</li>
+        <li>张艳军    stanlyzhang</li>
+        <li>刘梦诗    mercy?liu</li>
+        <li>焦路路    lulujiao</li>
+        <li>何俊志    nasahe</li>
+        <li>詹成林    ColinZhan</li>
+        <li>樊小柱    brantfan</li>
+        <li>郭庭苇    guotingwei</li>
+        <li>符駿揚    junyangfu</li>
+        <li>谢庆玲    rainiexie</li>
+        <li>付雅馨    v_yxyxfu</li>
+        <li>黄其亮    leonqhuang</li>
+        <li>林逸鑫    yimlin</li>
+        <li>曹强 stevencqcao</li>
+        <li>刘熠 roy</li>
+        <li>王亚翔    kimwang </li>
+        <li>唐卓 v_zhuotang</li>
+        <li>唐伟 vititang</li>
+        <li>高慧 huicagao</li>
+        <li>吴安琪    anqiwu</li>
+        <li>沈勇 youngshen</li>
+        <li>陈姗姗    sandrachen</li>
+        <li>毛应捷    suzymao</li>
+        <li>潘铭峰    fieldpan</li>
+        <li>罗运广    jonyluo</li>
+        <li>赵洪泽    Hongzezhao</li>
+        <li>曹登科    tigercao</li>
+        <li>李津 samjinli</li>
+        <li>林凯帆    hookclin</li>
+        <li>彭艳 peng?yan</li>
+        <li>李戈 gergli</li>
+        <li>王佳蕾    jialeiwang</li>
+        <li>马超逸    jeremyma</li>
+        <li>林慈童    citonglin</li>
+        <li>邹宇宁    carolinezou</li>
+        <li>徐婧晶    wynnxu</li>
+        <li>赵海燕    haiyan</li>
+        <li>蔡依依    caiyiyi</li>
+        <li>曹洋 Franciscao</li>
+        <li>袁月 luciayuan</li>
+        <li>栗绍峰    shaofengli</li>
+        <li>张敏 amzhang</li>
+        <li>刘建松    jokliu</li>
+        <li>刘青梅    ellaliu</li>
+        <li>颜玮 weiweiyan</li>
+        <li>刘亚宁    Wateringliu</li>
+        <li>杨琳 caralinyang</li>
+        <li>俊豪 leowan</li>
+        <li>李涌芳    lili</li>
+        <li>辛小勇    showyoung</li>
+        <li>温和 rockywen</li>
+        <li>杨泽宇    zacharyyang</li>
+        <li>陈翔 ralychen</li>
+        <li>陈晓丹    de?lia?ad?chen</li>
+        <li>桂紫薇    viviangui</li>
+        <li>贾英男    jiayingnan</li>
+        <li>刘宇然    elvayrliu</li>
+        <li>付磊 scott?fu</li>
+        <li>池承 donkeychi</li>
+        <li>周小康    zhouxiaokang</li>
+        <li>从静轩    Emmacong </li>
+        <li>李维 liwei</li>
+        <li>陈伟林    Wilian</li>
+        <li>张宝力    Bolex</li>
+        <li>王玲玲    miraclewang</li>
+        <li>董凌燕    orangedong</li>
+        <li>曹志灵    colincao</li>
+        <li>邓钧 joundeng</li>
+        <li>林冠龙    Longmanlin</li>
+        <li>彭文静    Janetpeng </li>
+        <li>孟祥萍    Gavinmeng </li>
+        <li>李由 reoli</li>
+        <li>杨溯 suyang</li>
+        <li>彭春梅    aprilcmpeng</li>
+        <li>刘洁 an?na?liu</li>
+        <li>曲竹卿    zhuqingq</li>
+        <li>叶金添    timye</li>
+        <li>陈圣鹏    samperchen</li>
+        <li>董重里    leodong</li>
+        <li>卢俊鸿    junhonglu</li>
+        <li>张泽欣    jsonzhang</li>
+        <li>夏婕 joxia</li>
+        <li>rita   ritachou</li>
+        <li>李程 jaysenli</li>
+        <li>陈云云    judychen</li>
+        <li>汤标 belltang</li>
+        <li>吴昭君    junewu</li>
+        <li>蔡燕君    v_yanjuncai</li>
+        <li>宋睿 rachelsong</li>
+        <li>谭敏 ninatan</li>
+        <li>魏艳芳    nicolewei</li>
+        <li>彭亚男    parispeng</li>
+        <li>徐柳宗    aquazong</li>
+        <li>周文韬    winterzhou</li>
+        <li>贺继 geecohe</li>
+        <li>陈莎莎    shashachan</li>
+        <li>刘君 v_julisaliu</li>
+        <li>钟韬 alexzhong</li>
+        <li>李肇阳    joezyli</li>
+        <li>邢嘉威    lanceieng</li>
+        <li>黄冠杰    felixxhuang</li>
+        <li>丁文博    Samuelding</li>
+        <li>陈春勇    wickchen</li>
+        <li>李思华    seaamesli</li>
+        <li>蔡韶曼    wendycai</li>
+        <li>陈静 phoebechen</li>
+        <li>尹欢密    secretyin</li>
+        <li>张家伦    caicaizhang</li>
+        <li>黄瑞 edisonhuang</li>
+        <li>邢秀齐    leoxong</li>
+        <li>韦政勤    raymonwei</li>
+        <li>徐烨 robertoxu</li>
+        <li>汪芳 Raymondwang</li>
+        <li>马振杰    zhenjiema</li>
+        <li>徐珊 sxu</li>
+        <li>肖梅香    lilacxiao</li>
+        <li>亢航 亢航</li>
+        <li>郭晓 xiaoguo</li>
+        <li>赵侦镐    v_ideazhao</li>
+        <li>方方 curryfang</li>
+        <li>廖睿志    Richelliao</li>
+        <li>黄志平    huangzhiping3</li>
+        <li>黄丽莉    queenhuang </li>
+        <li>唐沐 thomas</li>
+        <li>陈思权    ielchen</li>
+        <li>黄利贤    henryhuang</li>
+        <li>蔡智军    kencai</li>
+        <li>陈娆 cyinchen</li>
+        <li>胡诗财    scothu</li>
+        <li>陆瑾怡    aimee</li>
+        <li>严超凌    superyan</li>
+        <li>fanfancao  fanfancao</li>
+        <li>贺炳应    v_hebyhe</li>
+        <li>杨练 link</li>
+        <li>陈思国    sisi</li>
+        <li>尹凤荣    shirley</li>
+        <li>向兵 bensonxiang</li>
+        <li>汪琦 catwqwang</li>
+        <li>樊中一    afinafan</li>
+        <li>李倩芸    Lenaqyli</li>
+        <li>徐远朝    ycxu</li>
+        <li>张华锋    Tosonzhang </li>
+        <li>谭玉倩    v_yuqiantan</li>
+        <li>马晓磊    maxiaolei</li>
+        <li>李安琪    angieli</li>
+        <li>曾颖 wingyzeng</li>
+        <li>李昕 purplexinli</li>
+        <li>林邵华    sosolin </li>
+        <li>杨俊鑫    matzyang</li>
+        <li>栾兰 amyluan</li>
+        <li>毛帆 maxmao</li>
+        <li>段李华    dsduan</li>
+        <li>潇潇 xuxiao</li>
+        <li>JOJO   JOJO</li>
+        <li>黎欣健    horsleyli</li>
+        <li>陈志坚    jeeghinchen</li>
+        <li>田兴富    tomatotian</li>
+        <li>李一鸣    bufoli</li>
+        <li>吕爽 shuanglv</li>
+        <li>李成艳    wayleeli</li>
+        <li>陈星海    damonchen</li>
+        <li>何洋 dylanhehe</li>
+        <li>郑晖 kavinzheng</li>
+        <li>罗绮媚    miraluo</li>
+        <li>王琪琳    lynnwang</li>
+        <li>吴仕祥    sulongwu</li>
+        <li>付强 edisonqfu</li>
+        <li>冯永强    yongqiang</li>
+        <li>郑春乔    phoebezheng</li>
+        <li>阮子斌    zibinruan</li>
+        <li>陈明 Mingdy</li>
+        <li>黄碧坚    bijianhuang</li>
+        <li>刘健 ugoneliu</li>
+        <li>张俊海    junehizhang</li>
+        <li>张强 Expzhang</li>
+        <li>梁立安    leonlaliang</li>
+        <li>高威煌    edwingao</li>
+        <li>周洲 dualzhou</li>
+        <li>戴芳琼    dianafdai</li>
+        <li>于奇 yuqi41</li>
+        <li>邓婷婷    v_ttingdeng</li>
+        <li>朱璇 Eddyzhu</li>
+        <li>孔茜 qiankong </li>
+        <li>莉莉 yiliy</li>
+        <li>田靳 jintian</li>
+        <li>齐晶明    jingming</li>
+        <li>王钊 Michael Wang</li>
+        <li>何炯琛    johnsonhe</li>
+        <li>林子参    v_zclin</li>
+        <li>祝云龙    gemizhu</li>
+        <li>彭锦兴    starpeng</li>
+        <li>陈波希    Cooper</li>
+        <li>韩莉苹    applehan</li>
+        <li>王雪妍    wangxueyan6</li>
+        <li>宋丽婷    viviansong</li>
+        <li>王曼 wangman</li>
+        <li>陈澄宇    cinellichen</li>
+        <li>王力 alanwang</li>
+        <li>余亮 Tyroneyu</li>
+        <li>李栋梁    dannydli</li>
+        <li>戴勇 hardydai</li>
+        <li>刘嘉恩    jiaenliu</li>
+        <li>罗孝根    loganluo</li>
+        <li>吴婷娜    jasminewu</li>
+        <li>黎志云    abelli</li>
+        <li>谭艳姬    Kayan </li>
+        <li>王荣坛    v_rtwang</li>
+        <li>胡霖 tembohu</li>
+      </ul>
+      <button class="btn_whocome_close" id="btn_whocome_close"></button>
+    </div>
+  </div>
+
+
+  <!-- 截图提示 [[-->
+    <section class="screen_wrap " style="display:none">
+          <i class="screen_icon"></i>
+    </section>
+    <!-- 截图提示 ]]--> 
+  <!-- 分享页 [[-->
+    <section class="share_wrap " style="display:none">
+        <div class="share">
+          <i class="share_icon"></i>
+          <i class="share_txt"></i>
+        </div>
+    </section>
+    <!-- 分享页 ]]--> 
+</body>
+<script>
+  var count = 0;
+
+    var baseWidth = 750,
+        baseHeiht = 1334,
+        baseFontSize = 100,
+        newSize = 1,
+        sacle = 1;
+
+    var sacle = Math.min(window.innerWidth / baseWidth, window.innerHeight / baseHeiht),
+        newSize = parseInt(sacle * 10000 * baseFontSize) / 10000;
+
+    document.documentElement.style.fontSize = newSize + "px";
+</script>
+<script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
+
+<!-- loading -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    document.getElementsByClassName('main').className += 'loaded';
+    });
+</script>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        var ResourceLoader = (function(Config, Util, _, Backbone) {
+
+            var ResourceLoader = function(opts) {
+                this.files = opts.files;
+                this.loadedCallback = opts.callback;
+                this.filesLoaded = 0;
+            };
+
+            ResourceLoader.prototype.loadResource = function(url, callback) {
+                if (url.indexOf('.png') > 0) {
+                    var image = new Image();
+                    image.onload = function() {
+                        return callback(null, null);
+                    };
+                    image.src = url;
+                    return;
+                }
+
+                var request = new XMLHttpRequest();
+                request.open('GET', url, true);
+
+                request.addEventListener('load', function() {
+                    return callback(null, request.response);
+                });
+                request.addEventListener('error', function() {
+                    var statusCode = request.status;
+                    var statusText = request.statusText;
+                    var error = new Error(statusText);
+                    error.status = statusCode;
+                    return callback(error, request.response);
+                });
+                request.send();
+            };
+
+            ResourceLoader.prototype.load = function() {
+                var _this = this;
+                for (var i = 0; i < _this.files.length; i++) {
+                    var url = _this.files[i];
+                    _this.loadResource(url, function() {
+                        _this.filesLoaded += 1;
+                        _this.loadedCallback(false, _this.filesLoaded, url);
+                        if (_this.filesLoaded >= _this.files.length) {
+                            _this.loadedCallback(true, _this.filesLoaded);
+                        }
+                    });
+                }
+            };
+
+            return ResourceLoader;
+        })();
+        var fileList;
+
+        fileList = [
+          'img/arrow_txt.png',
+          'img/btn_close.png',
+          'img/icon_arrow.png',
+          'img/logo.png',
+          'img/logo2.png',
+          'img/music_play.gif',
+          'img/music_stop.png',
+          'img/page_1_100d.png',
+          'img/page_1_text1.png',
+          'img/page_1_text2.png',
+          'img/page_1_text3.png',
+          'img/page_2_d.png',
+          'img/page_3_d.png',
+          'img/page_4_d.png',
+          'img/page_5_d.png',
+          'img/page_6_icon.png',
+          'img/page_6_qrcode.png',
+          'img/page_6_upload.png',
+          'img/screen.png',
+          'img/share.png',
+            'img/share_icon.png',
+            'media/music3.mp3'
+        ];
+
+        var fileLength = fileList.length;
+        var loader = new ResourceLoader({
+            files: fileList,
+            callback: function(isDone, filesLoaded, url) {
+                if (isDone) {
+                    setTimeout(function() {
+                        $('.loading').hide();
+                        $('#fullpage').removeClass('hide');
+
+                        audio.play();
+                        music.className = 'on';
+                    }, 1000);
+                } else {
+
+                }
+            }
+        });
+
+        loader.load();
+    });
+
+
+
+</script>
+
+<!-- fullpage 插件设置 -->
+<script src="js/jquery.fullPage.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            // anchors: ['firstSlide', 'secondSlide', 'thirdSlide', 'forthSlide', 'fifthSlide', 'sixthSlide', 'seventhSlide', 'eighthSlide', 'ninthSlide'],
+            // css3: true,
+            // normalScrollElements: '.scroll',
+            // fixedElements: '.section5_block_wrap',
+            // resize: true,
+            // easing: 'ease-in'
+        });
+    });
+</script>
+<script src="js/transform.js"></script>
+<script src="js/alloy_finger.js"></script>
+<script src="js/image_loaded.js"></script>
+<script src="js/to.js"></script>
+<script src="js/jquery.uploadView.js"></script>
+<script type="text/javascript" src="js/ten.js"></script>
+
+<script type="text/javascript">
+// 点击看看谁会来
+window.onload = function(){
+ var btnWhocome = $('btn_whocome');
+ var popWhocome = $('pop_whocome');
+ var btnClose =  $('btn_whocome_close');
+ btnWhocome.onclick = function(){
+   popWhocome.style.display = 'block';
+ }
+ btnClose.onclick = function(){
+   popWhocome.style.display = 'none';
+ }
+
+
+}
+
+
+$(document).ready(function(e) {
+    for(var i=0;i<100;i++){
+        var span = $("<span class='pic pic_"+i+"'>"+i+"</span>")
+        $(".page_1_100d").append(span);
+    }
+    
+    for(var x=0;x<10;x++){
+        var x_factor = 2.5 + x/10;
+        for(var y=0;y<10;y++){
+            var timedelay = x_factor + y/10;
+            var num = (x * 10 + y);
+            $(".pic_"+num).css({
+                "-webkit-animation-delay":timedelay+"s",
+                "background-position": (-0.7 * x) + "rem " + (-0.7 * y) + "rem"
+            });
+        }
+    }
+    
+
+    $(document).on('touchstart click', '#btn_whocome', function() {
+       $('#pop_whocome').show();
+    });
+
+    $(document).on('touchstart click', '#btn_whocome_close', function() {
+       $('#pop_whocome').hide();
+    });
+
+});
+
+
+(function() {
+  var mtas = document.createElement("script");
+  mtas.src = "//tajs.qq.com/h5?sId=500000270";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(mtas, s);
+})();
+</script>
+
+</html>
