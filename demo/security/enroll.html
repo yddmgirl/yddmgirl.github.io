@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-cn">
+    <head>
+	<meta charset="UTF-8">
+	<title>互联网安全生态圈报名H5</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script>
+		// 根据屏幕控制字体大小
+	    var baseWidth = 640,
+	        baseHeiht = 1006,
+	        baseFontSize = 100,
+	        newSize = 1,
+	        sacle = 1;
+
+	    var sacle = Math.min(window.innerWidth / baseWidth, window.innerHeight / baseHeiht),
+	        newSize = parseInt(sacle * 10000 * baseFontSize) / 10000;
+
+	    document.documentElement.style.fontSize = newSize + "px"; 
+	</script>
+</head>
+<body>
+
+    
+
+<div id="orientation_hinter" class="landscape">
+    <div class="hinter_phone"><i></i></div>
+    <div class="hinter_rotate"></div>
+    <div class="hinter_text landscape">竖屏体验效果更佳</div>
+    <div class="hinter_text portrait">横屏体验效果更佳</div>
+</div>
+ 
+
+    
+
+<div class="enroll_form">
+    <div class="tit"></div>
+    <form class="enroll_form_con swiper-no-swiping">
+        <ul>
+            <li class="name">
+                <span>姓名</span>
+                <input type="text" datatype="s2-4" nullmsg="请填写姓名！" errormsg="姓名格式不正确！">
+            </li>
+            <li class="tel">
+                <span>手机号</span>
+                <input type="text" datatype="m" nullmsg="请填写手机号！" errormsg="手机号格式不正确！">
+            </li>
+            <li>
+                <span>公司名称</span>
+                <input type="text" datatype="s" nullmsg="请填写公司名称！" errormsg="公司名称格式不正确！">
+            </li>
+            <li>
+                <span>职位名称</span>
+                <input type="text" datatype="s" nullmsg="请填写您的职位名称！" errormsg="职位名称格式不正确！">
+            </li>
+            <li>
+                <span>工作邮箱</span>
+                <input type="text" datatype="e" nullmsg="请填写您的工作邮箱！" errormsg="工作邮箱格式不正确！">
+            </li>
+            <li>
+                <span>工作区域 <i>(城市)</i></span>
+                <input type="text" datatype="s" nullmsg="请填写您的工作区域！" errormsg="工作区域格式不正确！">
+            </li>
+            <li>
+                <span>问题征集 <i>(请写下您希望向腾讯安全管理团队了解的问题)</i></span>
+                <textarea></textarea>
+            </li>
+        </ul>
+        <input type="submit" class="submit" value="提交报名">
+    </form>
+</div> 
+
+    <!-- 提交成功弹窗 -->
+
+<div class="enroll_success">
+    <div class="content">
+        <div class="tip"></div>
+        <p>提交成功</p>
+        <a href="index.html" class="close">×</a>
+    </div>
+</div> 
+
+
+</body>
+<script src="js/src/jquery-2.0.0.min.js"></script>
+<script src="js/src/Validform_v5.3.2_min.js"></script>
+<script>
+    // 报名
+    $('.btn_enroll').on('tap',function(){
+        $('.enroll_form').css('display','block');
+    })
+
+
+    $('.enroll_success .close').on('tap',function(e){
+        $('.enroll_success').css('display','none');
+        $('.enroll_form').css('display','none');
+        e.stopPropagation();
+    })
+    
+    $('.enroll_success .content').on('tap',function(e){
+        e.stopPropagation();
+    })
+
+    $('.enroll_success').on('tap',function(e){
+        $(this).css('display','none');
+        $('.enroll_form').cssmoz ('display','none');
+        e.stopPropagation();
+    })
+
+    // 报名表单验证
+
+    $(".enroll_form_con").Validform({
+        callback:function(data){
+            $('.submit').click(function(){
+                $('.enroll_success').css('display','block');
+                setTimeout(function(){
+                    window.location.href = 'index.html';
+                },3000);
+            })
+        }
+    });
+</script>
+</html>
