@@ -186,7 +186,7 @@ function sendPhoto(formdata,fn){
           fn({
             filterId:111,
             url: src,
-            result: '测试数据'
+            result: '测 试 数据'
           })
       }
     },1000)
