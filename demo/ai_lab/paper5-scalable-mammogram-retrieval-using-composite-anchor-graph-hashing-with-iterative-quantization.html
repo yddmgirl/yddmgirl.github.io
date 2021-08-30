@@ -1,0 +1,412 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>腾讯 AI Lab - 腾讯人工智能实验室官网</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="baidu-site-verification" content="r5znRc9TGh" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="腾讯AI,QQ AI,腾讯人工智能实验室,，腾讯人工智能，计算机视觉，语音合成，语音识别，语音技术，语音识别与合成，自然语言处理，机器学习，大数据，深度学习，视频滤镜，图像滤镜，图像描述生成，语音识别前端，神经网络，信息挖掘，信息抽取，对话，问答，机器翻译" name="Keywords">
+    <meta name="description" content="腾讯 AI Lab（腾讯人工智能实验室）， 腾讯公司级AI战略，聚集全球数十位人工智能科学家、50位世界一流AI博士。聚焦Content AI, Social AI，Game AI. 
+专注机器学习、计算机视觉、语音识别、自然语言处理等人工智能领域的研究。基于腾讯亿万用户海量数据及在互联网各垂直领域的技术优势，立志打造世界顶尖人工智能团队。
+" />
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="Tencent-CDC">
+    <meta name="copyright" content="Tencent">
+    <meta name="robots" content="index,follow">
+    <link href="images/favicon.ico" type="image/ico" rel="shortcut icon" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
+        
+<script>
+(function(doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+            var designWidth  = 1920; // 设计稿宽度
+            var designHeight = 1080; // 设计稿高度
+            var maxWidth     = 1920; // 设计稿最大宽度
+            var maxHeight    = 1080; // 设计稿最大高度
+            var clientWidth  = docEl.clientWidth;
+            var clientHeight = docEl.clientHeight;
+            var baseFontSize = 100; // 根元素基准字体大小
+            if ( (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+                //移动端
+                docEl.setAttribute("class", "m"); 
+                baseFontSize = 256; // 根元素基准字体大小
+                // console.log('m');
+                $('.header').addClass('fixed');
+            } else {
+                //PC端
+                docEl.setAttribute("class", "pc pagepc");
+                baseFontSize = 100; // 根元素基准字体大小
+                // console.log('pc');
+            }
+
+            if (!clientWidth) return;
+            if (clientWidth / clientHeight > designWidth / designHeight) {
+                if (clientHeight <= maxHeight) {
+                    docEl.style.fontSize = clientHeight / designHeight * baseFontSize + "px";
+                } else {
+                    docEl.style.fontSize = maxHeight / designHeight * baseFontSize + "px";
+                }
+            } else {
+                if (clientWidth <= maxWidth) {
+                    docEl.style.fontSize = clientWidth / designWidth * baseFontSize + "px";
+                } else {
+                    docEl.style.fontSize = maxWidth / designWidth * baseFontSize + "px";
+                }
+            }
+        };
+
+    // Abort if browser does not support addEventListener
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+
+
+</script>
+    
+    <script type="text/javascript" src="js/vendor/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="js/vendor/sona.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.i18n.properties.min.js"></script>
+    <script src="js/vendor/sha256.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+
+</head>
+<body>
+<!--[if lt IE 10]><body id="lt-ie10"><![endif]-->
+
+
+
+
+    <section class="g-wrap">
+        <div class="header fixed on">
+     <h1 class="head-logo" title="腾讯 AI Lab">腾讯 AI Lab 官网</h1>
+     <a class="head-logolink" href="http://ai.tencent.com/ailab/index.html">腾讯 AI Lab 官网</a>
+     <div class="lang">
+        <a href="javascript:;" id="en">En</a><span>/</span><a href="javascript:;" id="cn">中</a>
+     </div>
+     <div class="navbar">
+         <ul>
+            <li ><a href="index.html"><span>首页</span></a></li>
+            <li class="active"><a href="paper-list.html"><span>论文</span></a></li>
+            <li class="has-dropdown">
+                <a href="technology-basis-text-analysis.html">
+                    <span>技术体验</span>
+                </a>
+                <div class="navbar-dropdown">
+                    <div class="dropdown-list clearfix">
+                        <div class="dropdown-item">
+                            <h3><i class="icon nav-icon1"></i><span>自然语言处理</span></h3>
+                            <dl>
+                                <dt><a href="technology-basis-text-analysis.html">基础文本分析</a></dt>
+                                <dd>
+                                    <a href="technology-basis-text-analysis.html#participle">分词/词性标注</a>
+                                    <a href="technology-basis-text-analysis.html#centence">句法分析</a>
+                                    <a href="">语义分析</a>
+                                </dd>
+                                <dt><a href="technology-intelligent-chat.html">智能闲聊</a></dt>
+                                <dt><a href="technology-machine-translation.html">机器翻译</a></dt>
+                            </dl>
+                        </div>
+                        <div class="dropdown-item">
+                            <h3><i class="icon nav-icon2"></i><span>计算机视觉</span></h3>
+                            <dl>
+                                <dt><a href="technology-picture-identification.html">图片识别</a></dt>
+                                <dd>
+                                    <a href="technology-picture-identification.html#mark">图片标注</a>
+                                    <a href="technology-picture-identification.html#speak">看图说话</a>
+                                </dd>
+                                <dt><a href="technology-face-recognition.html">人脸检测</a></dt>
+                                <dt><a href="">艺术滤镜</a></dt>
+                            </dl>
+                        </div>
+                        <div class="dropdown-item">
+                            <h3><i class="icon nav-icon3"></i><span>智能语音</span></h3>
+                            <dl>
+                                <dt><a href="">语音识别</a></dt>
+                                <dd>
+                                    <a href="">远程语音识别</a>
+                                    <a href="">近场语音识别</a>
+                                    <a href="">说话人识别</a>
+                                </dd>
+                                <dt><a href="">语音合成</a></dt>
+                                <dt><a href="">语音唤醒</a></dt>
+                                <dt><a href="">语音活动性检测</a><i>beta</i></dt>
+                                <dt><a href="">语音降噪</a><i>new</i></dt>
+                            </dl>
+                        </div>
+                        <div class="dropdown-item personal-panel">
+                            <h3>
+                                <i class="icon nav-icon4"></i><span>个人控制台<a href="http://100.102.32.50/console/console_front/index.html" target="_blank" class="btn-login">登录</a></span>
+                            </h3>
+                            <dl>
+                                <dt><a href="http://100.102.32.50/console/console_doc/index.html" target="_blank">文档中心</a></dt>
+                                <!--<dt><a href="">API文档</a></dt>
+                                <dd>
+                                    <a href="">自然语言处理</a>
+                                    <a href="">计算机视觉</a>
+                                    <a href="">智能语言</a>
+                                </dd>-->
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li ><a href="news-list.html"><span>新闻</span></a></li>
+            <li ><a href="academic-list.html"><span>合作</span></a></li>
+            <li ><a href="recruit.html"><span>招聘</span></a></li>
+            <li ><a href="about.html"><span>关于</span></a></li>
+         </ul>
+     </div>
+     <a href="javascript:;" class="nav_btn"></a>
+</div>
+
+
+        
+
+
+
+
+
+
+<div class="container">
+    <div class="paper-title">Scalable Mammogram Retrieval Using Composite Anchor Graph Hashing with Iterative Quantization</div>
+    <div class="paper-content">
+        <div class="paper-main">
+            <div class="head">
+                <span class="mod-tit">Abstract</span>
+            </div>
+            <div class="content">
+                 Content-Based Image Retrieval (CBIR) shows great significance in clinical decision-making, which explores the visual content of medical images rather than keywords, tags, or descriptions. It provides doctors an image-guided approach to explore relevant cases that could offer doctors instructive reference. Mammogram screening has been known to be widely used in the early-stage diagnosis of breast cancer, and could reduce its morbidity and mortality. In this paper, we aim to develop a scalable CBIR method for a large repository of mammogram. To this end, we extend the original Anchor Graph Hashing (AGH) and propose a new unsupervised hashing algorithm, named as Composite Anchor Graph Hashing with Iterative Quantization (CAGH- ITQ), which compresses mammographic ROIs into compact binary codes and enables real-time searching in Hamming space. Multimodal features and different distance metrics are integrated, performing upon a composite Anchor Graph. To improve the effectiveness of the hash code, quantization error is further iteratively minimized by introducing an orthogonal rotation matrix. We evaluate the presented C-AGH-ITQ algorithm on a dataset of 11; 533 mammographic ROIs obtained from the Digital Database for Screening Mammography (DDSM). Our method obtains more than 84% retrieval precision and 93% classification accuracy (by using k-NN prediction), which demonstrates that hash codes produced by C-AGH-ITQ well capture the visual similarities between mammographic images. In addition, since C-AGH-ITQ ensures linear complexity of the training procedure and constant time for query, our system is readily applicable to large-scale mammogram databases and has the potential to provide abundant clinical cases as reference. 
+                <div class="paper-data">
+                    <span class="view">
+                        <i class="icon icon-paper"></i>
+                        <a href="http://ieeexplore.ieee.org/document/7514951/" target="_blank">View the Paper</a>
+                    </span>
+                    <span class="view">
+                        <i class="icon icon-dataset"></i>
+                        <a href="">Download Dataset</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="paper-side">
+            <div class="row">
+                <div class="mod-tit">Venue</div>
+                <div class="mod-text">IEEE Transactions on Circuits and Systems for Video Technology</div>
+            </div>
+            <div class="row">
+                <div class="mod-tit">Publication Time</div>
+                <div class="mod-text">
+                    2016
+                </div>
+            </div>
+            <div class="row">
+                <div class="mod-tit">Authors</div>
+                <div class="mod-text">Jingjing Liu, Shaoting Zhang, Wei Liu, Cheng Deng, Yuanjie Zheng, and Dimitris N. Metaxas</div>
+            </div>
+        </div>
+        <!-- 上一篇&下一篇 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul class="paper-num">
+    <li class="paper-prev">
+         <span class="prev">上一篇：</span><div class="link"><a href="paper4-stochastic-gradient-made-stable--a-manifold-propagation-approach-for-large-scale-optimization.html">Stochastic Gradient Made Stable: A Manifold Propagation Approach for Large-Scale Optimization</a></div>
+    </li>
+    <li class="paper-next">
+        <span class="next">下一篇：</span><div class="link"><a href="paper6-efficient-multi-class-selective-sampling-on-graphs.html">Efficient Multi-Class Selective Sampling on Graphs</a></div>
+    </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+        <footer class="footer">
+    <ul class="foot-logo">
+        <li class="tencent" title="tencent">
+            <a href="http://www.tencent.com/" target="_blank">腾讯官网</a>
+        </li>
+        <li class="line" title="tencent"></li>
+        <li class="tencentlab" title="tencent lab">
+            <a href="http://ai.tencent.com/">腾讯 AI Lab 官网</a>
+        </li>
+    </ul>
+    <div class="copyright">
+        Copyright © 1998 - 2017 Tencent. All Rights Reserved.
+    </div>
+    <ul class="foot-msg">
+        <li class="msg-email"><a href="mailto:ailab@tencent.com"><i class="icon icon-email"></i>email</a></li>
+        <li class="msg-Wechat">
+            <i class="icon icon-wx"></i>Wechat
+            <div class="foot-pop"><img src="images/qrcode-wechat.png" alt=""></div>
+        </li>
+        <li class="msg-qq"><i class="icon icon-qq"></i>QQ International</li>
+    </ul>
+</footer>
+
+    </section>
+
+
+
+<!-- 低版本浏览器警告 -->
+
+ <!--[if IE]>
+<div class="pop-browser-warn" data-func="pop-wrap">
+    <div class="pop-content">
+        <i class="icon-warn-browser"></i>
+        <a href="javascript:;" class="btn-warn-close" data-func="close"></a>
+        <div class="warn-content">
+            <h3>请升级您的浏览器</h3>
+            <p class="warn-tips">尊敬的用户，我们强烈建议您升级操作系统或浏览器获得更安全的网络环境及更好的用户体验</p>
+            <div class="browser-list">
+                <ul>
+                    <li>
+                        <a target="_blank" href="http://browser.qq.com/">
+                            <i class="icon icon-browser-qq"></i>
+                            <p>QQ浏览器</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.firefox.com.cn/download/">
+                            <i class="icon icon-browser-firefox"></i>
+                            <p>火狐</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.google.cn/chrome/index.html">
+                            <i class="icon icon-browser-chrome"></i>
+                            <p>Chrome</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<![endif]-->
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>腾讯 AI Lab - 腾讯人工智能实验室官网</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="baidu-site-verification" content="r5znRc9TGh" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="腾讯AI,QQ AI,腾讯人工智能实验室,，腾讯人工智能，计算机视觉，语音合成，语音识别，语音技术，语音识别与合成，自然语言处理，机器学习，大数据，深度学习，视频滤镜，图像滤镜，图像描述生成，语音识别前端，神经网络，信息挖掘，信息抽取，对话，问答，机器翻译" name="Keywords">
+    <meta name="description" content="腾讯 AI Lab（腾讯人工智能实验室）， 腾讯公司级AI战略，聚集全球数十位人工智能科学家、50位世界一流AI博士。聚焦Content AI, Social AI，Game AI. 
+专注机器学习、计算机视觉、语音识别、自然语言处理等人工智能领域的研究。基于腾讯亿万用户海量数据及在互联网各垂直领域的技术优势，立志打造世界顶尖人工智能团队。
+" />
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="Tencent-CDC">
+    <meta name="copyright" content="Tencent">
+    <meta name="robots" content="index,follow">
+    <link href="images/favicon.ico" type="image/ico" rel="shortcut icon" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
+        
+<script>
+(function(doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+            var designWidth  = 1920; // 设计稿宽度
+            var designHeight = 1080; // 设计稿高度
+            var maxWidth     = 1920; // 设计稿最大宽度
+            var maxHeight    = 1080; // 设计稿最大高度
+            var clientWidth  = docEl.clientWidth;
+            var clientHeight = docEl.clientHeight;
+            var baseFontSize = 100; // 根元素基准字体大小
+            if ( (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+                //移动端
+                docEl.setAttribute("class", "m"); 
+                baseFontSize = 256; // 根元素基准字体大小
+                // console.log('m');
+                $('.header').addClass('fixed');
+            } else {
+                //PC端
+                docEl.setAttribute("class", "pc pagepc");
+                baseFontSize = 100; // 根元素基准字体大小
+                // console.log('pc');
+            }
+
+            if (!clientWidth) return;
+            if (clientWidth / clientHeight > designWidth / designHeight) {
+                if (clientHeight <= maxHeight) {
+                    docEl.style.fontSize = clientHeight / designHeight * baseFontSize + "px";
+                } else {
+                    docEl.style.fontSize = maxHeight / designHeight * baseFontSize + "px";
+                }
+            } else {
+                if (clientWidth <= maxWidth) {
+                    docEl.style.fontSize = clientWidth / designWidth * baseFontSize + "px";
+                } else {
+                    docEl.style.fontSize = maxWidth / designWidth * baseFontSize + "px";
+                }
+            }
+        };
+
+    // Abort if browser does not support addEventListener
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+
+
+</script>
+    
+    <script type="text/javascript" src="js/vendor/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="js/vendor/sona.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.i18n.properties.min.js"></script>
+    <script src="js/vendor/sha256.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+
+</head>
+<body>
+<!--[if lt IE 10]><body id="lt-ie10"><![endif]-->
+
+
+
+
+    <section class="g-wrap">
+        <div class="header fixed on">
+     <h1 class="head-logo" title="腾讯 AI Lab">腾讯 AI Lab 官网</h1>
+     <a class="head-logolink" href="http://ai.tencent.com/ailab/index.html">腾讯 AI Lab 官网</a>
+     <div class="lang">
+        <a href="javascript:;" id="en">En</a><span>/</span><a href="javascript:;" id="cn">中</a>
+     </div>
+     <div class="navbar">
+         <ul>
+            <li ><a href="index.html"><span>首页</span></a></li>
+            <li ><a href="paper-list.html"><span>论文</span></a></li>
+            <li class="has-dropdown">
+                <a href="technology-basis-text-analysis.html">
+                    <span>技术体验</span>
+                </a>
+                <div class="navbar-dropdown">
+                    <div class="dropdown-list clearfix">
+                        <div class="dropdown-item">
+                            <h3><i class="icon nav-icon1"></i><span>自然语言处理</span></h3>
+                            <dl>
+                                <dt><a href="technology-basis-text-analysis.html">基础文本分析</a></dt>
+                                <dd>
+                                    <a href="technology-basis-text-analysis.html#participle">分词/词性标注</a>
+                                    <a href="technology-basis-text-analysis.html#centence">句法分析</a>
+                                    <a href="">语义分析</a>
+                                </dd>
+                                <dt><a href="technology-intelligent-chat.html">智能闲聊</a></dt>
+                                <dt><a href="technology-machine-translation.html">机器翻译</a></dt>
+                            </dl>
+                        </div>
+                        <div class="dropdown-item">
+                            <h3><i class="icon nav-icon2"></i><span>计算机视觉</span></h3>
+                            <dl>
+                                <dt><a href="technology-picture-identification.html">图片识别</a></dt>
+                                <dd>
+                                    <a href="technology-picture-identification.html#mark">图片标注</a>
+                                    <a href="technology-picture-identification.html#speak">看图说话</a>
+                                </dd>
+                                <dt><a href="technology-face-recognition.html">人脸检测</a></dt>
+                                <dt><a href="">艺术滤镜</a></dt>
+                            </dl>
+                        </div>
+                        <div class="dropdown-item">
+                            <h3><i class="icon nav-icon3"></i><span>智能语音</span></h3>
+                            <dl>
+                                <dt><a href="">语音识别</a></dt>
+                                <dd>
+                                    <a href="">远程语音识别</a>
+                                    <a href="">近场语音识别</a>
+                                    <a href="">说话人识别</a>
+                                </dd>
+                                <dt><a href="">语音合成</a></dt>
+                                <dt><a href="">语音唤醒</a></dt>
+                                <dt><a href="">语音活动性检测</a><i>beta</i></dt>
+                                <dt><a href="">语音降噪</a><i>new</i></dt>
+                            </dl>
+                        </div>
+                        <div class="dropdown-item personal-panel">
+                            <h3>
+                                <i class="icon nav-icon4"></i><span>个人控制台<a href="http://100.102.32.50/console/console_front/index.html" target="_blank" class="btn-login">登录</a></span>
+                            </h3>
+                            <dl>
+                                <dt><a href="http://100.102.32.50/console/console_doc/index.html" target="_blank">文档中心</a></dt>
+                                <!--<dt><a href="">API文档</a></dt>
+                                <dd>
+                                    <a href="">自然语言处理</a>
+                                    <a href="">计算机视觉</a>
+                                    <a href="">智能语言</a>
+                                </dd>-->
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li ><a href="news-list.html"><span>新闻</span></a></li>
+            <li class="active"><a href="academic-list.html"><span>合作</span></a></li>
+            <li ><a href="recruit.html"><span>招聘</span></a></li>
+            <li ><a href="about.html"><span>关于</span></a></li>
+         </ul>
+     </div>
+     <a href="javascript:;" class="nav_btn"></a>
+</div>
+
+
+        
+    
+<div class="container">
+    <div class="paper-title visiting_scholars_program_title">
+        腾讯AI Lab犀牛鸟访问学者申请指南
+    </div>
+    <div class="paper-content visiting_scholars_program">
+        <div class="paper-main">
+            <div class="content academic-content">
+                <h4 class="acadeindex first">项目介绍</h4>
+                <p>腾讯AI Lab犀牛鸟访问学者项目旨在向人工智能相关领域学者提供一个了解工业届研发和应用现状的机会，同时开展紧密的共赢合作。</p>
+                <h4 class="acadeindex">面向对象</h4>
+                <p>机器学习、计算机视觉、语音信号处理和自然语言处理等领域的全球高校全职学者、博士后或科研机构的全职研究人员，所在单位鼓励赴企业访问工作，且有相对较长的假期。</p>
+                <p>访问工作地点为腾讯AI Lab位于深圳或西雅图办公室。申请学者需拥有在访问地点所在国家从事有偿劳动的相关许可。</p>
+                <p>具体研究方向参见附件1: Tencent AI Lab Rhino-Bird Visiting Scholar Program_ Research Topics.</p>
+
+                <h4 class="acadeindex">申请方式</h4>
+                <p>请下载右侧附件2：Tencent AI Lab Rhino-Bird Visiting Scholar Program_Application_Faculty Name_University中的申请书模版，填写完成后邮件发送至腾讯AI Lab犀牛鸟学术合作计划专用邮箱：<a href="mailto:AILabPrograms@tencent.com">AILabPrograms@tencent.com</a>。</p>
+                <p>如果申请学者能够联系到腾讯AI Lab相关方向研究员，建议先与其交流沟通，以使研究计划尽量符合双方的研究兴趣。工作内容可以是对双方和人工智能的发展有意义的各类型工作。</p>
+                <p>请勿在申请材料中包含任何保密信息或无权分享给腾讯的信息。</p>
+
+                <h4 class="acadeindex">评审通知</h4>
+                <p>腾讯AI Lab组织评审，确定可支持的申请，邮件通知学者，并与访问学者签署协议。访问资助额度将结合学者的职称和访问期间工作计划协商确定，并包含交通和住宿补贴。</p>
+
+                <h4 class="acadeindex">访问安排</h4>
+                <p><b>访问时间</b><br>实际访问周期不得与申请书有较大差异，具体日期可协商调整。开始访问日期不得晚于2018年10月1日。原则上需连续全职访问一个月以上，三个月以上更佳；腾讯AI Lab附近地区学者可选择每周访问约半周。</p>
+                <p><b>工作模式</b><br>访问学者赴腾讯AI Lab，加入和自己研究领域相关的研究团队。腾讯AI Lab会为每位访问学者安排相关领域研究员作为研究合作伙伴，开展深入合作。</p>
+                <p><b>访问总结</b><br>访问结束时访问学者提交《腾讯AI Lab访问学者工作总结报告》，并在总结会议上向腾讯AI Lab相关研究主管汇报工作成果。</p>
+
+                <h4 class="acadeindex">重要时间</h4>
+                <p>2018年度访问学者申请截止：2018年1月31日；结果通知：2018年3月。</p>
+
+                <h4 class="acadeindex">联系咨询</h4>
+                <p>腾讯AI Lab犀牛鸟学术合作计划专用邮箱：<a href="mailto:AILabPrograms@tencent.com">AILabPrograms@tencent.com</a></p>
+            </div>
+        </div>
+        <div class="paper-side">
+            <div class="download-wrap">
+                <h4>附件下载：</h4>
+                <ul>
+                    <li><i class="icon icon-download"></i><a href="./media/1_Tencent_AI_Lab_Rhino-Bird_Visiting_Scholar_Program_Research_Topics.pdf" download>Tencent AI Lab Rhino-Bird Visiting Scholar Program_ Research Topics.pdf</a></li>
+                    <li><i class="icon icon-download"></i><a href="./media/2_Tencent_AI Lab_Rhino-Bird_Visiting_Scholar_Program_Application_Faculty_Name_University.docx" download>Tencent AI Lab Rhino-Bird Visiting Scholar Program_Application_Faculty Name_University.docx</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        <footer class="footer">
+    <ul class="foot-logo">
+        <li class="tencent" title="tencent">
+            <a href="http://www.tencent.com/" target="_blank">腾讯官网</a>
+        </li>
+        <li class="line" title="tencent"></li>
+        <li class="tencentlab" title="tencent lab">
+            <a href="http://ai.tencent.com/">腾讯 AI Lab 官网</a>
+        </li>
+    </ul>
+    <div class="copyright">
+        Copyright © 1998 - 2017 Tencent. All Rights Reserved.
+    </div>
+    <ul class="foot-msg">
+        <li class="msg-email"><a href="mailto:ailab@tencent.com"><i class="icon icon-email"></i>email</a></li>
+        <li class="msg-Wechat">
+            <i class="icon icon-wx"></i>Wechat
+            <div class="foot-pop"><img src="images/qrcode-wechat.png" alt=""></div>
+        </li>
+        <li class="msg-qq"><i class="icon icon-qq"></i>QQ International</li>
+    </ul>
+</footer>
+
+    </section>
+
+
+
+<!-- 低版本浏览器警告 -->
+
+ <!--[if IE]>
+<div class="pop-browser-warn" data-func="pop-wrap">
+    <div class="pop-content">
+        <i class="icon-warn-browser"></i>
+        <a href="javascript:;" class="btn-warn-close" data-func="close"></a>
+        <div class="warn-content">
+            <h3>请升级您的浏览器</h3>
+            <p class="warn-tips">尊敬的用户，我们强烈建议您升级操作系统或浏览器获得更安全的网络环境及更好的用户体验</p>
+            <div class="browser-list">
+                <ul>
+                    <li>
+                        <a target="_blank" href="http://browser.qq.com/">
+                            <i class="icon icon-browser-qq"></i>
+                            <p>QQ浏览器</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.firefox.com.cn/download/">
+                            <i class="icon icon-browser-firefox"></i>
+                            <p>火狐</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.google.cn/chrome/index.html">
+                            <i class="icon icon-browser-chrome"></i>
+                            <p>Chrome</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<![endif]-->
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,562 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>腾讯 AI Lab - 腾讯人工智能实验室官网</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="baidu-site-verification" content="r5znRc9TGh" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="腾讯AI,QQ AI,腾讯人工智能实验室,，腾讯人工智能，计算机视觉，语音合成，语音识别，语音技术，语音识别与合成，自然语言处理，机器学习，大数据，深度学习，视频滤镜，图像滤镜，图像描述生成，语音识别前端，神经网络，信息挖掘，信息抽取，对话，问答，机器翻译" name="Keywords">
+    <meta name="description" content="腾讯 AI Lab（腾讯人工智能实验室）， 腾讯公司级AI战略，聚集全球数十位人工智能科学家、50位世界一流AI博士。聚焦Content AI, Social AI，Game AI. 
+专注机器学习、计算机视觉、语音识别、自然语言处理等人工智能领域的研究。基于腾讯亿万用户海量数据及在互联网各垂直领域的技术优势，立志打造世界顶尖人工智能团队。
+" />
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="Tencent-CDC">
+    <meta name="copyright" content="Tencent">
+    <meta name="robots" content="index,follow">
+    <link href="images/favicon.ico" type="image/ico" rel="shortcut icon" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
+        
+<script>
+(function(doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+            var designWidth  = 1920; // 设计稿宽度
+            var designHeight = 1080; // 设计稿高度
+            var maxWidth     = 1920; // 设计稿最大宽度
+            var maxHeight    = 1080; // 设计稿最大高度
+            var clientWidth  = docEl.clientWidth;
+            var clientHeight = docEl.clientHeight;
+            var baseFontSize = 100; // 根元素基准字体大小
+            if ( (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+                //移动端
+                docEl.setAttribute("class", "m"); 
+                baseFontSize = 256; // 根元素基准字体大小
+                // console.log('m');
+                $('.header').addClass('fixed');
+            } else {
+                //PC端
+                docEl.setAttribute("class", "pc pagepc");
+                baseFontSize = 100; // 根元素基准字体大小
+                // console.log('pc');
+            }
+
+            if (!clientWidth) return;
+            if (clientWidth / clientHeight > designWidth / designHeight) {
+                if (clientHeight <= maxHeight) {
+                    docEl.style.fontSize = clientHeight / designHeight * baseFontSize + "px";
+                } else {
+                    docEl.style.fontSize = maxHeight / designHeight * baseFontSize + "px";
+                }
+            } else {
+                if (clientWidth <= maxWidth) {
+                    docEl.style.fontSize = clientWidth / designWidth * baseFontSize + "px";
+                } else {
+                    docEl.style.fontSize = maxWidth / designWidth * baseFontSize + "px";
+                }
+            }
+        };
+
+    // Abort if browser does not support addEventListener
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+
+
+</script>
+    
+    <script type="text/javascript" src="js/vendor/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="js/vendor/sona.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.i18n.properties.min.js"></script>
+    <script src="js/vendor/sha256.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+
+</head>
+<body>
+<!--[if lt IE 10]><body id="lt-ie10"><![endif]-->
+
+
+
+
+    <section class="g-wrap">
+        <div class="header fixed on">
+     <h1 class="head-logo" title="腾讯 AI Lab">腾讯 AI Lab 官网</h1>
+     <a class="head-logolink" href="http://ai.tencent.com/ailab/index.html">腾讯 AI Lab 官网</a>
+     <div class="lang">
+        <a href="javascript:;" id="en">En</a><span>/</span><a href="javascript:;" id="cn">中</a>
+     </div>
+     <div class="navbar">
+         <ul>
+            <li ><a href="index.html"><span>首页</span></a></li>
+            <li ><a href="paper-list.html"><span>论文</span></a></li>
+            <li class="has-dropdown active">
+                <a href="technology-basis-text-analysis.html">
+                    <span>技术体验</span>
+                </a>
+                <div class="navbar-dropdown">
+                    <div class="dropdown-list clearfix">
+                        <div class="dropdown-item">
+                            <h3><i class="icon nav-icon1"></i><span>自然语言处理</span></h3>
+                            <dl>
+                                <dt><a href="technology-basis-text-analysis.html">基础文本分析</a></dt>
+                                <dd>
+                                    <a href="technology-basis-text-analysis.html#participle">分词/词性标注</a>
+                                    <a href="technology-basis-text-analysis.html#centence">句法分析</a>
+                                    <a href="">语义分析</a>
+                                </dd>
+                                <dt><a href="technology-intelligent-chat.html">智能闲聊</a></dt>
+                                <dt><a href="technology-machine-translation.html">机器翻译</a></dt>
+                            </dl>
+                        </div>
+                        <div class="dropdown-item">
+                            <h3><i class="icon nav-icon2"></i><span>计算机视觉</span></h3>
+                            <dl>
+                                <dt><a href="technology-picture-identification.html">图片识别</a></dt>
+                                <dd>
+                                    <a href="technology-picture-identification.html#mark">图片标注</a>
+                                    <a href="technology-picture-identification.html#speak">看图说话</a>
+                                </dd>
+                                <dt><a href="technology-face-recognition.html">人脸检测</a></dt>
+                                <dt><a href="">艺术滤镜</a></dt>
+                            </dl>
+                        </div>
+                        <div class="dropdown-item">
+                            <h3><i class="icon nav-icon3"></i><span>智能语音</span></h3>
+                            <dl>
+                                <dt><a href="">语音识别</a></dt>
+                                <dd>
+                                    <a href="">远程语音识别</a>
+                                    <a href="">近场语音识别</a>
+                                    <a href="">说话人识别</a>
+                                </dd>
+                                <dt><a href="">语音合成</a></dt>
+                                <dt><a href="">语音唤醒</a></dt>
+                                <dt><a href="">语音活动性检测</a><i>beta</i></dt>
+                                <dt><a href="">语音降噪</a><i>new</i></dt>
+                            </dl>
+                        </div>
+                        <div class="dropdown-item personal-panel">
+                            <h3>
+                                <i class="icon nav-icon4"></i><span>个人控制台<a href="http://100.102.32.50/console/console_front/index.html" target="_blank" class="btn-login">登录</a></span>
+                            </h3>
+                            <dl>
+                                <dt><a href="http://100.102.32.50/console/console_doc/index.html" target="_blank">文档中心</a></dt>
+                                <!--<dt><a href="">API文档</a></dt>
+                                <dd>
+                                    <a href="">自然语言处理</a>
+                                    <a href="">计算机视觉</a>
+                                    <a href="">智能语言</a>
+                                </dd>-->
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li ><a href="news-list.html"><span>新闻</span></a></li>
+            <li ><a href="academic-list.html"><span>合作</span></a></li>
+            <li ><a href="recruit.html"><span>招聘</span></a></li>
+            <li ><a href="about.html"><span>关于</span></a></li>
+         </ul>
+     </div>
+     <a href="javascript:;" class="nav_btn"></a>
+</div>
+
+
+        
+<div class="banner-technology">
+    <div class="content">
+        <h2>基础文本分析</h2>
+        <p>腾讯AI LAB基础文本分析服务依托腾讯强大的机器学习能力和文本挖掘引擎，在腾讯千亿级社交语料支撑下，不断完善算法模型，提供准确的分词，词性标注，命名实体识别，同义词转换，纠错等功能，同时抽取文本中的关键信息，全面支撑机器对基础文本的理解与分析。</p>
+        <div class="btn-area">
+            <a href="" class="btn-white">立即试用</a>
+            <a href="">技术文档</a>
+        </div>
+    </div>
+</div>
+
+<div class="placeholder-id" id="participle"></div>
+<div class="placeholder-id" id="centence"></div>
+
+<div class="container">
+    <h3 class="technology-tit" id="analysis">功能体验</h3>
+    <div class="technology-section function-experience-section">
+        <div class="text-section">
+            <p>请输入一段想分析的文本<a href="javascript:;" id="change-sentence">换一段示例</a><span>67/100</span></p>
+            <textarea id="sentence-input"></textarea>
+        </div>
+        <div class="analysis-section clearfix">
+            <div class="analysis-cats">
+                <ul>
+                    <li data-tabs="nav" class="active">分词/词性</li>
+                    <li data-tabs="nav">句法分析</li>
+                </ul>
+            </div>
+            <div class="analysis-content">
+                <div class="analysis-content-item words-analysis-area" data-tabs="content">
+                    <div class="analysis-words">
+                        <div class="words-list">
+                            <span class="selected">由</span><span>腾讯</span><span>基金会</span><span>发起</span><span>的</span><span>中国</span><span>互联网</span><span>公益</span><span>峰会</span><span>在</span><span>本月</span><span>中旬</span><span>于</span><span>北京</span><span>举行</span><span>，</span><span>峰会</span><span>的</span><span>主题</span><span>是</span><span>：</span><span>互联网</span><span>改变</span><span>公益</span><span>。</span><span>会上</span><span>陈一丹</span><span>宣布</span><span>，</span><span>腾讯</span><span>将</span><span>出</span><span>20</span><span>亿</span><span>资源</span><span>助力</span><span>公益</span><span>生态</span><span>。</span>
+                        </div>
+                        <div class="words-cats">
+                            <a href="" class="selected">介词</a>
+                            <a href="">名词</a>
+                            <a href="">动词</a>
+                            <a href="">助词</a>
+                            <a href="">地名</a>
+                            <a href="">时间词</a>
+                            <a href="">标点符号</a>
+                            <a href="">方位词</a>
+                            <a href="">人名</a>
+                            <a href="">副词</a>
+                            <a href="">数词</a>
+                            <a href="">区别词</a>
+                        </div>
+                    </div>
+                    <!-- 暂时隐藏 -->
+                    <div class="analysis-option" style="display: none;">
+                        <span class="ui-switch jmod-pos-switch checked">
+                            <span class="ui-switch-inner"></span>
+                            <i></i>
+                        </span>
+                        <label>混合颗粒：将相关联名词合并</label>
+                    </div>
+                </div>
+                <div class="analysis-content-item sentence-analysis-area" style="display: none;" data-tabs="content">
+                    <div class="sentence-relationship">
+                        <ul>
+                            <li>SBV-主谓关系</li>
+                            <li>HED-核心关系</li>
+                            <li>VOB-动宾关系</li>
+                            <li>SBV-主谓关系</li>
+                            <li>HED-核心关系</li>
+                            <li>VOB-动宾关系</li>
+                            <li>COO-并列关系</li>
+                            <li>RAD-右附加关系</li>
+                            <li>SBV-主谓关系</li>
+                            <li>HED-核心关系</li>
+                            <li>VOB-动宾关系</li>
+                            <li>COO-并列关系</li>
+                            <li>RAD-右附加关系</li>
+                            <li>SBV-主谓关系</li>
+                            <li>HED-核心关系</li>
+                            <li>VOB-动宾关系</li>
+                            <li>COO-并列关系</li>
+                            <li>RAD-右附加关系</li>
+                        </ul>
+                    </div>
+                    <div class="sentence-analysis">
+                        <div class="analysis-canvas-area" id="analysis-canvas-area"></div>
+                        <a href="javascript:;" class="btn-zoom btn-zoom-in"></a>
+                        <a href="javascript:;" class="btn-zoom btn-zoom-out"></a>
+                    </div>
+                    <div class="pop-tip">请点击拖动看看</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 class="technology-tit">技术优势</h3>
+    <div class="technology-section advantage-section clearfix">
+        <ul>
+            <li>
+                <i class="icon icon1"></i>
+                <h4>业界最优</h4>
+                <p>词性标注与句法分析成绩在全球公开竞赛中位居第一</p>
+            </li>
+            <li>
+                <i class="icon icon2"></i>
+                <h4>国际同步</h4>
+                <p>使用的标记集是国际通行规范，保持国际接轨</p>
+            </li>
+            <li>
+                <i class="icon icon3"></i>
+                <h4>厚实积累</h4>
+                <p>依托强大的机器学习能力和文本挖掘引擎，十年专注中文语义分析技术</p>
+            </li>
+            <li>
+                <i class="icon icon4"></i>
+                <h4>垂直领域广</h4>
+                <p>支持天气、音乐、新闻、财经、交通、美食、视频、提醒等垂直领域，并在不断扩展中</p>
+            </li>
+            <li>
+                <i class="icon icon5"></i>
+                <h4>语料丰富</h4>
+                <p>千亿级互联网语料数据支持，精确理解自然语言</p>
+            </li>
+            <li>
+                <i class="icon icon6"></i>
+                <h4>市场历练</h4>
+                <p>数十个腾讯产品的成功应用经验，饱经市场检验</p>
+            </li>
+        </ul>
+    </div>
+    <h3 class="technology-tit">应用场景</h3>
+    <div class="scene-section">
+        <ul class="clearfix">
+            <li class="scene-item1">
+                <div class="con">
+                    <i class="icon icon1"></i>
+                    <h4>个性化推荐</h4>
+                    <p>挖掘用户喜好，实现精准触达</p>
+                </div>
+            </li>
+            <li class="scene-item2">
+                <div class="con">
+                    <i class="icon icon2"></i>
+                    <h4>金融风控</h4>
+                    <p>对数据进行结构化处理后，运用于风控与征信评估</p>
+                </div>
+            </li>
+            <li class="scene-item3">
+                <div class="con">
+                    <i class="icon icon3"></i>
+                    <h4>搜索引擎</h4>
+                    <p>准确的分词结果提高搜索准确率</p>
+                </div>
+            </li>
+            <li class="scene-item4">
+                <div class="con">
+                    <i class="icon icon4"></i>
+                    <h4>舆情分析</h4>
+                    <p>轻松挖掘社会舆论倾向</p>
+                </div>
+            </li>
+            <li class="scene-item5">
+                <div class="con">
+                    <i class="icon icon5"></i>
+                    <h4>智能客服</h4>
+                    <p>让机器客服更懂客户所需</p>
+                </div>
+            </li>
+            <li class="scene-item6">
+                <div class="con">
+                    <i class="icon icon6"></i>
+                    <h4>生活服务</h4>
+                    <p>通过对UGC的关键词和兴趣点挖掘，调用对应的服务功能，提高用户体验</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <h3 class="technology-tit">合作案例</h3>
+    <div class="case-section">
+        <ul class="clearfix">
+            <li class="case-qq"><a href=""><div class="pic"></div></a></li>
+            <li class="case-my"><a href=""><div class="pic"></div></a></li>
+            <li class="case-news"><a href=""><div class="pic"></div></a></li>
+            <li class="case-didi"><a href=""><div class="pic"></div></a></li>
+        </ul>
+    </div>
+</div>
+
+
+        <footer class="footer">
+    <ul class="foot-logo">
+        <li class="tencent" title="tencent">
+            <a href="http://www.tencent.com/" target="_blank">腾讯官网</a>
+        </li>
+        <li class="line" title="tencent"></li>
+        <li class="tencentlab" title="tencent lab">
+            <a href="http://ai.tencent.com/">腾讯 AI Lab 官网</a>
+        </li>
+    </ul>
+    <div class="copyright">
+        Copyright © 1998 - 2017 Tencent. All Rights Reserved.
+    </div>
+    <ul class="foot-msg">
+        <li class="msg-email"><a href="mailto:ailab@tencent.com"><i class="icon icon-email"></i>email</a></li>
+        <li class="msg-Wechat">
+            <i class="icon icon-wx"></i>Wechat
+            <div class="foot-pop"><img src="images/qrcode-wechat.png" alt=""></div>
+        </li>
+        <li class="msg-qq"><i class="icon icon-qq"></i>QQ International</li>
+    </ul>
+</footer>
+
+    </section>
+
+
+
+<!-- 低版本浏览器警告 -->
+
+ <!--[if IE]>
+<div class="pop-browser-warn" data-func="pop-wrap">
+    <div class="pop-content">
+        <i class="icon-warn-browser"></i>
+        <a href="javascript:;" class="btn-warn-close" data-func="close"></a>
+        <div class="warn-content">
+            <h3>请升级您的浏览器</h3>
+            <p class="warn-tips">尊敬的用户，我们强烈建议您升级操作系统或浏览器获得更安全的网络环境及更好的用户体验</p>
+            <div class="browser-list">
+                <ul>
+                    <li>
+                        <a target="_blank" href="http://browser.qq.com/">
+                            <i class="icon icon-browser-qq"></i>
+                            <p>QQ浏览器</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.firefox.com.cn/download/">
+                            <i class="icon icon-browser-firefox"></i>
+                            <p>火狐</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.google.cn/chrome/index.html">
+                            <i class="icon icon-browser-chrome"></i>
+                            <p>Chrome</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<![endif]-->
+
+
+
+
+<script src="js/vendor/echarts-all.js"></script>
+<script>
+// 混合颗粒开关
+$(document).on('click','.jmod-pos-switch',function(){
+    if($(this).hasClass('checked')){
+        $(this).removeClass('checked');
+    } else{
+        $(this).addClass('checked');
+    }
+});
+
+// 词性分析
+function catsInitial(){
+    var urlArr = window.location.href.split('#');
+    var url = urlArr[urlArr.length-1];
+    var index = 0;
+    if(url == 'participle' || url == 'mark' ){
+        index = 0;
+    } else if(url == 'centence' || url == 'speak'){
+        index = 1;
+    }
+    $('[data-tabs="nav"]').removeClass('active');
+    $('[data-tabs="nav"]').eq(index).addClass('active');
+    $('[data-tabs="content"]').hide();
+    $('[data-tabs="content"]').eq(index).show();
+}
+  
+// 检测上传的图片是否符合要求
+function checkImageValidity (selectedFile) {
+  var result = { valid: false, msg: '' }
+  /*if (selectedFile.type !== 'image/jpeg' && selectedFile.type !== 'image/jpg') {
+    result.msg = '请选择 jpg 或者 jpeg 图片！'
+  } else */if (selectedFile.size / 1024 /1024 > 1) {
+    result.msg = '图片大小不能超过1M！'
+  } else {
+    result.valid = true
+  }
+  return result
+}
+  
+// 去除图片 base64 编码的头部信息
+function removeBase64Header (base64Str) {
+  return base64Str.replace(/^data:image\/(png|jpg|jpeg);base64,/, "")
+}
+  
+// 把图片转为 base64 编码的字符窜
+function convertImgToBase64Str (imgObj) {
+  var imgType = /\.png$/.test(imgObj.src) ? 'png' : 'jpeg'
+  var canvas = document.createElement('canvas')
+  var ctx = canvas.getContext('2d')
+  canvas.width = imgObj.naturalWidth
+  canvas.height = imgObj.naturalHeight
+  ctx.drawImage(imgObj, 0, 0)
+  return removeBase64Header(canvas.toDataURL('image/' + imgType))
+}
+  
+// 把使用文件框选择的图片转为 base64 编码的字符窜
+function convertFileToBase64Str (imgFileObj, withHeader = false) {
+  return new Promise((resolve, reject) => {
+    var reader = new FileReader()
+    reader.addEventListener('load', function (e) {
+      if (withHeader) {
+        resolve(reader.result)
+      } else {
+        resolve(removeBase64Header(reader.result))
+      }
+    })
+    reader.readAsDataURL(imgFileObj)
+  })
+}
+    
+// 人脸对比页面计算预览图适应 container 要缩放的比例
+function getPreviewImgScaler (container, preview) {
+  var cw = container.offsetWidth,
+      ch = container.offsetHeight,
+      pw = preview.offsetWidth,
+      ph = preview.offsetHeight
+  var widthScaler = cw / pw,
+      heightScaler = ch / ph
+  return Math.min(widthScaler, heightScaler)
+}
+  
+// api 请求
+function request (url, data) {
+  var host = 'http://100.102.32.50:8081/appdemo/'
+  // var host = 'http://100.102.32.50:8081/v1/cv/'
+  var authInfo = generateAuthenticationInfo()
+  authInfo.data = data
+  return fetch(host + url, {
+    method: 'post',
+    body: JSON.stringify(authInfo),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8'
+    }
+  }).then(res => res.json())
+}
+  
+catsInitial();
+  
+$(window).on('hashchange',function(){
+    catsInitial();
+});
+  
+$(document).on('click','[data-tabs="nav"]',function(){
+    $(this).siblings().removeClass('active');
+    var content = $('[data-tabs="content"]');
+    content.hide();
+    var index = $(this).index();
+    content.eq(index).show();
+    if(!$(this).hasClass('active')){
+        $(this).addClass('active');
+    }
+});
+  
+// 功能体验部分缩略图切换
+$('.jmod-demo-list').on('click', function (e) {
+  if ($(e.target).hasClass('active') || $(e.target).parent('.img-wrap').hasClass('active')) {
+    return
+  }
+  // 显示点击的缩略图的原始图片
+  var imgSrc = e.target.src
+  $(this).parent('.demo-box').find('.jmod-preview img').attr({
+    src: imgSrc.replace(/-m(\.\w{3})/, '$1'),
+    'data-img-type': 'url'
+  })
+  // 切换高亮的缩略图
+  $(this).find('.active').removeClass('active')
+  $(e.target).parent('.img-wrap').addClass('active')
+})
+</script>
+
+<script src="js/technology-basis-text-analysis.js"></script>
+
+
+
+</body>
+</html>

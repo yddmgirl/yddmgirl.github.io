@@ -1,0 +1,838 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>腾讯 AI Lab - 腾讯人工智能实验室官网</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="baidu-site-verification" content="r5znRc9TGh" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="腾讯AI,QQ AI,腾讯人工智能实验室,，腾讯人工智能，计算机视觉，语音合成，语音识别，语音技术，语音识别与合成，自然语言处理，机器学习，大数据，深度学习，视频滤镜，图像滤镜，图像描述生成，语音识别前端，神经网络，信息挖掘，信息抽取，对话，问答，机器翻译" name="Keywords">
+    <meta name="description" content="腾讯 AI Lab（腾讯人工智能实验室）， 腾讯公司级AI战略，聚集全球数十位人工智能科学家、50位世界一流AI博士。聚焦Content AI, Social AI，Game AI. 
+专注机器学习、计算机视觉、语音识别、自然语言处理等人工智能领域的研究。基于腾讯亿万用户海量数据及在互联网各垂直领域的技术优势，立志打造世界顶尖人工智能团队。
+" />
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="Tencent-CDC">
+    <meta name="copyright" content="Tencent">
+    <meta name="robots" content="index,follow">
+    <link href="images/favicon.ico" type="image/ico" rel="shortcut icon" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
+        
+<script>
+(function(doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+            var designWidth  = 1920; // 设计稿宽度
+            var designHeight = 1080; // 设计稿高度
+            var maxWidth     = 1920; // 设计稿最大宽度
+            var maxHeight    = 1080; // 设计稿最大高度
+            var clientWidth  = docEl.clientWidth;
+            var clientHeight = docEl.clientHeight;
+            var baseFontSize = 100; // 根元素基准字体大小
+            if ( (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+                //移动端
+                docEl.setAttribute("class", "m"); 
+                baseFontSize = 256; // 根元素基准字体大小
+                // console.log('m');
+                $('.header').addClass('fixed');
+            } else {
+                //PC端
+                docEl.setAttribute("class", "pc indexpc");
+                baseFontSize = 100; // 根元素基准字体大小
+                // console.log('pc');
+            }
+
+            if (!clientWidth) return;
+            if (clientWidth / clientHeight > designWidth / designHeight) {
+                if (clientHeight <= maxHeight) {
+                    docEl.style.fontSize = clientHeight / designHeight * baseFontSize + "px";
+                } else {
+                    docEl.style.fontSize = maxHeight / designHeight * baseFontSize + "px";
+                }
+            } else {
+                if (clientWidth <= maxWidth) {
+                    docEl.style.fontSize = clientWidth / designWidth * baseFontSize + "px";
+                } else {
+                    docEl.style.fontSize = maxWidth / designWidth * baseFontSize + "px";
+                }
+            }
+        };
+
+    // Abort if browser does not support addEventListener
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+
+
+</script>
+        <link rel="stylesheet" type="text/css" href="css/idangerous.swiper.css" />
+        <script type="text/javascript" src="js/vendor/idangerous.swiper.min.js"></script>
+    
+    <script type="text/javascript" src="js/vendor/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="js/vendor/sona.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.i18n.properties.min.js"></script>
+    <script src="js/vendor/sha256.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+
+</head>
+<body>
+<!--[if lt IE 10]><body id="lt-ie10"><![endif]-->
+
+
+
+    
+    
+
+<!-- loading -->
+<div class="loading hide" id="loader">
+    <div class="loading-img" id="loadimg"></div>
+    <div class="loading-bar" id="loadbar">
+        <span class="percent-text">Loading…</span>
+        <span class="percent-num" id="percent">0%</span>
+    </div>
+</div>
+<!-- loading -->
+
+    <!-- Swiper -->
+    <div class="header ">
+     <h1 class="head-logo" title="腾讯 AI Lab">腾讯 AI Lab 官网</h1>
+     <a class="head-logolink" href="http://ai.tencent.com/ailab/index.html">腾讯 AI Lab 官网</a>
+     <div class="lang">
+        <a href="javascript:;" id="en">En</a><span>/</span><a href="javascript:;" id="cn">中</a>
+     </div>
+     <div class="navbar">
+         <ul>
+            <li class="active"><a href="index.html"><span>首页</span></a></li>
+            <li ><a href="paper-list.html"><span>论文</span></a></li>
+            <li class="has-dropdown">
+                <a href="technology-basis-text-analysis.html">
+                    <span>技术体验</span>
+                </a>
+                <div class="navbar-dropdown">
+                    <div class="dropdown-list clearfix">
+                        <div class="dropdown-item">
+                            <h3><i class="icon nav-icon1"></i><span>自然语言处理</span></h3>
+                            <dl>
+                                <dt><a href="technology-basis-text-analysis.html">基础文本分析</a></dt>
+                                <dd>
+                                    <a href="technology-basis-text-analysis.html#participle">分词/词性标注</a>
+                                    <a href="technology-basis-text-analysis.html#centence">句法分析</a>
+                                    <a href="">语义分析</a>
+                                </dd>
+                                <dt><a href="technology-intelligent-chat.html">智能闲聊</a></dt>
+                                <dt><a href="technology-machine-translation.html">机器翻译</a></dt>
+                            </dl>
+                        </div>
+                        <div class="dropdown-item">
+                            <h3><i class="icon nav-icon2"></i><span>计算机视觉</span></h3>
+                            <dl>
+                                <dt><a href="technology-picture-identification.html">图片识别</a></dt>
+                                <dd>
+                                    <a href="technology-picture-identification.html#mark">图片标注</a>
+                                    <a href="technology-picture-identification.html#speak">看图说话</a>
+                                </dd>
+                                <dt><a href="technology-face-recognition.html">人脸检测</a></dt>
+                                <dt><a href="">艺术滤镜</a></dt>
+                            </dl>
+                        </div>
+                        <div class="dropdown-item">
+                            <h3><i class="icon nav-icon3"></i><span>智能语音</span></h3>
+                            <dl>
+                                <dt><a href="">语音识别</a></dt>
+                                <dd>
+                                    <a href="">远程语音识别</a>
+                                    <a href="">近场语音识别</a>
+                                    <a href="">说话人识别</a>
+                                </dd>
+                                <dt><a href="">语音合成</a></dt>
+                                <dt><a href="">语音唤醒</a></dt>
+                                <dt><a href="">语音活动性检测</a><i>beta</i></dt>
+                                <dt><a href="">语音降噪</a><i>new</i></dt>
+                            </dl>
+                        </div>
+                        <div class="dropdown-item personal-panel">
+                            <h3>
+                                <i class="icon nav-icon4"></i><span>个人控制台<a href="http://100.102.32.50/console/console_front/index.html" target="_blank" class="btn-login">登录</a></span>
+                            </h3>
+                            <dl>
+                                <dt><a href="http://100.102.32.50/console/console_doc/index.html" target="_blank">文档中心</a></dt>
+                                <!--<dt><a href="">API文档</a></dt>
+                                <dd>
+                                    <a href="">自然语言处理</a>
+                                    <a href="">计算机视觉</a>
+                                    <a href="">智能语言</a>
+                                </dd>-->
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li ><a href="news-list.html"><span>新闻</span></a></li>
+            <li ><a href="academic-list.html"><span>合作</span></a></li>
+            <li ><a href="recruit.html"><span>招聘</span></a></li>
+            <li ><a href="about.html"><span>关于</span></a></li>
+         </ul>
+     </div>
+     <a href="javascript:;" class="nav_btn"></a>
+</div>
+
+    <div class="swiper-container swiper-container-h">
+        <div class="swiper-pagination-h"></div>
+        <div class="swiper-wrapper swiper-wrapper-h">
+            <div class="swiper-slide">
+                <div class="page-wr page1">
+                    <div class="logo">
+                        <img class="logo_img" src="images/logo.png" srcset="images/logo@2x.png 2x"  alt="腾讯 AI Lab">
+                    </div>
+                    <!-- <h2 class="logo-text">腾讯 AI Lab 官网</h2> -->
+                    <div class="page1-title-slogen">Make AI Everywhere</div>
+                    <div class="page1-title">
+                        让 AI 无处不在
+                    </div>
+                    <div class="page1-info">
+                        腾讯公司级AI战略蓄势待发，聚集全球数十位人工智能科学家、50位世界一流AI博士。<br>专注机器学习、计算机视觉、语音识别、自然语言处理等人工智能领域的研究。<br>基于腾讯亿万用户海量数据及在互联网各垂直领域的技术优势，立志打造世界顶尖人工智能团队。
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="page-wr page2">
+                    <div class="page-content">
+                        <div class="study-title">
+                            研究与应用
+                        </div>
+                        <div class="search-cats clearfix">
+                            <a href="javascript:;" class="active">研究领域</a>
+                            <a href="javascript:;">应用领域</a>
+                        </div>
+                        <div class="paper-container-s">
+                            <div class="swiper-wrapper">
+                                <div class="search-content swiper-slide">
+                                    <ul>
+                                        <li>
+                                            <i class="icon"><img src="images/icon-search1.png" alt=""></i>
+                                            <h4>计算机视觉</h4>
+                                            <p>计算机视觉使得计算机能够理解真实的视觉世界。</p>
+                                        </li>
+                                        <li>
+                                            <i class="icon"><img src="images/icon-search2.png" alt=""></i>
+                                            <h4>语音识别</h4>
+                                            <p>使机器能“听懂”人类语言，将语音转化为文本。</p>
+                                        </li>
+                                        <li>
+                                            <i class="icon"><img src="images/icon-search3.png" alt=""></i>
+                                            <h4>自然语言处理</h4>
+                                            <p>赋予计算机系统以自然语言文本方式与外界交互的能力。</p>
+                                        </li>
+                                        <li>
+                                            <i class="icon"><img src="images/icon-search4.png" alt=""></i>
+                                            <h4>机器学习</h4>
+                                            <p>使计算机在没有明确编程的情况下自动执行。</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="application-content swiper-slide">
+                                    <ul>
+                                        <li>
+                                            <i class="icon"><img src="images/icon-application1.png" alt=""></i>
+                                            <div class="section">
+                                                <h4>社交AI</h4>
+                                                <p>核心领域：智能助手，客服机器人；应用于中国领先的社交平台，包括微信和QQ。</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="icon"><img src="images/icon-application2.png" alt=""></i>
+                                            <div class="section">
+                                                <h4>游戏AI</h4>
+                                                <p>核心领域：围棋AI绝艺，其他腾讯游戏；支持中国排名第一的线上游戏提供商。</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="icon"><img src="images/icon-application3.png" alt=""></i>
+                                            <div class="section">
+                                                <h4>内容AI</h4>
+                                                <p>核心领域：搜索、个性化推荐、内容生成；应用于中国排名第一的线上视频、音乐、阅读平台和新闻app。</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="icon"><img src="images/icon-application4.png" alt=""></i>
+                                            <div class="section">
+                                                <h4>平台AI</h4>
+                                                <p>核心领域：机器翻译、聊天机器人、语音识别、敏感性分析；通过强大的工具和服务将AI技术带给开发者，以加速技术创新。</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-btn-area"><a href="http://ai.tencent.com/ailab/about.html" target="_blank" class="page2-btn btn-common">查看更多</a></div>
+                        <!-- <div class="study-list">
+                            <div class="page2-text mod-page-text">
+                                <h2 class="page2-title mod-page-title">
+                                    <i class="icon icon-vision"></i><span>计算机视觉</span>
+                                </h2>
+                                <p class="page2-info-1">
+                                追踪和研究最前沿的计算机视觉理论与算法，依托人工智能和大数据的支持，赋予计算机接近乃至超越人类视觉系统的能力，提升计算机完成各类视觉任务的水平，探索计算机在最新领域中的应用。
+                                </p>
+                                <p class="page2-info-2">
+                                    主要研究分支：图像视频的分析、理解与编辑，人脸的检测与识别，物体的检测、跟踪与分类，3D视觉，基于视觉的增强学习等。
+                                </p>
+                            </div>
+                            <div class="page3-text mod-page-text">
+                                <h2 class="page3-title mod-page-title">
+                                    <i class="icon icon-voice"></i>
+                                    <span>语音识别</span>
+                                </h2>
+                                <p class="page3-info-1">基于声学模型和语言模型, 创建一个智能的"机器听觉系统" 和"机器会话系统", 让机器能"听懂"人类语言, 并理解语言中包含的信息从而达到真正的人机"对话"。</p>
+                                <p class="page3-info-2">
+                                主要研究分支：语言前端处理、声学模型/语言模型的建立、语言解码和语音合成等。
+                                </p>
+                            </div>
+                            <div class="page4-text mod-page-text">
+                                <h2 class="page4-title mod-page-title">
+                                    <i class="icon icon-lau"></i>
+                                    <span>自然语言处理</span>
+                                </h2>
+                                <p class="page4-info-1">
+                                赋予计算机系统以自然语言文本方式与外界交互的能力(即让计算机能够"读懂"自然语言文本，并能够用自然语言文本的方式"表达"自己的"思想")，追踪和研究最前沿的自然语言文本理解和生成技术，孵化下一代自然语言处理技术与商业应用场景。
+                                </p>
+                                <p class="page4-info-2">
+                                    主要研究分支：语义分析、知识推理、智能问答、机器翻译等。
+                                </p>
+                            </div>
+
+                            <div class="page5-text mod-page-text">
+                                <h2 class="page5-title mod-page-title">
+                                    <i class="icon icon-mac"></i>
+                                    <span>机器学习</span>
+                                </h2>
+                                <p class="page5-info-1">
+                                研究前沿的机器学习理论及算法，研发和部署大规模机器学习/深度学习系统。在大数据和互联网背景下，探索其在社交网络、广告推荐，行业大数据，智能游戏，以及基于感知和决策的AI等方向的应用 。
+                                </p>
+                                <p class="page5-info-2">
+                                    主要研究分支：机器学习理论，优化算法，大规模分布式计算，异构平台，以及创新监督，半监督，和增强机器学习算法的研究。
+                                </p>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="page-wr page6">
+                    <h2 class="page6-title ">
+                        论文成果
+                    </h2>
+                    <div class="swiper-container paper-container-v">
+                        <div class="swiper-wrapper paper-wrapper">
+                            <!-- paper1 -->
+                            <div class="swiper-slide paper-slide">
+                               <a class="paper-item" href="http://ai.tencent.com/ailab/paper1-multimedia-hashing-and-networking.html" target="_blank">
+                                    <div class="tit">
+                                        IEEE MultiMedia
+                                    </div>
+                                    <div class="tit-2">
+                                        Multimedia Hashing and Networking
+                                    </div>
+                                    <div class="txt">
+                                       Wei Liu and Tongtao Zhang
+                                        <br>
+                                        2016.
+                                    </div>
+                                    <div class="link">Read More</div>
+                                </a>
+                            </div>
+                            <!-- paper2 -->
+                            <div class="swiper-slide paper-slide">
+                               <a class="paper-item" href="http://ai.tencent.com/ailab/paper2-deep-learning-driven-visual-path-prediction-from-a-single-image.html" target="_blank">
+                                    <div class="tit">
+                                       IEEE Transactions on Image Processing
+                                    </div>
+                                    <div class="tit-2">
+                                        Deep Learning Driven Visual Path Prediction from a Single Image
+                                    </div>
+                                    <div class="txt">
+                                        Siyu Huang, Xi Li, Zhongfei Zhang, Zhouzhou He, Fei Wu, Wei Liu, Jinhui Tang, and Yueting Zhuang
+                                        <br>
+                                        Dec. 2016.
+                                    </div>
+                                    <div class="link">Read More</div>
+                                </a>
+                            </div>
+                            <!-- paper3 -->
+                            <div class="swiper-slide paper-slide">
+                               <a class="paper-item" href="http://ai.tencent.com/ailab/paper3-hierarchical-visualization-of-video-search-results-for-topic-based-browsing.html" target="_blank">
+                                    <div class="tit">
+                                        IEEE Transactions on Multimedia
+                                    </div>
+                                    <div class="tit-2">
+                                        Hierarchical Visualization of Video Search Results for Topic-based Browsing
+                                    </div>
+                                    <div class="txt">
+                                        Yu-Gang Jiang, Jiajun Wang, Qiang Wang, Wei Liu, and Chong-Wah Ngo
+                                        <br>
+                                        2016.
+                                    </div>
+                                    <div class="link">Read More</div>
+                                </a>
+                            </div>
+                            <!-- paper4 -->
+                            <div class="swiper-slide paper-slide">
+                               <a class="paper-item" href="http://ai.tencent.com/ailab/paper4-stochastic-gradient-made-stable--a-manifold-propagation-approach-for-large-scale-optimization.html" target="_blank">
+                                    <div class="tit">
+                                        IEEE Transactions on Knowledge and Data Engineering
+                                    </div>
+                                    <div class="tit-2">
+                                        Stochastic Gradient Made Stable: A Manifold Propagation Approach for Large-Scale Optimization
+                                    </div>
+                                    <div class="txt">
+                                        Yadong Mu, Wei Liu, and Wei Fan
+                                        <br>
+                                        2016.
+                                    </div>
+                                    <div class="link">Read More</div>
+                                </a>
+                            </div>
+                            <!-- paper5 -->
+                            <div class="swiper-slide paper-slide">
+                               <a class="paper-item" href="http://ai.tencent.com/ailab/paper5-scalable-mammogram-retrieval-using-composite-anchor-graph-hashing-with-iterative-quantization.html" target="_blank">
+                                    <div class="tit">
+                                        IEEE Transactions on Circuits and Systems for Video Technology
+                                    </div>
+                                    <div class="tit-2">
+                                       Scalable Mammogram Retrieval Using Composite Anchor Graph Hashing with Iterative Quantization
+                                    </div>
+                                    <div class="txt">
+                                        Jingjing Liu, Shaoting Zhang, Wei Liu, Cheng Deng, Yuanjie Zheng, and Dimitris N. Metaxas
+                                        <br>
+                                        2016.
+                                    </div>
+                                    <div class="link">Read More</div>
+                                </a>
+                            </div>
+                            <!-- paper6 -->
+                            <div class="swiper-slide paper-slide">
+                               <a class="paper-item" href="http://ai.tencent.com/ailab/paper6-efficient-multi-class-selective-sampling-on-graphs.html" target="_blank">
+                                    <div class="tit">
+                                        Conference on Uncertainty in Artificial Intelligence (UAI)
+                                    </div>
+                                    <div class="tit-2">
+                                        Efficient Multi-Class Selective Sampling on Graphs
+                                    </div>
+                                    <div class="txt">
+                                        Peng Yang, Peilin Zhao, Zhen Hai, Wei Liu, Steven C.H. Hoi, and Xiao-Li Li
+                                        <br>
+                                        2016.
+                                    </div>
+                                    <div class="link">Read More</div>
+                                </a>
+                            </div>
+                            <!-- paper7 -->
+                            <div class="swiper-slide paper-slide">
+                               <a class="paper-item" href="http://ai.tencent.com/ailab/paper7-on-stochastic-primal-dual-hybrid-gradient-approach-for-compositely-regularized-minimization.html" target="_blank">
+                                    <div class="tit">
+                                        European Conference on Artificial Intelligence (ECAI)
+                                    </div>
+                                    <div class="tit-2">
+                                        On Stochastic Primal-Dual Hybrid Gradient Approach for Compositely Regularized Minimization
+                                    </div>
+                                    <div class="txt">
+                                        Linbo Qiao, Tianyi Lin, Yu-Gang Jiang, Fan Yang, Wei Liu, and Xicheng Lu
+                                        <br>
+                                        2016.
+                                    </div>
+                                    <div class="link">Read More</div>
+                                </a>
+                            </div>
+                            <!-- paper8 -->
+                            <div class="swiper-slide paper-slide">
+                               <a class="paper-item" href="http://ai.tencent.com/ailab/paper8-no-reference-retargeted-image-quality-assessment-based-on-pairwise-rank-learning.html" target="_blank">
+                                    <div class="tit">
+                                        IEEE Transactions on Multimedia
+                                    </div>
+                                    <div class="tit-2">
+                                        No-Reference Retargeted Image Quality Assessment Based on Pairwise Rank Learning
+                                    </div>
+                                    <div class="txt">
+                                        Lin Ma, Long Xu, Yichi Zhang, Yihua Yan, and King Ngi Ngan
+                                        <br>
+                                        Sep. 2016
+                                    </div>
+                                    <div class="link">Read More</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="paper-pagination-v hide"></div>
+                        <div class="swiper-button-next paper-button-next"></div>
+                        <div class="swiper-button-prev paper-button-prev"></div>
+                    </div>
+                    <div class="page-btn-area"><a href="http://ai.tencent.com/ailab/paper-list.html" target="_blank" class="page6-btn btn-common">查看全部论文</a></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="page-wr page7">
+                    <div class="page7-container">
+                        <h2 class="page7-title">
+                            最新动态
+                        </h2>
+                        <div class="page7-news-list clearfix">
+                            
+
+                            
+                                <div class="news-item">
+                                    <a href="http://ai.tencent.com/ailab/news.html" target="_blank">
+                                        <div class="news-pic" style="background-image: url(images/news1.jpg);"></div>
+                                        <div class="news-text">
+                                            <h4 class="news-title">Advancing AI at NIPS 2016</h4>
+                                            <p class="news-desc">Here is digest, maybe very very long. Max is three lines, when there is more, display dots. Here is digest, maybe …</p>
+                                            <div class="news-date">DEC 05, 2016</div>
+                                            <span class="readmore">Read More ></span>
+                                        </div>
+                                    </a>
+                                </div>
+                            
+                                <div class="news-item">
+                                    <a href="http://ai.tencent.com/ailab/news.html" target="_blank">
+                                        <div class="news-pic" style="background-image: url(images/news2.jpg);"></div>
+                                        <div class="news-text">
+                                            <h4 class="news-title">A Chinese Internet Giant Enters the AI Race</h4>
+                                            <p class="news-desc">Here is digest, maybe very very long. Max is three lines, when there is …</p>
+                                            <div class="news-date">DEC 05, 2016</div>
+                                            <span class="readmore">Read More ></span>
+                                        </div>
+                                    </a>
+                                </div>
+                            
+                                <div class="news-item">
+                                    <a href="http://ai.tencent.com/ailab/news.html" target="_blank">
+                                        <div class="news-pic" style="background-image: url(images/news3.jpg);"></div>
+                                        <div class="news-text">
+                                            <h4 class="news-title">A Chinese Internet Giant Enters the AI Race</h4>
+                                            <p class="news-desc">Here is digest, maybe very very long. Max is three lines, when there is …</p>
+                                            <div class="news-date">DEC 05, 2016</div>
+                                            <span class="readmore">Read More ></span>
+                                        </div>
+                                    </a>
+                                </div>
+                            
+                        </div>
+                        <div class="page-btn-area">
+                            <a href="http://ai.tencent.com/ailab/news-list.html" target="_blank" class="page7-btn btn-common">查看全部动态</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide page8-wr">
+                <div class="page-wr page8">
+                    <div class="page8-wrap page-content">
+                        <div class="page8-container">
+                            <h2 class="page8-title">
+                                来自腾讯
+                            </h2>
+                           <div class="page8-text">
+                            研究前沿的机器学习理论及算法，研发和部署大规模机器学习/在移动互联网新技术发展中，腾讯将专注AI技术的广泛应用与基础研究，结合产品数据与用户行为的学习，为多个产品打造出个性化与创新体验，在挑战难题的同时研究对新算法的突破。于此同时，通过云服务与开放平台，将图表、语音、自然语言、机器学习等方面积累的AI技术提供给广大创业者。</div>
+                            <div class="page8-title-3">
+                                腾讯 AI Lab犀牛鸟学术合作计划
+                            </div>
+                            <div class="page8-text-3">
+                                腾讯 AI Lab犀牛鸟学术合作计划秉持开放、灵活、共赢的原则，旨在通过无边际的产学研合作，推动人工智能的前沿研发和人才培养。
+                            </div>
+                            <a class="page8-btn2 btn-common" href="http://ai.tencent.com/ailab/academic-list.html" target="_blank">查看更多项目</a>
+                            <div class="page8-title-2">
+                                诚邀您的加入
+                            </div>
+                            <div class="page8-text-2">
+                                加入我们的团队，与顶尖科学家们携手创造更美好的世界！
+                            </div>
+                            <a class="page8-btn btn-common" href="http://ai.tencent.com/ailab/academic-list.html" target="_blank">查看更多项目</a>
+
+                        </div>
+                    </div>
+                </div>
+                    <footer class="footer">
+    <ul class="foot-logo">
+        <li class="tencent" title="tencent">
+            <a href="http://www.tencent.com/" target="_blank">腾讯官网</a>
+        </li>
+        <li class="line" title="tencent"></li>
+        <li class="tencentlab" title="tencent lab">
+            <a href="http://ai.tencent.com/">腾讯 AI Lab 官网</a>
+        </li>
+    </ul>
+    <div class="copyright">
+        Copyright © 1998 - 2017 Tencent. All Rights Reserved.
+    </div>
+    <ul class="foot-msg">
+        <li class="msg-email"><a href="mailto:ailab@tencent.com"><i class="icon icon-email"></i>email</a></li>
+        <li class="msg-Wechat">
+            <i class="icon icon-wx"></i>Wechat
+            <div class="foot-pop"><img src="images/qrcode-wechat.png" alt=""></div>
+        </li>
+        <li class="msg-qq"><i class="icon icon-qq"></i>QQ International</li>
+    </ul>
+</footer>
+
+
+                
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-h"></div>
+    </div>
+
+    <div class="fixed-entrence"><a href="http://ai.tencent.com/ailab/academic-forum-2018/index.html" target="_blank">2018第二届AI Lab学术论坛</a></div>
+
+    <script type="text/javascript">
+
+    // 判断UA
+    $(function () {
+        var Sys = {};
+        var ua = navigator.userAgent.toLowerCase();
+        var s;
+        (s = ua.match(/rv:([\d.]+)\) like gecko/)) ? Sys.ie = s[1] :
+        (s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1] :
+        (s = ua.match(/firefox\/([\d.]+)/)) ? Sys.firefox = s[1] :
+        (s = ua.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] :
+        (s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] :
+        (s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
+        // console.log(s);
+        if (Sys.ie){
+            // setTimeout(,100);
+            Swipie()
+        }else{
+            // setTimeout(,100);
+            Swip()
+        }
+       
+    });
+
+    // 页面内滚动
+    function Noscroll(index){
+        var $pageNoScrollWr = $('.swiper-wrapper-h').children('.swiper-slide').eq(index);
+        var $pageNoScroll = $pageNoScrollWr.find('.page-wr');
+        var $pageNoScrollCont = $pageNoScroll.children('.page-content');
+        var scrollHeight = $pageNoScrollCont.height()-$pageNoScroll.height();
+        if ($pageNoScrollCont.height() > $pageNoScroll.height()) {
+            $pageNoScrollWr.addClass("swiper-no-swiping");
+        }
+        
+        var startX;
+        var startY;
+        $pageNoScroll.on('touchstart',function(){
+            startX = event.touches[0].pageX;
+            startY = event.touches[0].pageY;
+        });
+
+        $pageNoScroll.on("touchmove",function(){
+            var x = event.touches[0].pageX;
+            var y = event.touches[0].pageY;
+            var dx = startX - x;
+            var dy = startY - y;
+            if(dy < 0){  //上滑
+                // console.log('up')
+                if($pageNoScroll.scrollTop() == 0){
+                   $pageNoScrollWr.removeClass("swiper-no-swiping");
+                }
+            }
+
+            if(dy > 0){  //下滑
+                // console.log('down')
+                if($pageNoScroll.scrollTop() == scrollHeight){
+                   $pageNoScrollWr.removeClass("swiper-no-swiping");
+                }
+            }
+
+        });
+
+        $pageNoScroll.scroll(function() {
+            // console.log($pageNoScroll.scrollTop(),scrollHeight)
+           
+            if($pageNoScroll.scrollTop() == 0){
+                $pageNoScrollWr.removeClass("swiper-no-swiping");
+            }
+
+            if($pageNoScroll.scrollTop() == scrollHeight){
+               $pageNoScrollWr.removeClass("swiper-no-swiping");
+            }   
+            
+        });
+    }
+    
+    // 默认swipr
+    function Swip(){
+        var swiperV = new Swiper('.swiper-container-h',{
+            pagination: '.swiper-pagination-h',
+            paginationClickable: true,
+            slidesPerView: 1,
+            mode: 'vertical',
+            // touchRatio : 0.5,
+            longSwipesRatio : 0,
+            mousewheelControl : true,
+            mousewheelControlForceToAxis : true,
+            keyboardControl : true,
+            simulateTouch: false,
+            // initialSlide :4,
+            noSwiping : true,
+            onSlideChangeStart: function(swiper){
+                if(!swiper.slides[0].isActive()){
+                    //新的slide是活动的
+                    // console.log(!swiperV.slides[0].isActive());
+                    $('.header').addClass('on');
+
+                } else{
+                    $('.header').removeClass('on');
+                }
+
+                // console.log(swiperV.activeIndex)
+                
+                Noscroll(swiperV.activeIndex);
+            },
+            paginationBulletRender: function (swiper, index, className) {
+                return '<span class="' + className + '">' + (index + 1) + '</span>';
+            }
+        });
+
+        var swiperH = new Swiper('.paper-container-v',{
+            pagination: '.paper-pagination-v',
+            paginationClickable: true,
+            slidesPerView: 3,
+            loop:true,
+            // centeredSlides: true,
+            watchActiveIndex: true,
+            initialSlide :1,
+            centeredSlides: !0,
+            watchSlidesProgress : true
+        })
+
+        var swiperS = new Swiper('.paper-container-s',{
+            onSlideChangeStart: function(swiper) {
+                $(".search-cats .active").removeClass('active');
+                $(".search-cats a").eq(swiper.activeLoopIndex).addClass('active');
+            }
+        });
+
+        $(".search-cats a").on('touchstart mousedown',function(e) {
+            e.preventDefault();
+            $(".search-cats .active").removeClass('active');
+            $(this).addClass('active');
+            swiperS.swipeTo( $(this).index() );
+        })
+
+
+                      
+          $('.paper-button-prev').on('click', function(e){
+            e.preventDefault()
+            swiperH.swipePrev()
+          })
+          $('.paper-button-next').on('click', function(e){
+            e.preventDefault()
+            swiperH.swipeNext()
+          })
+          // console.log('新的slide的位置是'+ swiperV.index());
+          dotShow();
+          loadProperties(); //中英文切换
+    }
+
+    // ie专用
+    function Swipie(){
+        var swiperV = new Swiper('.swiper-container-h',{
+            pagination: '.swiper-pagination-h',
+            paginationClickable: true,
+            slidesPerView: 1,
+            mode: 'vertical',
+            mousewheelControl : true,
+            keyboardControl : true,
+            simulateTouch: false,
+            onSlideChangeStart: function(){
+                if(!swiperV.slides[0].isActive()){
+                    //新的slide是活动的
+                    // console.log(!swiperV.slides[0].isActive());
+                    $('.header').addClass('on');
+                }else{
+                    $('.header').removeClass('on');
+                }
+
+                Noscroll(swiperV.activeIndex);
+            }
+          })
+          var swiperH = new Swiper('.paper-container-v',{
+            pagination: '.paper-pagination-v',
+            paginationClickable: true,
+            slidesPerView: 3,
+            loop:true,
+            // centeredSlides: true,
+            watchActiveIndex: true,
+            initialSlide :1,
+            centeredSlides: !0,
+            watchSlidesProgress : true
+        })
+                      
+          $('.paper-button-prev').on('click', function(e){
+            e.preventDefault()
+            swiperH.swipePrev()
+          })
+          $('.paper-button-next').on('click', function(e){
+            e.preventDefault()
+            swiperH.swipeNext()
+          })
+          // console.log('新的slide的位置是'+ swiperV.index());
+          dotShow();
+          loadProperties(); //中英文切换
+    }
+
+    </script>
+
+
+
+
+
+<!-- 低版本浏览器警告 -->
+
+ <!--[if IE]>
+<div class="pop-browser-warn" data-func="pop-wrap">
+    <div class="pop-content">
+        <i class="icon-warn-browser"></i>
+        <a href="javascript:;" class="btn-warn-close" data-func="close"></a>
+        <div class="warn-content">
+            <h3>请升级您的浏览器</h3>
+            <p class="warn-tips">尊敬的用户，我们强烈建议您升级操作系统或浏览器获得更安全的网络环境及更好的用户体验</p>
+            <div class="browser-list">
+                <ul>
+                    <li>
+                        <a target="_blank" href="http://browser.qq.com/">
+                            <i class="icon icon-browser-qq"></i>
+                            <p>QQ浏览器</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.firefox.com.cn/download/">
+                            <i class="icon icon-browser-firefox"></i>
+                            <p>火狐</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.google.cn/chrome/index.html">
+                            <i class="icon icon-browser-chrome"></i>
+                            <p>Chrome</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<![endif]-->
+
+
+
+
+
+
+</body>
+</html>

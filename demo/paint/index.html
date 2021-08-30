@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="copyright" content="Tencent">
+    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <title>寻诗作画</title>
+    <script>
+        // 调整字体大小
+        !function(){
+            // 根据屏幕控制字体大小
+            var baseWidth = 750,
+                baseHeiht = 1280,
+                baseFontSize = 100,
+                newSize = 1,
+                sacle = 1;
+
+            var sacle = Math.min(window.innerWidth / baseWidth, window.innerHeight / baseHeiht),
+                newSize = parseInt(sacle * 10000 * baseFontSize) / 10000;
+
+            document.documentElement.style.fontSize = newSize + "px"; 
+        }();
+    </script>
+    <script src="https://h5app.qq.com/act/sona/0.0.1/sona.min.js"></script>
+    <script>
+        var share = new Sona.Share({
+            // 分享标题
+            title: '寻诗作画',
+            // 分享描述
+            desc: '选张风景照，制作明信片',
+            // 分享缩略图, 允许使用相对路径
+            thumb: 'images/icon.png',
+            // 分享链接, 默认是当前页面链接
+            link: window.location.href,
+            // 分享成功后回调
+            success: function(type, status) {
+                // ...
+                // report(window.uId,2,window.picId,window.styleId);
+            },
+            // 取消分享后回调
+            cancel: function(type, status) {
+                // ...
+            },
+            // 分享失败后回调
+            fail: function(type, status) {
+                // ...
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="main-page">
+        <h1>照片变成中国画</h1>
+        <div class="paint-tab">
+            <div class="paint-list swiper-container">
+                <div class="swiper-wrapper" style="transform: translate3d(0.3rem, 0px, 0px);">
+                    <div class="paint-item swiper-slide">
+                        <div class="img-wrap"><img src="images/pic1.png" alt="" class="paint-img"></div>
+                        <div class="paint-text clearfix">
+                            <div class="paint-poem">
+                                <span>亭亭山上松<i>，</i></span>
+                                <span>瑟瑟谷中风<i>。</i></span>
+                            </div>
+                            <div class="paint-date">
+                                <span>腾讯人工智能实验室</span>
+                                <span class="current-time">丁酉年六月十九日</span>
+                                <i class="qrcode"><img src="images/qrcode.png" alt=""></i>
+                            </div>
+                        </div>
+                        <div class="decoration"><img src="images/paint-ele1.png" alt=""></div>
+                    </div>
+                    <div class="paint-item swiper-slide">
+                        <div class="img-wrap"><img src="images/pic2.png" alt="" class="paint-img"></div>
+                        <div class="paint-text clearfix">
+                            <div class="paint-poem">
+                                <span>白日依山尽</span>
+                                <span>黄河入海流</span>
+                            </div>
+                            <div class="paint-date">
+                                <span>腾讯人工智能实验室</span>
+                                <span class="current-time">丁酉年六月十九日</span>
+                                <i class="qrcode"><img src="images/qrcode.png" alt=""></i>
+                            </div>
+                        </div>
+                        <div class="decoration"><img src="images/paint-ele2.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="paint-name">
+                <a href="javascript:;" class="active"><i class="icon"></i>水墨画</a>
+                <a href="javascript:;"><i class="icon"></i>沙画</a>
+            </div> -->
+            <div class="btn-area">
+                <p>选张风景照，制作明信片</p>
+                <input type="file" class="btn-make" value="我要制作" id="file-upload"><label for="file-upload">我要制作</label>
+            </div>
+        </div>
+    </div>
+    <div class="make-page hide">
+        <div class="make-item">
+            <div class="make-pic">
+                <div class="make-bg upload-bg"></div>
+                <i></i>
+                <img src="images/painting-hor.jpg" alt="" class="make-img">
+            </div>
+            <div class="make-text clearfix">
+                <div class="poem-word">
+                    <span>不识庐山真面目<i>，</i></span>
+                    <span>只缘身在此山中<i>。</i></span>
+                </div>
+                <div class="make-date">
+                    <span>腾讯人工智能实验室</span>
+                    <span class="current-time">丁酉年六月十九日</span>
+                    <i class="qrcode"><img src="images/qrcode.png" alt=""></i>
+                </div>
+            </div>
+        </div>
+        <div class="pop-tips hide"><i class="icon-arrow"></i><em>向左滑动切换滤镜</em></div>
+        <p class="shake-word"></p>
+        <div class="btn-area">
+            <a href="javascript:;" class="btn-save">保存</a>
+            <a href="javascript:;" class="btn-change">换句诗</a>
+            <label for="file-upload" href="javascript:;" class="btn-more">再做一张</label>
+        </div>
+    </div>
+    <div class="photo-show hide">
+        <div class="photo-wrap"></div>
+    </div>
+
+    <div class="spinner">
+        <div class="spinner-container container1">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+        <div class="spinner-container container2">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+        <div class="spinner-container container3">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+    </div>
+</body>
+<script src="js/vendor/zepto.1.1.6.js"></script>
+<script src="js/vendor/swiper.min.js"></script>
+<script>
+    // swiper
+    var dis = document.documentElement.style.fontSize;
+    dis = parseInt(dis)*0.3;
+    var paintSwiper = new Swiper('.swiper-container',{
+        slidesOffsetBefore : dis,
+        slidesOffsetAfter: dis,
+        spaceBetween: dis,
+        slidesPerView: 1.4,
+        speed: 500
+    });
+</script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    // 微信jssdk功能
+    (function() {
+      // 获取待验证的URL
+      var verifyUrl = window.location.href.replace(window.location.hash, '');
+      var sdkScript = document.createElement('script');
+      sdkScript.src = 'https://wxapp.qq.com/wxjssdk-signature/sign.php?url=' + encodeURIComponent(verifyUrl) + '&callback=jssdkCallback';
+      document.getElementsByTagName('head')[0].appendChild(sdkScript);
+      window.jssdkCallback = function(res) {
+        wx.config({
+            debug: false,
+            appId: res.data.appId,
+            timestamp: res.data.timestamp,
+            nonceStr: res.data.nonceStr,
+            signature: res.data.signature,
+            jsApiList: [
+              'onMenuShareTimeline',
+              'onMenuShareAppMessage',
+              'onMenuShareQQ',
+              'onMenuShareWeibo',
+              'onMenuShareQZone'
+            ]
+        });
+      }
+    })();
+</script>
+<script src="js/vendor/hammer.min.js"></script>  
+<script src="js/vendor/html2canvas.js"></script> 
+<script src="js/main.js"></script>
+<script>
+    // 统计代码
+    var _mtac = {};
+    (function() {
+        var mta = document.createElement("script");
+        mta.src = "http://pingjs.qq.com/h5/stats.js?v2.0.4";
+        mta.setAttribute("name", "MTAH5");
+        mta.setAttribute("sid", "500493397");
+        mta.setAttribute("cid", "500493399");
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(mta, s);
+    })();
+</script>
+
+
+</html>

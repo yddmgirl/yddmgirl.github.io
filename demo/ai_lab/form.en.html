@@ -1,0 +1,459 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>腾讯 AI Lab - 腾讯人工智能实验室官网</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="baidu-site-verification" content="r5znRc9TGh" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="腾讯AI,QQ AI,腾讯人工智能实验室,，腾讯人工智能，计算机视觉，语音合成，语音识别，语音技术，语音识别与合成，自然语言处理，机器学习，大数据，深度学习，视频滤镜，图像滤镜，图像描述生成，语音识别前端，神经网络，信息挖掘，信息抽取，对话，问答，机器翻译" name="Keywords">
+    <meta name="description" content="腾讯 AI Lab（腾讯人工智能实验室）， 腾讯公司级AI战略，聚集全球数十位人工智能科学家、50位世界一流AI博士。聚焦Content AI, Social AI，Game AI. 
+专注机器学习、计算机视觉、语音识别、自然语言处理等人工智能领域的研究。基于腾讯亿万用户海量数据及在互联网各垂直领域的技术优势，立志打造世界顶尖人工智能团队。
+" />
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="Tencent-CDC">
+    <meta name="copyright" content="Tencent">
+    <meta name="robots" content="index,follow">
+    <link href="images/favicon.ico" type="image/ico" rel="shortcut icon" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
+        
+<script>
+(function(doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+            var designWidth  = 1920; // 设计稿宽度
+            var designHeight = 1080; // 设计稿高度
+            var maxWidth     = 1920; // 设计稿最大宽度
+            var maxHeight    = 1080; // 设计稿最大高度
+            var clientWidth  = docEl.clientWidth;
+            var clientHeight = docEl.clientHeight;
+            var baseFontSize = 100; // 根元素基准字体大小
+            if ( (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+                //移动端
+                docEl.setAttribute("class", "m"); 
+                baseFontSize = 256; // 根元素基准字体大小
+                // console.log('m');
+                $('.header').addClass('fixed');
+            } else {
+                //PC端
+                docEl.setAttribute("class", "pc pagepc");
+                baseFontSize = 100; // 根元素基准字体大小
+                // console.log('pc');
+            }
+
+            if (!clientWidth) return;
+            if (clientWidth / clientHeight > designWidth / designHeight) {
+                if (clientHeight <= maxHeight) {
+                    docEl.style.fontSize = clientHeight / designHeight * baseFontSize + "px";
+                } else {
+                    docEl.style.fontSize = maxHeight / designHeight * baseFontSize + "px";
+                }
+            } else {
+                if (clientWidth <= maxWidth) {
+                    docEl.style.fontSize = clientWidth / designWidth * baseFontSize + "px";
+                } else {
+                    docEl.style.fontSize = maxWidth / designWidth * baseFontSize + "px";
+                }
+            }
+        };
+
+    // Abort if browser does not support addEventListener
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+
+
+</script>
+    
+    <script type="text/javascript" src="js/vendor/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="js/vendor/sona.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.i18n.properties.min.js"></script>
+    <script src="js/vendor/sha256.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+
+</head>
+<body>
+<!--[if lt IE 10]><body id="lt-ie10"><![endif]-->
+
+
+
+
+    <section class="g-wrap">
+        <div class="header fixed on">
+     <h1 class="head-logo" title="腾讯 AI Lab">腾讯 AI Lab 官网</h1>
+     <a class="head-logolink" href="http://ai.tencent.com/ailab/index.html">腾讯 AI Lab 官网</a>
+     <div class="lang">
+        <a href="javascript:;" id="en">En</a><span>/</span><a href="javascript:;" id="cn">中</a>
+     </div>
+     <div class="navbar">
+         <ul>
+            <li ><a href="index.html"><span>首页</span></a></li>
+            <li ><a href="paper-list.html"><span>论文</span></a></li>
+            <li class="has-dropdown">
+                <a href="technology-basis-text-analysis.html">
+                    <span>技术体验</span>
+                </a>
+                <div class="navbar-dropdown">
+                    <div class="dropdown-list clearfix">
+                        <div class="dropdown-item">
+                            <h3><i class="icon nav-icon1"></i><span>自然语言处理</span></h3>
+                            <dl>
+                                <dt><a href="technology-basis-text-analysis.html">基础文本分析</a></dt>
+                                <dd>
+                                    <a href="technology-basis-text-analysis.html#participle">分词/词性标注</a>
+                                    <a href="technology-basis-text-analysis.html#centence">句法分析</a>
+                                    <a href="">语义分析</a>
+                                </dd>
+                                <dt><a href="technology-intelligent-chat.html">智能闲聊</a></dt>
+                                <dt><a href="technology-machine-translation.html">机器翻译</a></dt>
+                            </dl>
+                        </div>
+                        <div class="dropdown-item">
+                            <h3><i class="icon nav-icon2"></i><span>计算机视觉</span></h3>
+                            <dl>
+                                <dt><a href="technology-picture-identification.html">图片识别</a></dt>
+                                <dd>
+                                    <a href="technology-picture-identification.html#mark">图片标注</a>
+                                    <a href="technology-picture-identification.html#speak">看图说话</a>
+                                </dd>
+                                <dt><a href="technology-face-recognition.html">人脸检测</a></dt>
+                                <dt><a href="">艺术滤镜</a></dt>
+                            </dl>
+                        </div>
+                        <div class="dropdown-item">
+                            <h3><i class="icon nav-icon3"></i><span>智能语音</span></h3>
+                            <dl>
+                                <dt><a href="">语音识别</a></dt>
+                                <dd>
+                                    <a href="">远程语音识别</a>
+                                    <a href="">近场语音识别</a>
+                                    <a href="">说话人识别</a>
+                                </dd>
+                                <dt><a href="">语音合成</a></dt>
+                                <dt><a href="">语音唤醒</a></dt>
+                                <dt><a href="">语音活动性检测</a><i>beta</i></dt>
+                                <dt><a href="">语音降噪</a><i>new</i></dt>
+                            </dl>
+                        </div>
+                        <div class="dropdown-item personal-panel">
+                            <h3>
+                                <i class="icon nav-icon4"></i><span>个人控制台<a href="http://100.102.32.50/console/console_front/index.html" target="_blank" class="btn-login">登录</a></span>
+                            </h3>
+                            <dl>
+                                <dt><a href="http://100.102.32.50/console/console_doc/index.html" target="_blank">文档中心</a></dt>
+                                <!--<dt><a href="">API文档</a></dt>
+                                <dd>
+                                    <a href="">自然语言处理</a>
+                                    <a href="">计算机视觉</a>
+                                    <a href="">智能语言</a>
+                                </dd>-->
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li ><a href="news-list.html"><span>新闻</span></a></li>
+            <li class="active"><a href="academic-list.html"><span>合作</span></a></li>
+            <li ><a href="recruit.html"><span>招聘</span></a></li>
+            <li ><a href="about.html"><span>关于</span></a></li>
+         </ul>
+     </div>
+     <a href="javascript:;" class="nav_btn"></a>
+</div>
+
+
+        
+    
+<div class="container">
+    <div class="paper-title ta-c">AI Lab PhD Fellowship</div>
+    <div class="application-form">
+        <h4>Personal information</h4>
+        <ul class="clearfix">
+            <li class="mandatory" data-inp="text">
+                <h5>Full name</h5>
+                <div class="inp-wrap">
+                    <input type="text" class="inp-text">
+                </div>
+            </li>
+            <li>
+                <h5>Gender</h5>
+                <div class="inp-wrap clearfix">
+                    <div class="mod-select">
+                        <a href="javascript:;">Select</a>
+                        <div class="pop-select">
+                            <div class="select-item">Male</div>
+                            <div class="select-item">Female</div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="no-mr">
+                <h5>Birth date</h5>
+                <div class="inp-wrap clearfix">
+                    <div class="mod-select fl">
+                        <a href="javascript:;">Select</a>
+                        <div class="pop-select">
+                            <div class="select-item">2000</div><div class="select-item">1999</div><div class="select-item">1998</div><div class="select-item">1997</div><div class="select-item">1996</div><div class="select-item">1995</div><div class="select-item">1994</div><div class="select-item">1993</div><div class="select-item">1992</div><div class="select-item">1991</div><div class="select-item">1990</div><div class="select-item">1989</div><div class="select-item">1988</div><div class="select-item">1987</div><div class="select-item">1986</div><div class="select-item">1985</div><div class="select-item">1984</div><div class="select-item">1983</div><div class="select-item">1982</div><div class="select-item">1981</div><div class="select-item">1980</div><div class="select-item">1979</div><div class="select-item">1978</div><div class="select-item">1977</div><div class="select-item">1976</div><div class="select-item">1975</div><div class="select-item">1974</div><div class="select-item">1973</div><div class="select-item">1972</div><div class="select-item">1971</div>
+                        </div>
+                    </div>
+                    <div class="mod-select fr">
+                        <a href="javascript:;">Select</a>
+                        <div class="pop-select">
+                            <div class="select-item">01</div><div class="select-item">02</div><div class="select-item">03</div><div class="select-item">04</div><div class="select-item">05</div><div class="select-item">06</div><div class="select-item">07</div><div class="select-item">08</div><div class="select-item">09</div><div class="select-item">10</div><div class="select-item">11</div><div class="select-item">12</div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h5>Mobile phone</h5>
+                <div class="inp-wrap">
+                    <input type="number" class="inp-text">
+                </div>                
+            </li>
+            <li class="mandatory no-mr" data-inp="text">
+                <h5>Email</h5>
+                <div class="inp-wrap">
+                    <input type="email" class="inp-text check-email">
+                </div>
+            </li>
+        </ul>
+        <h4>Education background</h4>
+        <ul class="clearfix">
+            <li class="mandatory" data-inp="select">
+                <h5>Country</h5>
+                <div class="inp-wrap clearfix">
+                    <div class="mod-select auto-width">
+                        <a href="javascript:;">Select</a>
+                        <div class="pop-select">
+                            <div class="select-item">China</div><div class="select-item">United States</div><div class="select-item">Canada</div><div class="select-item">United Kingdom</div><div class="select-item">Afghanistan</div><div class="select-item">Aland Islands</div><div class="select-item">Albania</div><div class="select-item">Algeria</div><div class="select-item">American Samoa</div><div class="select-item">Andorra</div><div class="select-item">Angola</div><div class="select-item">Anguilla</div><div class="select-item">Antarctica</div><div class="select-item">Antigua</div><div class="select-item">Argentina</div><div class="select-item">Armenia</div><div class="select-item">Aruba</div><div class="select-item">Australia</div><div class="select-item">Austria</div><div class="select-item">Azerbaijan</div><div class="select-item">Bahrain</div><div class="select-item">Bangladesh</div><div class="select-item">Barbados</div><div class="select-item">Belarus</div><div class="select-item">Belgium</div><div class="select-item">Belize</div><div class="select-item">Benin</div><div class="select-item">Bermuda</div><div class="select-item">Bhutan</div><div class="select-item">Bolivia</div><div class="select-item">Bonaire, Sint Eustatius and Saba</div><div class="select-item">Bosnia and Herzegovina</div><div class="select-item">Botswana</div><div class="select-item">Bouvet Island</div><div class="select-item">Brazil</div><div class="select-item">British Indian Ocean Territory</div><div class="select-item">British Virgin Islands</div><div class="select-item">Brunei</div><div class="select-item">Bulgaria</div><div class="select-item">Burkina Faso</div><div class="select-item">Burundi</div><div class="select-item">Cambodia</div><div class="select-item">Cameroon</div><div class="select-item">Cape Verde</div><div class="select-item">Cayman Islands</div><div class="select-item">Côte d&#39;Ivoire</div><div class="select-item">Central African Republic</div><div class="select-item">Chad</div><div class="select-item">Chile</div><div class="select-item">Christmas Island</div><div class="select-item">Cocos (Keeling) Islands</div><div class="select-item">Colombia</div><div class="select-item">Comoros</div><div class="select-item">Cook Islands</div><div class="select-item">Costa Rica</div><div class="select-item">Croatia</div><div class="select-item">Cuba</div><div class="select-item">Curaçao</div><div class="select-item">Cyprus</div><div class="select-item">Czech Republic</div><div class="select-item">Democratic Republic of the Congo</div><div class="select-item">Denmark</div><div class="select-item">Djibouti</div><div class="select-item">Dominica</div><div class="select-item">Dominican Republic</div><div class="select-item">Ecuador</div><div class="select-item">Egypt</div><div class="select-item">El Salvador</div><div class="select-item">Equatorial Guinea</div><div class="select-item">Eritrea</div><div class="select-item">Estonia</div><div class="select-item">Ethiopia</div><div class="select-item">Falkland Islands</div><div class="select-item">Faroe Islands</div><div class="select-item">Federated States of Micronesia</div><div class="select-item">Fiji</div><div class="select-item">Finland</div><div class="select-item">France</div><div class="select-item">French Guiana</div><div class="select-item">French Polynesia</div><div class="select-item">French Southern Territories</div><div class="select-item">Gabon</div><div class="select-item">Georgia</div><div class="select-item">Germany</div><div class="select-item">Ghana</div><div class="select-item">Gibraltar</div><div class="select-item">Greece</div><div class="select-item">Greenland</div><div class="select-item">Grenada</div><div class="select-item">Guadeloupe</div><div class="select-item">Guam</div><div class="select-item">Guatemala</div><div class="select-item">Guernsey</div><div class="select-item">Guinea</div><div class="select-item">Guinea-Bissau</div><div class="select-item">Guyana</div><div class="select-item">Haiti</div><div class="select-item">Heard Island and McDonald Islands</div><div class="select-item">Honduras</div><div class="select-item">Hong Kong</div><div class="select-item">Hungary</div><div class="select-item">Iceland</div><div class="select-item">India</div><div class="select-item">Indonesia</div><div class="select-item">Iran</div><div class="select-item">Iraq</div><div class="select-item">Ireland</div><div class="select-item">Isle Of Man</div><div class="select-item">Israel</div><div class="select-item">Italy</div><div class="select-item">Jamaica</div><div class="select-item">Japan</div><div class="select-item">Jersey</div><div class="select-item">Jordan</div><div class="select-item">Kazakhstan</div><div class="select-item">Kenya</div><div class="select-item">Kiribati</div><div class="select-item">Kosovo</div><div class="select-item">Kuwait</div><div class="select-item">Kyrgyzstan</div><div class="select-item">Laos</div><div class="select-item">Latvia</div><div class="select-item">Lebanon</div><div class="select-item">Lesotho</div><div class="select-item">Liberia</div><div class="select-item">Libya</div><div class="select-item">Liechtenstein</div><div class="select-item">Lithuania</div><div class="select-item">Luxembourg</div><div class="select-item">Macau</div><div class="select-item">Macedonia</div><div class="select-item">Madagascar</div><div class="select-item">Malawi</div><div class="select-item">Malaysia</div><div class="select-item">Maldives</div><div class="select-item">Mali</div><div class="select-item">Malta</div><div class="select-item">Marshall Islands</div><div class="select-item">Martinique</div><div class="select-item">Mauritania</div><div class="select-item">Mauritius</div><div class="select-item">Mayotte</div><div class="select-item">Mexico</div><div class="select-item">Moldova</div><div class="select-item">Monaco</div><div class="select-item">Mongolia</div><div class="select-item">Montenegro</div><div class="select-item">Montserrat</div><div class="select-item">Morocco</div><div class="select-item">Mozambique</div><div class="select-item">Myanmar</div><div class="select-item">Namibia</div><div class="select-item">Nauru</div><div class="select-item">Nepal</div><div class="select-item">Netherlands</div><div class="select-item">Netherlands Antilles</div><div class="select-item">New Caledonia</div><div class="select-item">New Zealand</div><div class="select-item">Nicaragua</div><div class="select-item">Niger</div><div class="select-item">Nigeria</div><div class="select-item">Niue</div><div class="select-item">Norfolk Island</div><div class="select-item">North Korea</div><div class="select-item">Northern Mariana Islands</div><div class="select-item">Norway</div><div class="select-item">Oman</div><div class="select-item">Pakistan</div><div class="select-item">Palau</div><div class="select-item">Palestine</div><div class="select-item">Panama</div><div class="select-item">Papua New Guinea</div><div class="select-item">Paraguay</div><div class="select-item">Peru</div><div class="select-item">Philippines</div><div class="select-item">Pitcairn</div><div class="select-item">Poland</div><div class="select-item">Portugal</div><div class="select-item">Puerto Rico</div><div class="select-item">Qatar</div><div class="select-item">Réunion</div><div class="select-item">Republic of the Congo</div><div class="select-item">Romania</div><div class="select-item">Russia</div><div class="select-item">Rwanda</div><div class="select-item">Saint Barthélemy</div><div class="select-item">Saint Helena</div><div class="select-item">Saint Kitts and Nevis</div><div class="select-item">Saint Martin</div><div class="select-item">Saint Pierre and Miquelon</div><div class="select-item">Saint Vincent and the Grenadines</div><div class="select-item">Samoa</div><div class="select-item">San Marino</div><div class="select-item">Sao Tome and Principe</div><div class="select-item">Saudi Arabia</div><div class="select-item">Senegal</div><div class="select-item">Serbia</div><div class="select-item">Seychelles</div><div class="select-item">Sierra Leone</div><div class="select-item">Singapore</div><div class="select-item">Sint Maarten</div><div class="select-item">Slovakia</div><div class="select-item">Slovenia</div><div class="select-item">Solomon Islands</div><div class="select-item">Somalia</div><div class="select-item">South Africa</div><div class="select-item">South Georgia and the South Sandwich Islands</div><div class="select-item">South Korea</div><div class="select-item">South Sudan</div><div class="select-item">Spain</div><div class="select-item">Sri Lanka</div><div class="select-item">St. Lucia</div><div class="select-item">Sudan</div><div class="select-item">Suriname</div><div class="select-item">Svalbard and Jan Mayen</div><div class="select-item">Swaziland</div><div class="select-item">Sweden</div><div class="select-item">Switzerland</div><div class="select-item">Syria</div><div class="select-item">Taiwan</div><div class="select-item">Tajikistan</div><div class="select-item">Tanzania</div><div class="select-item">Thailand</div><div class="select-item">The Bahamas</div><div class="select-item">The Gambia</div><div class="select-item">Timor-Leste</div><div class="select-item">Togo</div><div class="select-item">Tokelau</div><div class="select-item">Tonga</div><div class="select-item">Trinidad and Tobago</div><div class="select-item">Tunisia</div><div class="select-item">Turkey</div><div class="select-item">Turkmenistan</div><div class="select-item">Turks and Caicos Islands</div><div class="select-item">Tuvalu</div><div class="select-item">Uganda</div><div class="select-item">Ukraine</div><div class="select-item">United Arab Emirates</div><div class="select-item">United States Minor Outlying Islands</div><div class="select-item">Uruguay</div><div class="select-item">US Virgin Islands</div><div class="select-item">Uzbekistan</div><div class="select-item">Vanuatu</div><div class="select-item">Vatican City</div><div class="select-item">Venezuela</div><div class="select-item">Vietnam</div><div class="select-item">Wallis and Futuna</div><div class="select-item">Western Sahara</div><div class="select-item">Yemen</div><div class="select-item">Zambia</div><div class="select-item">Zimbabwe</div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="mandatory" data-inp="text">
+                <h5>Current University</h5>
+                <div class="inp-wrap">
+                    <input type="text" class="inp-text">
+                </div>
+            </li>
+            <li class="no-mr mandatory" data-inp="text">
+                <h5>Department</h5>
+                <div class="inp-wrap">
+                    <input type="text" class="inp-text">
+                </div>
+            </li>
+            <li class="mandatory entrance-date" data-inp="date">
+                <h5>Start date</h5>
+                <div class="inp-wrap clearfix">
+                    <div class="mod-select fl">
+                        <a href="javascript:;">Select</a>
+                        <div class="pop-select">
+                            <div class="select-item">2012</div><div class="select-item">2013</div><div class="select-item">2014</div><div class="select-item">2015</div><div class="select-item">2016</div><div class="select-item">2017</div><div class="select-item">2018</div><div class="select-item">2019</div><div class="select-item">2020</div>
+                        </div>
+                    </div>
+                    <div class="mod-select fr">
+                        <a href="javascript:;">Select</a>
+                        <div class="pop-select">
+                            <div class="select-item">01</div><div class="select-item">02</div><div class="select-item">03</div><div class="select-item">04</div><div class="select-item">05</div><div class="select-item">06</div><div class="select-item">07</div><div class="select-item">08</div><div class="select-item">09</div><div class="select-item">10</div><div class="select-item">11</div><div class="select-item">12</div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="no-mr mandatory graduation-date" data-inp="date">
+                <h5>Graduation date(Expected)</h5>
+                <div class="inp-wrap clearfix">
+                    <div class="mod-select fl">
+                        <a href="javascript:;">Select</a>
+                        <div class="pop-select">
+                            <div class="select-item">2017</div><div class="select-item">2018</div><div class="select-item">2019</div><div class="select-item">2020</div><div class="select-item">2021</div><div class="select-item">2022</div><div class="select-item">2023</div><div class="select-item">2024</div><div class="select-item">2025</div>
+                        </div>
+                    </div>
+                    <div class="mod-select fr">
+                        <a href="javascript:;">Select</a>
+                        <div class="pop-select">
+                            <div class="select-item">01</div><div class="select-item">02</div><div class="select-item">03</div><div class="select-item">04</div><div class="select-item">05</div><div class="select-item">06</div><div class="select-item">07</div><div class="select-item">08</div><div class="select-item">09</div><div class="select-item">10</div><div class="select-item">11</div><div class="select-item">12</div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="mandatory" data-inp="text">
+                <h5>Research area</h5>
+                <div class="inp-wrap">
+                    <input type="text" class="inp-text">
+                </div>
+            </li>
+            <li class="no-mr mandatory" data-inp="text">
+                <h5>Research topic</h5>
+                <div class="inp-wrap">
+                    <input type="text" class="inp-text">
+                </div>
+            </li>
+            <li class="mandatory" data-inp="text">
+                <h5>Academic supervisor</h5>
+                <div class="inp-wrap">
+                    <input type="text" class="inp-text">
+                </div>
+            </li>
+            <li class="no-mr mandatory" data-inp="text">
+                <h5>Academic supervisor Email</h5>
+                <div class="inp-wrap">
+                    <input type="email" class="inp-text check-email">
+                </div>
+            </li>
+            <li class="mandatory" data-inp="text">
+                <h5>Reference name</h5>
+                <div class="inp-wrap">
+                    <input type="text" class="inp-text">
+                </div>
+            </li>
+            <li class="no-mr mandatory" data-inp="text">
+                <h5>Reference Email</h5>
+                <div class="inp-wrap">
+                    <input type="email" class="inp-text check-email">
+                </div>
+            </li>
+        </ul>
+        <h4>Application material</h4>
+        <ul class="clearfix">
+            <li class="whole-row mandatory" data-inp="file">
+                <h5>Resume / CV</h5>
+                <div class="inp-wrap">
+                    <input type="file" accept=".pdf, .doc, .docx, .txt, .ppt, .pptx" class="inp-upload" id="upload-profile"><label for="upload-profile"><i class="icon-upload"></i><span>Upload</span></label>
+                </div>
+            </li>
+            <li class="whole-row" data-inp="file">
+                <h5>Recommendation letters</h5>
+                <div class="inp-wrap">
+                    <div class="tips">Two or more. Please upload as a single compressed file (e.g. zip, rar), or send directly to <a href="mailto:ailabfellowship@tencent.com">ailabfellowship@tencent.com</a></div>
+                    <input type="file" accept=".pdf, .doc, .docx, .txt" class="inp-upload" id="upload-recommendation"><label for="upload-recommendation"><i class="icon-upload"></i><span>Upload</span></label>
+                </div>
+            </li>
+            <li class="whole-row mandatory" data-inp="file">
+                <h5>Academic Research</h5>
+                <div class="inp-wrap">
+                    <div class="tips">
+                        Please upload the following material as a single compressed file (e.g. zip, rar):<br>
+                        <div class="snd-list">
+                            1) Academic transcript<br>
+                            2) List and copy of published papers<br>
+                            3) Research proposal (2-3 pages, outlining the research area and impact in the field) <br>
+                            4) Other supplementary material
+                        </div>
+                    </div>
+                    <input type="file" accept=".zip,.rar,.7z" class="inp-upload" id="upload-certificate"><label for="upload-certificate"><i class="icon-upload"></i><span>Upload</span></label>
+                </div>
+            </li>
+            <li class="qst-internship mandatory" data-inp="radio">
+                <h5>Are you interested in Internship at Tencent AI Lab?</h5>
+                <div class="inp-wrap">
+                    <input type="radio" id="internship-yes" name="internship" class="inp-radio"><label for="internship-yes">Yes</label>
+                    <input type="radio" id="internship-no" name="internship" class="inp-radio"><label for="internship-no">No</label>
+                </div>
+            </li>
+            <li class="qst-place hide">
+                <h5>Preferred location？</h5>
+                <div class="inp-wrap">
+                    <input type="radio" id="place-1" name="place" class="inp-radio"><label for="place-1">Shenzhen</label>
+                    <input type="radio" id="place-2" name="place" class="inp-radio"><label for="place-2">Seattle</label>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="submit-area">
+        <a href="javascript:;" class="submit-appliaction btn-common">Submit</a>
+    </div>
+</div>
+
+<div class="pop-common-wrap pop-submit-success" style="display: none;">
+    <div class="pop-content">
+        <a href="javascript:;" class="btn-close" data-func="close"></a>
+        <h4>Submission successful</h4>
+        <p>You will be contacted via email, for further enquiries please contact<br><a href="mailto:ailabfellowship@tencent.com">ailabfellowship@tencent.com</a>。<br><br></p>
+        <div class="btn-area">
+            <a href="javascript:;" class="btn-common" data-func="close">OK</a>
+        </div>
+    </div>
+</div>
+
+
+
+        <footer class="footer">
+    <ul class="foot-logo">
+        <li class="tencent" title="tencent">
+            <a href="http://www.tencent.com/" target="_blank">腾讯官网</a>
+        </li>
+        <li class="line" title="tencent"></li>
+        <li class="tencentlab" title="tencent lab">
+            <a href="http://ai.tencent.com/">腾讯 AI Lab 官网</a>
+        </li>
+    </ul>
+    <div class="copyright">
+        Copyright © 1998 - 2017 Tencent. All Rights Reserved.
+    </div>
+    <ul class="foot-msg">
+        <li class="msg-email"><a href="mailto:ailab@tencent.com"><i class="icon icon-email"></i>email</a></li>
+        <li class="msg-Wechat">
+            <i class="icon icon-wx"></i>Wechat
+            <div class="foot-pop"><img src="images/qrcode-wechat.png" alt=""></div>
+        </li>
+        <li class="msg-qq"><i class="icon icon-qq"></i>QQ International</li>
+    </ul>
+</footer>
+
+    </section>
+
+
+
+<!-- 低版本浏览器警告 -->
+
+ <!--[if IE]>
+<div class="pop-browser-warn" data-func="pop-wrap">
+    <div class="pop-content">
+        <i class="icon-warn-browser"></i>
+        <a href="javascript:;" class="btn-warn-close" data-func="close"></a>
+        <div class="warn-content">
+            <h3>请升级您的浏览器</h3>
+            <p class="warn-tips">尊敬的用户，我们强烈建议您升级操作系统或浏览器获得更安全的网络环境及更好的用户体验</p>
+            <div class="browser-list">
+                <ul>
+                    <li>
+                        <a target="_blank" href="http://browser.qq.com/">
+                            <i class="icon icon-browser-qq"></i>
+                            <p>QQ浏览器</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.firefox.com.cn/download/">
+                            <i class="icon icon-browser-firefox"></i>
+                            <p>火狐</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.google.cn/chrome/index.html">
+                            <i class="icon icon-browser-chrome"></i>
+                            <p>Chrome</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<![endif]-->
+
+
+
+
+<script src="js/form.js"></script>
+
+
+</body>
+</html>
